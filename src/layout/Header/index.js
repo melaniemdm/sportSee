@@ -1,14 +1,15 @@
 import './style.scss';
 import logo from '../../assets/logo.png';
-import Navigate from '../Navigate';
+import Navigate from '../../components/Navigate';
 
 
 function Header(){
     return(
-        <div>
-<img src={logo} alt="logo SportSee" />
+        <header className="containerHeader">
+            <div className="logoImg">
+<img src={logo} alt="logo SportSee" /></div>
 <Navigate/>
-        </div>
+        </header>
     )
 }
 export default Header
