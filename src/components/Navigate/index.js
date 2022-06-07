@@ -5,10 +5,10 @@ function Navigate(){
     return(
         <div className="containerNav">
 <nav className="navigate">
-      <Link to=" " className="accueil">Accueil</Link> 
-      <Link to=" " className="profil">profil</Link>
-      <Link to=" " className="reglages">Reglages</Link>
-      <Link to=" " className="communaute">Communauté</Link>
+      <Link to="/accueil " className="accueil">Accueil</Link> 
+      <Link to="/profil " className="profil">Profil</Link>
+      <Link to="/reglage " className="reglage">Reglages</Link>
+      <Link to="/communaute " className="communaute">Communauté</Link>
     </nav>
         </div>
     )
