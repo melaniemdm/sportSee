@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 function Navigate(){
     return(
-        <div>
+        <div className="containerNav">
 <nav className="navigate">
       <Link to=" " className="accueil">Accueil</Link> 
       <Link to=" " className="profil">profil</Link>
