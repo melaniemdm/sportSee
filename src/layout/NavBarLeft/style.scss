@@ -1,7 +1,7 @@
 .containerIcone{
     background-color: black;
     width: 117px;
-    height:870px;
+    height:auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,4 +36,15 @@ margin-bottom:20px;
 .swimTete{
     margin-top:18px;
     margin-left:32px; 
+}
+
+.textNavBarLeft{
+    color: white;
+    font-size: 12px;
+    writing-mode: vertical-lr;
+    text-orientation: use-glyph-orientation;
+    transform: rotate(180deg);
+      outline: 1px solid white;
+      margin-top:164px;
+      margin-bottom:50px;
 }

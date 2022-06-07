@@ -23,6 +23,9 @@ function NavBarLeft() {
       <div className="layoutIcone ">
         <img src={alter} alt="Icone Alter" className="alter" />
       </div>
+      <div className="textNavBarLeft">
+      Copiryght, SportSee 2020
+      </div>
     </div>
   );
 }
