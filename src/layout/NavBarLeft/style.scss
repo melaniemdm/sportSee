@@ -1,0 +1,39 @@
+.containerIcone{
+    background-color: black;
+    width: 117px;
+    height:870px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+.layoutIcone img{
+  background: white;
+  border-radius: 6px;
+margin-bottom:20px;
+  object-fit: none;
+}
+
+.yoga{ 
+    position: relative;
+    margin-top:256px;
+    height:64px;
+    width:64px;
+}
+.bike, .swim, .alter{
+    position: relative;
+    height:64px;
+    width:64px; 
+}
+.yogaTete, .swimTete{
+    z-index: 100;
+    position:absolute;
+}
+
+.yogaTete{
+    margin-top:267px;
+   margin-left:28px; 
+}
+.swimTete{
+    margin-top:18px;
+    margin-left:32px; 
+}
