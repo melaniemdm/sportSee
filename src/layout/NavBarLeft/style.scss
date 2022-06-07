@@ -1,50 +1,52 @@
-.containerIcone{
-    background-color: black;
-    width: 117px;
-    height:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-.layoutIcone img{
+.containerIcone {
+  background-color: black;
+  width: 117px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.layoutIcone img {
   background: white;
   border-radius: 6px;
-margin-bottom:20px;
+  margin-bottom: 20px;
   object-fit: none;
 }
 
-.yoga{ 
-    position: relative;
-    margin-top:256px;
-    height:64px;
-    width:64px;
+.yoga {
+  position: relative;
+  margin-top: 256px;
+  height: 64px;
+  width: 64px;
 }
-.bike, .swim, .alter{
-    position: relative;
-    height:64px;
-    width:64px; 
+.bike,
+.swim,
+.alter {
+  position: relative;
+  height: 64px;
+  width: 64px;
 }
-.yogaTete, .swimTete{
-    z-index: 100;
-    position:absolute;
-}
-
-.yogaTete{
-    margin-top:267px;
-   margin-left:28px; 
-}
-.swimTete{
-    margin-top:18px;
-    margin-left:32px; 
+.yogaTete,
+.swimTete {
+  z-index: 100;
+  position: absolute;
 }
 
-.textNavBarLeft{
-    color: white;
-    font-size: 12px;
-    writing-mode: vertical-lr;
-    text-orientation: use-glyph-orientation;
-    transform: rotate(180deg);
-      outline: 1px solid white;
-      margin-top:164px;
-      margin-bottom:50px;
+.yogaTete {
+  margin-top: 267px;
+  margin-left: 28px;
+}
+.swimTete {
+  margin-top: 18px;
+  margin-left: 32px;
+}
+
+.textNavBarLeft {
+  color: white;
+  font-size: 12px;
+  writing-mode: vertical-lr;
+  text-orientation: use-glyph-orientation;
+  transform: rotate(180deg);
+  margin-top: 164px;
+  margin-bottom: 50px;
 }
