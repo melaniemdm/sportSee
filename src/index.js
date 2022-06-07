@@ -1,24 +1,16 @@
 import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
+
 import ReactDOM from 'react-dom/client';
 import './styles/style.scss';
+import Routes from '../src/Routes';
 
-import Header from '../src/layout/Header';
-import NavBarLeft from '../src/layout/NavBarLeft';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Router>
-   <Header />
-   <NavBarLeft/>
-
-   </Router>
- 
-
-
-  </React.StrictMode>
+   <Routes/>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
