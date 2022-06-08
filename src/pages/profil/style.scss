@@ -5,8 +5,8 @@
 }
 .txtProfil{
   display: flex;
-  justify-content: center;
-}
+  margin-bottom: 77px;
+ }
 
 .titleProfil{
     font-weight: 500;
@@ -17,4 +17,7 @@
 }
 .name{
 color: red;
+}
+.littleGraph{
+  display: flex;
 }
