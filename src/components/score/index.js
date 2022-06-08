@@ -3,11 +3,9 @@ import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
-];
+  { name: "12% de votre objectif"}, {value: 40 }];
+  
+ 
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -21,8 +19,7 @@ const renderActiveShape = (props) => {
     endAngle,
     fill,
     payload,
-    percent,
-    value
+     value
   } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
@@ -76,7 +73,7 @@ const renderActiveShape = (props) => {
         textAnchor={textAnchor}
         fill="#999"
       >
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+       
       </text>
     </g>
   );
@@ -92,17 +89,17 @@ export default function Score() {
   );
 
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={300} height={300}>
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
         data={data}
-        cx={200}
-        cy={200}
+        cx={100}
+        cy={100}
         innerRadius={60}
         outerRadius={80}
-        fill="#8884d8"
-        dataKey="value"
+        fill="red"
+       
         onMouseEnter={onPieEnter}
       />
     </PieChart>

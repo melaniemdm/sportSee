@@ -19,8 +19,17 @@
 color: #FF0000;
 }
 .littleGraph{
-  display: flex;
+  display: flex; 
+   justify-content:space-between;
   margin-top:90px;
+  width:849px;
+
+}
+.dailyActivity{
+  font-size: 14px;
+  width:849px;
+  height:320px;
+  background-color:#FBFBFB;
 }
 .containerGray{
    width:263px;
@@ -38,4 +47,8 @@ color: #FF0000;
   width:263px;
   height:258px;
   background-color:#282D30;
+}
+.score{
+  font-size: 12px;
+ 
 }
