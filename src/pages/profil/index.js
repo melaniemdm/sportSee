@@ -14,11 +14,12 @@ function Profil() {
       <div className="txtProfil">
         <img src={clappingTxt} alt="logo clapping du texte" />
       </div>
-      <DailyActivity />
+      <div className="containerGray"><DailyActivity  /></div>
       <div className="littleGraph">
-        <AverageSession />
-        <Score />
-        <Intensity />
+      <div className="containeRed"> <AverageSession /></div> 
+      <div className="containerBlack"><Intensity /></div> 
+        <div className="containerGray"><Score /></div> 
+      
       </div>
     </div>
   );

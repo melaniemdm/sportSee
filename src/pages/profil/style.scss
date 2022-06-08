@@ -16,8 +16,25 @@
     margin-bottom:41px;
 }
 .name{
-color: red;
+color: #FF0000;
 }
 .littleGraph{
   display: flex;
+  margin-top:90px;
+}
+.containerGray{
+   width:263px;
+  height:258px;
+  background-color:#FBFBFB;
+}
+.containeRed{
+  font-size: 12px;
+  width:263px;
+  height:258px;
+  background-color:#FF0000;
+}
+.containerBlack{
+  width:263px;
+  height:258px;
+  background-color:#282D30;
 }
