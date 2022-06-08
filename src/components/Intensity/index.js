@@ -10,8 +10,17 @@ import {
 import {getPerformance} from '../../utils/data';
 
 
-const data = getPerformance(18).data.kind; 
-console.log(data)
+const dataPerf = getPerformance(18).data.data;
+const kind = getPerformance(18).data.kind; 
+const performances = dataPerf.map(performance=> { 
+  return{
+    subject: kind[performance.kind],
+    A: performance.value,
+    fullMark: 150
+      
+  }
+ 
+})
 
 export default function Intensity() {
   return (
@@ -21,7 +30,7 @@ export default function Intensity() {
      
       width={300}
       height={250}
-      data={data}
+      data={performances}
     >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />

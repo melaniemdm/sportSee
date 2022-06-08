@@ -8,15 +8,25 @@ import {
  } from "recharts";
 import {getEverageSessions} from '../../utils/data';
 
-const data = getEverageSessions(18).data.sessions;
-console.log(data)
+const dataEverageSessions = getEverageSessions(18).data.sessions;
+const everageSessions = dataEverageSessions.map(everageSession=> { 
+  return{
+    name: everageSession.name,
+    day: everageSession.day,
+    pv: 3800,
+      
+  }
+ 
+})
+
+
 export default function AverageSession() {
   return (<div>
   <div className="containerTitleGraphRed">Durée moyenne des sessions</div>
     <LineChart
       width={263}
       height={258}
-      data={data}
+      data={everageSessions}
       
     >
       
@@ -25,7 +35,7 @@ export default function AverageSession() {
       <Tooltip />
      
       
-      <Line type="monotone" dataKey="uv" stroke="black" />
+      <Line type="monotone" dataKey="day" stroke="black" />
     </LineChart></div>
   );
 }

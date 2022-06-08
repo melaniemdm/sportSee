@@ -12,6 +12,14 @@ import {
 import { getActivity } from '../../utils/data';
 
 const data = getActivity(18).data.sessions;
+const activities = data.map(activity=> { 
+  return{
+     name: activity.day,
+     kilogram: activity.kilogram,
+     calories: activity.calories
+  }
+ 
+})
 console.log(data)
 
 export default function DailyActivity() {
@@ -19,7 +27,7 @@ export default function DailyActivity() {
     <BarChart
       width={500}
       height={300}
-      data={data}
+      data={activities}
       margin={{
         top: 20,
         right: 30,
@@ -33,8 +41,8 @@ export default function DailyActivity() {
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip />
       <Legend />
-      <Bar yAxisId="left" dataKey="pv" fill="black" />
-      <Bar yAxisId="right" dataKey="uv" fill="red" />
+      <Bar yAxisId="left" dataKey="calories" fill="black" />
+      <Bar yAxisId="right" dataKey="kilogram" fill="red" />
     </BarChart>
   );
 }
