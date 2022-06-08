@@ -1,5 +1,4 @@
 .containerFirst{
-   
     height:100px;
     margin-left: 109px;
 }
@@ -51,4 +50,13 @@ color: #FF0000;
 .score{
   font-size: 12px;
  
+}
+.containerBody{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right:90px;
+  top: 354px;
+  height:656px;
 }
