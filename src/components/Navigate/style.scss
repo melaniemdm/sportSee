@@ -1,3 +1,4 @@
+@import "../../styles/commun.scss";
 .containerNav{
     font-size:24px;
     margin-right: 87px;
@@ -10,6 +11,6 @@
   }
 .navigate a{
     text-decoration:none;
-    color: white;
+    color: $colorWhite;
 }
 

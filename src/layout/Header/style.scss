@@ -1,8 +1,10 @@
+@import "../../styles/commun.scss";
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-     background-color:black;
+     background-color:$colorBlack;
     height:91px;
 }
 .logoImg{

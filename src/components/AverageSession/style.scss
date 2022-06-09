@@ -1,3 +1,5 @@
+@import "../../styles/commun.scss";
+
 .AverageSession{
     text-align: center;
     
@@ -5,8 +7,8 @@
 .containerTitleGraphRed{
     position: absolute;
     width:147px;
-    font-size: 15px;
+    font-size: $fontSizeContainerMaxGraph;
     margin-left: 34px;
     margin-top: 29px;
-    color: white;
+    color: $colorWhite;
 }

@@ -1,3 +1,4 @@
+@import '../../styles/commun.scss';
 .containerFirst{
     height:100px;
     margin-left: 109px;
@@ -9,13 +10,13 @@
 
 .titleProfil{
     font-weight: 500;
-    font-size:48px;
+    font-size:$fontSizeTitleProfil;
     display: flex;
     margin-top:68px;
     margin-bottom:41px;
 }
 .name{
-color: #FF0000;
+color: $colorRed;
 }
 .littleGraph{
   display: flex; 
@@ -25,31 +26,24 @@ color: #FF0000;
 
 }
 .dailyActivity{
-  font-size: 14px;
+  font-size: $fontSizeContainerMaxGraph;
   width:849px;
   height:320px;
-  background-color:#FBFBFB;
+  background-color:$colorGreylight;
 }
-.containerGray{
-   width:263px;
-  height:258px;
-  background-color:#FBFBFB;
-}
-.containeRed{
-  font-size: 12px;
+.containerGraph{
+  font-size: $fontSizeContainerLittleGraph;
   width:263px;
   height:258px;
-  background-color:#FF0000;
 }
-.containerBlack{
-  font-size: 12px;
-  width:263px;
-  height:258px;
-  background-color:#282D30;
+.averageSession{
+    background-color:$colorRed;
+}
+.intensity{
+    background-color:$colorGrey;
 }
 .score{
-  font-size: 12px;
- 
+    background-color:$colorGreylight;
 }
 .containerBody{
   position: absolute;

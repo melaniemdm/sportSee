@@ -1,5 +1,7 @@
+@import "../../styles/commun.scss";
+
 .containerIcone {
-  background-color: black;
+  background-color: $colorBlack;
   width: 117px;
   height: auto;
   display: flex;
@@ -7,7 +9,7 @@
   align-items: center;
 }
 .layoutIcone img {
-  background: white;
+  background: $colorWhite;
   border-radius: 6px;
   margin-bottom: 20px;
   object-fit: none;
@@ -42,8 +44,8 @@
 }
 
 .textNavBarLeft {
-  color: white;
-  font-size: 12px;
+  color: $colorWhite;
+  font-size: $fontSizeContainerLittleGraph;
   writing-mode: vertical-lr;
   text-orientation: use-glyph-orientation;
   transform: rotate(180deg);
