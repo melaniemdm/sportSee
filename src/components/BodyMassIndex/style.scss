@@ -1,8 +1,15 @@
 .bodyMassIndex{
-    background-color: gray;
+    background-color: #FBFBFB;
     width:258px;
     height:128px;
+    display: flex;
+    align-items: center;
+    
 }
 .bodyMass{
-    color: red;
+       color: red;
+}
+.iconeBodyMass{
+    margin-left: 32px;
+    margin-right: 29px;
 }

@@ -6,15 +6,19 @@ import Score from "../../components/Score";
 import Intensity from "../../components/Intensity";
 import BodyMassIndex from "../../components/BodyMassIndex";
 import { getUser } from "../../utils/data";
+import fire from '../../assets/fire.png';
+import prot from '../../assets/prot.png';
+import apple from '../../assets/apple.png';
+import lipides from '../../assets/lipides.png';
 
 const keyData = getUser(18).data.keyData;
 console.log(keyData);
 
 const bodyMassIndex = []
-bodyMassIndex.push({value:keyData.calorieCount, type:"Calories"} )
-bodyMassIndex.push({value:keyData.proteinCount, type:"Protéines"} )
-bodyMassIndex.push({value:keyData.carbohydrateCount, type:"Glucides"} )
-bodyMassIndex.push({value:keyData.lipidCount, type:"Lipides"} )
+bodyMassIndex.push({ value:keyData.calorieCount, type:"Calories", picture:fire} )
+bodyMassIndex.push({value:keyData.proteinCount, type:"Protéines", picture:prot} )
+bodyMassIndex.push({value:keyData.carbohydrateCount, type:"Glucides",picture:apple} )
+bodyMassIndex.push({value:keyData.lipidCount, type:"Lipides", picture:lipides} )
 
 function Profil() {
   const name = getUser(18).data.userInfos.firstName;
