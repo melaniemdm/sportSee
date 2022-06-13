@@ -20,7 +20,7 @@ const activities = data.map(activity=> {
   }
  
 })
-console.log(data)
+// console.log(data)
 
 export default function DailyActivity() {
   return (
