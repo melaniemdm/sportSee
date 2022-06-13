@@ -5,7 +5,6 @@ import AverageSession from "../../components/AverageSession";
 import Score from "../../components/Score";
 import Intensity from "../../components/Intensity";
 import BodyMassIndex from "../../components/BodyMassIndex";
-import { getUser } from "../../utils/data";
 import fire from '../../assets/fire.png';
 import prot from '../../assets/prot.png';
 import apple from '../../assets/apple.png';
@@ -13,24 +12,26 @@ import lipides from '../../assets/lipides.png';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const keyData = getUser(18).data.keyData;
 
-
-const bodyMassIndex = []
-bodyMassIndex.push({ value:keyData.calorieCount, type:"Calories", picture:fire} )
-bodyMassIndex.push({value:keyData.proteinCount, type:"Protéines", picture:prot} )
-bodyMassIndex.push({value:keyData.carbohydrateCount, type:"Glucides",picture:apple} )
-bodyMassIndex.push({value:keyData.lipidCount, type:"Lipides", picture:lipides} )
 
 function Profil() {
  
 
   //const name = getUser(18).data.userInfos.firstName;
 
- const [name, setData] = useState([]);
+ const [name, setName] = useState([]);
+ const [bodyMassIndex,setBodyMassIndex]= useState([]);
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/user/18`);
-    setData(data.data.userInfos.firstName);
+    const { data } = await axios.get(`http://localhost:3000/user/12`);
+    setName(data.data.userInfos.firstName);
+  const keyData = data.data.keyData;
+
+    let bmiArray =[]
+    bmiArray.push({ value:keyData.calorieCount, type:"Calories", picture:fire} )
+    bmiArray.push({value:keyData.proteinCount, type:"Protéines", picture:prot} )
+    bmiArray.push({value:keyData.carbohydrateCount, type:"Glucides",picture:apple} )
+    bmiArray.push({value:keyData.lipidCount, type:"Lipides", picture:lipides} )
+    setBodyMassIndex(bmiArray)
   };
   useEffect(() => {
     getData();
