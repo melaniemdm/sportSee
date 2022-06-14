@@ -76,37 +76,35 @@ const averageSessions = {
     userId: 18,
     sessions: [
       {
-          name:"L",
         day: 1,
         sessionLength: 30,
       },
       {
-        name:"M",
-        day: 2,
+            day: 2,
         sessionLength: 40,
       },
       {
-        name:"M",
+     
         day: 3,
         sessionLength: 50,
       },
       {
-        name:"J",
+     
         day: 4,
         sessionLength: 30,
       },
       {
-        name:"V",
+       
         day: 5,
         sessionLength: 30,
       },
       {
-        name:"S",
+      
         day: 6,
         sessionLength: 50,
       },
       {
-        name:"D",
+     
         day: 7,
         sessionLength: 50,
       },

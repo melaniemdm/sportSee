@@ -1,11 +1,11 @@
 
 import './style.scss';
-import {getUser} from '../../utils/data';
+// import {getUser} from '../../utils/data';
 
 
 function BodyMassIndex(props){
-    const bodyMass = getUser(18).data.keyData;
-    console.log(bodyMass)
+    // const bodyMass = getUser(18).data.keyData;
+    // console.log(bodyMass)
     
     return (
         <div className="bodyMassIndex">

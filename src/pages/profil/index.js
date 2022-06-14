@@ -22,7 +22,7 @@ function Profil() {
  const [name, setName] = useState([]);
  const [bodyMassIndex,setBodyMassIndex]= useState([]);
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/user/12`);
+    const { data } = await axios.get(`http://localhost:3000/user/18`);
     setName(data.data.userInfos.firstName);
   const keyData = data.data.keyData;
 

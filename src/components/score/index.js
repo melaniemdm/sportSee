@@ -1,22 +1,36 @@
 import './style.scss';
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { PieChart, Pie, Cell } from "recharts";
 
-const score = 0.3;
-const data = [
-  { name: "Group A", value: score },
-  { name: "Group B", value: 1 - score },
-];
+// const score = 0.3;
+
+
 
 export default function App() {
+  const [score, setScore] = useState([]);
+  const getData = async () => {
+  const { data } = await axios.get(`http://localhost:3000/user/18`);
+const scoreUser = data.data.todayScore ? data.data.todayScore : data.data.score;
+const dataScore = [
+  { name: "Group A", value: scoreUser },
+  { name: "Group B", value: 1 - scoreUser },
+];
+setScore(dataScore)
+console.log(dataScore)
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <PieChart width={400} height={400}>
       <Pie
         dataKey="value"
         startAngle={1000}
         endAngle={0}
-        data={data}
+        data={score}
         cx={130}
         cy={120}
         innerRadius={70}
