@@ -1,5 +1,4 @@
 import './style.scss';
-import React from "react";
 import {
   BarChart,
   Bar,
@@ -9,20 +8,39 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import { getActivity } from '../../utils/data';
+//import { getActivity } from '../../utils/data';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const data = getActivity(18).data.sessions;
-const activities = data.map(activity=> { 
-  return{
-     name: activity.day,
-     kilogram: activity.kilogram,
-     calories: activity.calories
-  }
- 
-})
+//const data = getActivity(18).data.sessions;
+
+
 // console.log(data)
 
 export default function DailyActivity() {
+  const [activities, setActivities] = useState([]);
+
+  const getData = async () => {
+    const { data } = await axios.get(`http://localhost:3000/user/12/activity`);
+
+   
+const activitiesArray = data.data.sessions.map(activity=> { 
+    return{
+       name: activity.day,
+       kilogram: activity.kilogram,
+       calories: activity.calories
+    }
+   
+  })
+  setActivities(activitiesArray)
+
+  }
+
+  
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <BarChart
       width={500}
