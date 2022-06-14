@@ -1,5 +1,4 @@
 import './style.scss';
-import React from "react";
 import {
   Radar,
   RadarChart,
@@ -8,21 +7,38 @@ import {
   PolarRadiusAxis
 } from "recharts";
 import {getPerformance} from '../../utils/data';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-
-const dataPerf = getPerformance(18).data.data;
+//const dataPerf = getPerformance(18).data.data;
 const kind = getPerformance(18).data.kind; 
-const performances = dataPerf.map(performance=> { 
+
+
+
+
+export default function Intensity() {
+const [performances,setPerformance] = useState([]);
+
+const getData=async()=>{
+  const {data}=await axios.get('http://localhost:3000/user/12/performance')
+
+const performancesArray = data.data.data.map(performance=> { 
   return{
     subject: kind[performance.kind],
     A: performance.value,
     fullMark: 150
       
   }
- 
-})
 
-export default function Intensity() {
+})
+ console.log(performancesArray)
+setPerformance(performancesArray)
+}
+
+useEffect(() => {
+  getData();
+}, []);
+
   return (
     <RadarChart
       cx={120}
