@@ -6,12 +6,12 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis
 } from "recharts";
-import {getPerformance} from '../../utils/data';
+//import {getPerformance} from '../../utils/data';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 //const dataPerf = getPerformance(18).data.data;
-const kind = getPerformance(18).data.kind; 
+//const kind = getPerformance(18).data.kind; 
 
 
 
@@ -24,7 +24,7 @@ const getData=async()=>{
 
 const performancesArray = data.data.data.map(performance=> { 
   return{
-    subject: kind[performance.kind],
+    subject: data.data.kind[performance.kind],
     A: performance.value,
     fullMark: 150
       
