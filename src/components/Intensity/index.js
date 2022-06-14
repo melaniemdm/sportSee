@@ -9,7 +9,7 @@ import {
 //import {getPerformance} from '../../utils/data';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useParams } from 'react-router-dom';
 //const dataPerf = getPerformance(18).data.data;
 //const kind = getPerformance(18).data.kind; 
 
@@ -18,9 +18,9 @@ import axios from "axios";
 
 export default function Intensity() {
 const [performances,setPerformance] = useState([]);
-
+const {id} = useParams();
 const getData=async()=>{
-  const {data}=await axios.get('http://localhost:3000/user/12/performance')
+  const {data}=await axios.get('http://localhost:3000/user/'+id+'/performance')
 
 const performancesArray = data.data.data.map(performance=> { 
   return{
@@ -37,7 +37,7 @@ setPerformance(performancesArray)
 
 useEffect(() => {
   getData();
-}, []);
+});
 
   return (
     <RadarChart

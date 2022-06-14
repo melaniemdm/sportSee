@@ -11,18 +11,18 @@ import apple from '../../assets/apple.png';
 import lipides from '../../assets/lipides.png';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useParams } from 'react-router-dom';
 
 
 function Profil() {
  
 
   //const name = getUser(18).data.userInfos.firstName;
-
+  const {id} = useParams();
  const [name, setName] = useState([]);
  const [bodyMassIndex,setBodyMassIndex]= useState([]);
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/user/18`);
+    const { data } = await axios.get(`http://localhost:3000/user/`+id);
     setName(data.data.userInfos.firstName);
   const keyData = data.data.keyData;
 
@@ -35,7 +35,7 @@ function Profil() {
   };
   useEffect(() => {
     getData();
-  }, []);
+  });
  
   
   return (

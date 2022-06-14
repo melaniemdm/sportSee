@@ -8,20 +8,15 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-//import { getActivity } from '../../utils/data';
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-//const data = getActivity(18).data.sessions;
-
-
-// console.log(data)
-
+import { useParams } from 'react-router-dom';
 export default function DailyActivity() {
   const [activities, setActivities] = useState([]);
-
+  const {id} = useParams();
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/user/12/activity`);
+    const { data } = await axios.get(`http://localhost:3000/user/`+ id +`/activity`);
 
    
 const activitiesArray = data.data.sessions.map(activity=> { 
@@ -39,7 +34,7 @@ const activitiesArray = data.data.sessions.map(activity=> {
   
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   return (
     <BarChart

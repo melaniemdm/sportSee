@@ -4,8 +4,7 @@ import './style.scss';
 
 
 function BodyMassIndex(props){
-    // const bodyMass = getUser(18).data.keyData;
-    // console.log(bodyMass)
+
     
     return (
         <div className="bodyMassIndex">
