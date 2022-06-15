@@ -1,6 +1,10 @@
 import './style.scss'
 import {Link} from 'react-router-dom';
 
+/**
+ * It's a function that returns a div with a navbar and 4 links.
+ * @returns A React component.
+ */
 function Navigate(){
     return(
         <div className="containerNav">
