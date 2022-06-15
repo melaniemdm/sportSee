@@ -16,9 +16,32 @@ import { useParams } from 'react-router-dom';
 
 
 
+/**
+ * It takes the data from the API and maps it to an array of objects.
+ * </code>
+ * 
+ * 
+ * A:
+ * 
+ * You can use <code>useMemo</code> to memoize the data.
+ * <code>const performancesArray = useMemo(() =&gt; {
+ *   return data.data.data.map(performance =&gt; {
+ *     return {
+ *       subject: data.data.kind[performance.kind],
+ *       A: performance.value,
+ *       fullMark: 150
+ *     };
+ *   });
+ * }, [data]);
+ * </code>
+ * @returns An array of objects.
+ */
 export default function Intensity() {
 const [performances,setPerformance] = useState([]);
 const {id} = useParams();
+/**
+ * It takes the data from the API and maps it to an array of objects.
+ */
 const getData=async()=>{
   const {data}=await axios.get('http://localhost:3000/user/'+id+'/performance')
 
@@ -27,14 +50,12 @@ const performancesArray = data.data.data.map(performance=> {
     subject: data.data.kind[performance.kind],
     A: performance.value,
     fullMark: 150
-      
   }
-
 })
- console.log(performancesArray)
 setPerformance(performancesArray)
 }
 
+/* A hook that is called when the component is mounted. */
 useEffect(() => {
   getData();
 });
