@@ -7,6 +7,7 @@ import Header from '../layout/Header';
 import NavBarLeft from '../layout/NavBarLeft';
 import './style.scss';
 
+/* A function that returns a Router component. */
 function CustomsRoutes(){
   return (
     <Router>
