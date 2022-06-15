@@ -5,16 +5,21 @@ import {
   XAxis,
   Tooltip,
  } from "recharts";
-//import {getEverageSessions} from '../../utils/data';
-//const dataEverageSessions = getEverageSessions(18).data.sessions;
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 
 
+/**
+ * A function that returns a component that displays a graph
+ * @returns An array of objects.
+ */
 export default function AverageSession() {
   const {id} = useParams();
 const [averageSessions,setAverageSessions]= useState([]);
+/* A function that is called when the component is mounted. It is an asynchronous function that makes
+an API call to the server and then sets the state of the component with the data returned by the API
+call. */
 
 const getData = async () => {
   const arrayDay =["L", "M", "M", "J", "V", "S","D"];
@@ -30,6 +35,10 @@ setAverageSessions(averageSessionsArray)
 console.log(averageSessionsArray)
 }
  
+/* A hook that is called when the component is mounted. It is an asynchronous function that makes
+an API call to the server and then sets the state of the component with the data returned by the API
+
+call. */
 useEffect(() => {
   getData();
 });
