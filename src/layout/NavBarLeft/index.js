@@ -6,6 +6,16 @@ import swim from "../../assets/swim.png";
 import swimtete from "../../assets/swimTete.png";
 import alter from "../../assets/alter.png";
 
+/**
+ * It returns a div with a className of "containerIcone" which contains a div with a className of
+ * "layoutIcone" which contains an img with a src of "yogatete" and an alt of "Icone Yogatete" and a
+ * className of "yogaTete" and another img with a src of "yoga" and an alt of "Icone Yoga" and a
+ * className of "yoga" and another div with a className of "layoutIcone" which contains an img with a
+ * src of "bike" and an alt of "Icone Bike" and a className of "bike" and another div with a className
+ * of "layoutIcone" which contains an img with a src of "swimtete" and an alt of "Icone SwimTete" and a
+ * className of "swimTete" and another img with a src of "swim" and
+ * @returns A React component.
+ */
 function NavBarLeft() {
   return (
     <div className="containerIcone">
