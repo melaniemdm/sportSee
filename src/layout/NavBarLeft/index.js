@@ -18,7 +18,7 @@ import alter from "../../assets/alter.png";
  */
 function NavBarLeft() {
   return (
-    <div className="containerIcone">
+    <nav className="containerIcone">
       <div className="layoutIcone"> 
       <img src={yogatete} alt="Icone Yogatete" className="yogaTete" />
         <img src={yoga} alt="Icone Yoga" className="yoga" />
@@ -36,7 +36,7 @@ function NavBarLeft() {
       <div className="textNavBarLeft">
       Copiryght, SportSee 2020
       </div>
-    </div>
+    </nav>
   );
 }
 export default NavBarLeft;
