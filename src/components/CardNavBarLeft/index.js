@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function CardNavBarLeft(props) {
   return (
-    <div>
+    <div className="containerIcones">
       <div className="layoutIcone">
         <nav className="navLeft">
         <Link to="" className="">

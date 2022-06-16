@@ -1,54 +1,26 @@
 @import "../../styles/commun.scss";
+.containerNavBarLeft{
+ // outline: 3px solid green;
+ background-color: $colorBlack;
+display: flex;
+text-align: center;
+flex-direction: column;
+align-items: center;
 
-// .containerIcone {
-//   background-color: $colorBlack;
-//   width: 117px;
-//   height: auto;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-// .layoutIcone img {
-//   background: $colorWhite;
-//   border-radius: 6px;
-//   margin-bottom: 20px;
-//   object-fit: none;
-// }
-
-// .yoga {
-//   position: relative;
-//   margin-top: 256px;
-//   height: 64px;
-//   width: 64px;
-// }
-// .bike,
-// .swim,
-// .alter {
-//   position: relative;
-//   height: 64px;
-//   width: 64px;
-// }
-// .yogaTete,
-// .swimTete {
-//   z-index: 100;
-//   position: absolute;
-// }
-
-// .yogaTete {
-//   margin-top: 267px;
-//   margin-left: 28px;
-// }
-// .swimTete {
-//   margin-top: 18px;
-//   margin-left: 32px;
-// }
-
-// .textNavBarLeft {
-//   color: $colorWhite;
-//   font-size: $fontSizeContainerLittleGraph;
-//   writing-mode: vertical-lr;
-//   text-orientation: use-glyph-orientation;
-//   transform: rotate(180deg);
-//   margin-top: 164px;
-//   margin-bottom: 50px;
-// }
+}
+.containerCard{
+  //outline: 3px solid blue;
+  margin-top:270px;
+  width: 117px;
+  
+}
+.textNavBarLeft {
+  color: $colorWhite;
+  font-size: $fontSizeContainerLittleGraph;
+  writing-mode: vertical-lr;
+  text-orientation: use-glyph-orientation;
+  transform: rotate(180deg);
+  margin-top: 148px;
+  margin-bottom: 50px;
+  
+}

@@ -37,13 +37,13 @@ setIconeNavBarLeft(iconeNavBarLeft);}
 useEffect(() => {
   getData();
 });
-  return (<div className="containerIcones ">
+  return (<div className="containerNavBarLeft ">
   
-
+<div className="containerCard">
 {navBarLeft.map((item, index)=>(
- <CardNavBarLeft className="layoutIcone" key={index} data={item}/>
+ <CardNavBarLeft  key={index} data={item}/>
 
-))}
+))}</div>
    
       <div className="textNavBarLeft">
       Copiryght, SportSee 2020

@@ -1,0 +1,21 @@
+
+@import "../../styles/commun.scss";
+.containerIcones{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.layoutIcone{
+    //outline: 3px solid rgb(128, 0, 0);
+    background: $colorWhite;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  width: $widthIconeNavBarLeft;
+  height:$heightIconeNavBarLeft;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
