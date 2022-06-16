@@ -1,5 +1,11 @@
 import "./style.scss";
 import CardNavBarLeft from '../../components/CardNavBarLeft';
+import yoga from "../../assets/yoga.png";
+import bike from "../../assets/bike.png";
+import swim from "../../assets/swim.png";
+import alter from "../../assets/alter.png";
+import React, { useEffect, useState } from "react";
+
 /**
  * It returns a div with a className of "containerIcone" which contains a div with a className of
  * "layoutIcone" which contains an img with a src of "yogatete" and an alt of "Icone Yogatete" and a
@@ -11,13 +17,38 @@ import CardNavBarLeft from '../../components/CardNavBarLeft';
  * @returns A React component.
  */
 function NavBarLeft() {
-  return (
-    <nav className="containerIcone">
-      <CardNavBarLeft/>
+  const [navBarLeft, setIconeNavBarLeft] = useState([]);
+
+  const getData = async () => {
+let iconeNavBarLeft=[];
+iconeNavBarLeft.push({
+  picture:yoga,
+});
+iconeNavBarLeft.push({
+  picture:bike,
+});
+iconeNavBarLeft.push({
+  picture:swim,
+});
+iconeNavBarLeft.push({
+  picture:alter,
+});
+setIconeNavBarLeft(iconeNavBarLeft);}
+useEffect(() => {
+  getData();
+});
+  return (<div className="containerIcones ">
+    <nav>
+
+{navBarLeft.map((item, index)=>(
+ <CardNavBarLeft className="layoutIcone" key={index} data={item}/>
+
+))}
+   
       <div className="textNavBarLeft">
       Copiryght, SportSee 2020
       </div>
-    </nav>
+    </nav></div>
   );
 }
 export default NavBarLeft;
