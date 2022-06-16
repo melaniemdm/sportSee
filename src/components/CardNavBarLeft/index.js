@@ -6,9 +6,10 @@ function CardNavBarLeft(props) {
   return (
     <div>
       <div className="layoutIcone">
+        <nav className="navLeft">
         <Link to="" className="">
           <img src={props.data.picture} alt="Icone de navigation left" className="containerIconeNavBarLeft" />
-        </Link>
+        </Link></nav>
       </div>
      
 

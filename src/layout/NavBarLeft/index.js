@@ -38,7 +38,7 @@ useEffect(() => {
   getData();
 });
   return (<div className="containerIcones ">
-    <nav>
+  
 
 {navBarLeft.map((item, index)=>(
  <CardNavBarLeft className="layoutIcone" key={index} data={item}/>
@@ -48,7 +48,7 @@ useEffect(() => {
       <div className="textNavBarLeft">
       Copiryght, SportSee 2020
       </div>
-    </nav></div>
+   </div>
   );
 }
 export default NavBarLeft;
