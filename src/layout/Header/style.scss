@@ -4,6 +4,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
      background-color:$colorBlack;
     height:91px;
 }
@@ -11,9 +12,10 @@ header{
     width:178px; 
 }
 .logoImg img{
-   
-    height:60px;
+     height:60px;
     margin-left:29px;
-    margin-top:19px;
-    margin-right: 149px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
