@@ -1,9 +1,5 @@
 import "./style.scss";
-import yoga from "../../assets/yoga.png";
-import bike from "../../assets/bike.png";
-import swim from "../../assets/swim.png";
-import alter from "../../assets/alter.png";
-
+import CardNavBarLeft from '../../components/CardNavBarLeft';
 /**
  * It returns a div with a className of "containerIcone" which contains a div with a className of
  * "layoutIcone" which contains an img with a src of "yogatete" and an alt of "Icone Yogatete" and a
@@ -17,19 +13,7 @@ import alter from "../../assets/alter.png";
 function NavBarLeft() {
   return (
     <nav className="containerIcone">
-      <div className="layoutIcone"> 
-      
-        <img src={yoga} alt="Icone Yoga" className="yoga" />
-             </div>
-      <div className="layoutIcone ">
-        <img src={bike} alt="Icone Bike" className="bike" />
-      </div>
-      <div className="layoutIcone ">
-          <img src={swim} alt="Icone Swim" className="swim" />
-      </div>
-      <div className="layoutIcone ">
-        <img src={alter} alt="Icone Alter" className="alter" />
-      </div>
+      <CardNavBarLeft/>
       <div className="textNavBarLeft">
       Copiryght, SportSee 2020
       </div>
