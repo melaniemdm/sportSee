@@ -11,7 +11,7 @@ function Header(){
     return(
         <header className="containerHeader">
             <div className="logoImg">
-<img src={logo} alt="logo SportSee" /></div>
+<img src={logo} alt="logo SportSee" className="logoSportSee"/></div>
 <Navigate/>
         </header>
     )

@@ -1,16 +1,17 @@
 @import "../../styles/commun.scss";
 
-header{
-    display: flex;
-  
-    align-items: center;
-    background-color:$colorBlack;
-    height:91px;
-}
 
-.logoImg img{
-     height:60px;
-     width:178px;
-    margin-left:29px;
+.logoSportSee{
+width:176px;
+margin-left:29px;
+}
+header{ 
+    height:72px;
+    background-color:$colorBlack;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:19px;
+   padding-right: 87px;
    
 }
