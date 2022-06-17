@@ -1,27 +1,10 @@
 import './style.scss';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { PieChart, Pie, Cell } from "recharts";
+import { RadialBarChart, RadialBar } from "recharts";
 import { useParams } from 'react-router-dom';
 
-/**
- * I'm getting data from an API and then I'm setting the data to a variable called score.
- * </code>
- * 
- * 
- * A:
- * 
- * You can use <code>useMemo</code> hook to memoize the data.
- * <code>const dataScore = useMemo(() =&gt; {
- *   const scoreUser = data.data.todayScore ? data.data.todayScore : data.data.score;
- *   return [
- *     { name: "Group A", value: scoreUser },
- *     { name: "Group B", value: 1 - scoreUser },
- *   ];
- * }, [data]);
- * </code>
- * @returns A pie chart with two slices.
- */
+
 export default function Score() {
   const {id} = useParams();
   const [score, setScore] = useState([]);
@@ -45,23 +28,25 @@ console.log(dataScore)
   });
 
   return (
-    <PieChart width={400} height={400}>
-      <Pie
-        dataKey="value"
-        startAngle={1000}
-        endAngle={0}
-        data={score}
-        cx={130}
-        cy={120}
-        innerRadius={70}
-        outerRadius={80}
-        fill="#8884d8"
-        label
-        >
-          <Cell key="0" fill="red" />
-          <Cell key="1" fill="#DDDDDD" />
-
-      </Pie>
-    </PieChart>
+    <div> Score
+    <RadialBarChart
+    width={500}
+    height={300}
+    cx={150}
+    cy={150}
+    innerRadius={20}
+    outerRadius={140}
+    barSize={10}
+    data={score}
+  >
+    <RadialBar
+      minAngle={15}
+      label={{ position: "insideStart", fill: "#fff" }}
+      background
+      clockWise
+      dataKey="value"
+    />
+   
+  </RadialBarChart></div>
   );
 }
