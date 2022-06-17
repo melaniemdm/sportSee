@@ -9,15 +9,20 @@
   margin-top: 68px;
   margin-left:-4px;
   line-height: 24px;
+  color: $colorRed;
 }
+
 .txtProfil {
   margin-top: 41px;
   display: flex;
   margin-bottom: 77px;
 }
-
-.name {
-  color: $colorRed;
+  
+.dailyActivity {
+  font-size: $fontSizeContainerMaxGraph;
+  width: 835px;
+  height: 321px;
+  background-color: $colorGreylight;
 }
 .littleGraph {
   display: flex;
@@ -25,12 +30,7 @@
   margin-top: 90px;
   width: 849px;
 }
-.dailyActivity {
-  font-size: $fontSizeContainerMaxGraph;
-  width: 849px;
-  height: 320px;
-  background-color: $colorGreylight;
-}
+
 .containerGraph {
   font-size: $fontSizeContainerLittleGraph;
   width: 263px;

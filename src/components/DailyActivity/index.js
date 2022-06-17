@@ -60,16 +60,18 @@ const activitiesArray = data.data.sessions.map(activity=> {
     getData();
   });
 
-  return (
+  return (<div> 
+    <div className="titleDailyActivity">Activité quotidienne</div>
     <BarChart
-      width={500}
+      width={800}
       height={300}
       data={activities}
       margin={{
         top: 20,
         right: 30,
         left: 20,
-        bottom: 5
+        bottom: 5,
+        
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
@@ -77,9 +79,10 @@ const activitiesArray = data.data.sessions.map(activity=> {
       <YAxis yAxisId="left" stroke="white" />
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip />
-      <Legend />
-      <Bar yAxisId="left" dataKey="calories" fill="black" />
-      <Bar yAxisId="right" dataKey="kilogram" fill="red" />
-    </BarChart>
+      <Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
+      <Bar yAxisId="right" dataKey="kilogram" fill="black" />
+      <Bar yAxisId="left" dataKey="calories" fill="red"  />
+     
+    </BarChart></div>
   );
 }
