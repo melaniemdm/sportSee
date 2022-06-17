@@ -1,18 +1,32 @@
 @import "../../styles/commun.scss";
-.containerNav{
-    font-size:24px;
-    font-weight: 500;
-    outline:1px solid green;
-        width:100%;
-        margin-left:159px;
-  }
+
   .navigate{
     width:100%;
-    display: flex;
-    justify-content:space-around;
-  }
+  
+    }
 .navigate a{
+  font-size:24px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
     text-decoration:none;
     color: $colorWhite;
+   // outline:1px solid rgb(0, 83, 128);
+}
+.accueil{
+  margin-left: 149px;
+  width:80px;
+  }
+.profil{
+margin-left: 204px;
 }
 
+.reglage{
+  margin-left: 229px;
+  }
+
+  .communaute{
+    margin-left: 196px;
+    margin-right:87px;
+    }
+      

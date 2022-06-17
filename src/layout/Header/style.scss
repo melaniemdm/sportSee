@@ -2,20 +2,15 @@
 
 header{
     display: flex;
-    justify-content: space-between;
+  
     align-items: center;
-    text-align: center;
-     background-color:$colorBlack;
+    background-color:$colorBlack;
     height:91px;
 }
-.logoImg{
-    width:178px; 
-}
+
 .logoImg img{
      height:60px;
+     width:178px;
     margin-left:29px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+   
 }
