@@ -1,5 +1,5 @@
 @import "../../styles/commun.scss";
-.containerFirst {
+.containerGraph {
   margin-left: 109px;
 }
 .titleProfil {
@@ -7,6 +7,7 @@
   font-size: $fontSizeTitleProfil;
   display: flex;
   margin-top: 68px;
+  margin-left:-4px;
   line-height: 24px;
 }
 .txtProfil {
