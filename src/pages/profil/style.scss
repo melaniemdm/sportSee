@@ -1,20 +1,24 @@
 @import '../../styles/commun.scss';
 .containerFirst{
-    height:100px;
-    margin-left: 109px;
-}
-.txtProfil{
-  display: flex;
-  margin-bottom: 77px;
- }
 
+   margin-left: 109px;
+}
 .titleProfil{
+  outline: 1px solid green;
     font-weight: 500;
     font-size:$fontSizeTitleProfil;
     display: flex;
     margin-top:68px;
-    margin-bottom:41px;
+    line-height:24px;
+
 }
+.txtProfil{
+  margin-top: 41px;
+  display: flex;
+  margin-bottom: 77px;
+ }
+
+
 .name{
 color: $colorRed;
 }
