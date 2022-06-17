@@ -1,7 +1,7 @@
 import './style.scss';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { RadialBarChart, RadialBar } from "recharts";
+import { RadialBarChart, RadialBar, Legend } from "recharts";
 import { useParams } from 'react-router-dom';
 
 
