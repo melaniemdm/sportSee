@@ -67,9 +67,10 @@ function Profil() {
       <div className="txtProfil">
         <img src={clappingTxt} alt="logo clapping du texte" />
       </div>
+      <div className="containerBigGraph">
       <div className="dailyActivity">
         <DailyActivity />
-      </div>
+      </div></div>
       <div className="littleGraph">
         <div className="containerLittleGraph averageSession">
           {" "}

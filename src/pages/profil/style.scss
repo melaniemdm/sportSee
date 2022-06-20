@@ -3,22 +3,26 @@
   margin-left:$marginLeftGraph;
 }
 .titleProfil {
-    font-weight: 500;
+  font-weight: 500;
   font-size: $fontSizeTitleProfil;
   display: flex;
   margin-top: 68px;
   margin-left:-4px;
   line-height: 24px;
-  
-}
+  }
 .nameProfil{
   color:$colorRed;
 }
 .txtProfil {
-  
   margin-top: 41px;
   display: flex;
   margin-bottom: 77px;
+}
+.containerBigGraph{
+  display: block;
+  outline: 1px green solid;
+  position: relative;
+  
 }
  .containerLittleGraph {
   width: 263px;
@@ -53,14 +57,14 @@ border-radius: 5px;
 }
 
 .containerBodyMass {
- // outline: 1px green solid;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  right: 90px;
-  top: 320px;
-  height: 620px;
+  outline: 1px green solid;
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ right: 90px;
+ top: 320px;
+ height: 620px;
 }
 @media #{$medium-down} {
   .containerBodyMass {
