@@ -62,7 +62,7 @@ function Profil() {
 
   return (
     <div className="containerGraph">
-      <div className="titleProfil">Bonjour &nbsp;<div className="name">{name}</div>
+      <div className="titleProfil">Bonjour &nbsp;<div className="nameProfil">{name}</div>
       </div>
       <div className="txtProfil">
         <img src={clappingTxt} alt="logo clapping du texte" />

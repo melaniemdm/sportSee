@@ -1,15 +1,21 @@
 @import "../../styles/commun.scss";
+.containerGraph{
+  margin-left:$marginLeftGraph;
+}
 .titleProfil {
-  font-weight: 500;
+    font-weight: 500;
   font-size: $fontSizeTitleProfil;
   display: flex;
   margin-top: 68px;
   margin-left:-4px;
   line-height: 24px;
-  color: $colorRed;
+  
 }
-
+.nameProfil{
+  color:$colorRed;
+}
 .txtProfil {
+  
   margin-top: 41px;
   display: flex;
   margin-bottom: 77px;
@@ -24,21 +30,16 @@ border-radius: 5px;
   margin-top: 28px;
   width: $widthgraph;
   font-size: $fontSizeContainerLittleGraph;
- margin-left:$marginLeftGraph;
- display: flex;
+  display: flex;
  justify-content:space-between;
  }
   
 .dailyActivity {
-  margin-left:$marginLeftGraph;
-  font-size: $fontSizeContainerMaxGraph;
+   font-size: $fontSizeContainerMaxGraph;
   width: $widthgraph;
   height: 321px;
   background-color: $colorGreylight;
 }
-
-
-
 
 .averageSession {
   background-color: $colorRed;
@@ -59,4 +60,12 @@ border-radius: 5px;
   right: 90px;
   top: 320px;
   height: 610px;
+}
+@media #{$medium-down} {
+  .containerBody {
+   flex-direction: row;
+     right: 00px;
+    top: 1000px;
+    height: 10px;
+  }
 }
