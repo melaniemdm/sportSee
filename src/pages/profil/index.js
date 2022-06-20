@@ -67,11 +67,17 @@ function Profil() {
       <div className="txtProfil">
         <img src={clappingTxt} alt="logo clapping du texte" />
       </div>
-      <div className="containerBigGraph">
+      <div className="containerSectionOneBigGraph">
       <div className="dailyActivity">
         <DailyActivity />
-      </div></div>
-      <div className="littleGraph">
+      </div>
+      <div className="containerBodyMass">
+        {bodyMassIndex.map((item, index) => (
+          <BodyMassIndex key={index} data={item} />
+        ))}
+      </div>
+      </div>
+      <div className="containerSectionTwoLittleGraph">
         <div className="containerLittleGraph averageSession">
           {" "}
           <AverageSession />
@@ -84,11 +90,7 @@ function Profil() {
         </div>
       </div>
 
-      <div className="containerBodyMass">
-        {bodyMassIndex.map((item, index) => (
-          <BodyMassIndex key={index} data={item} />
-        ))}
-      </div>
+      
     </div>
   );
 }

@@ -12,7 +12,7 @@ function CustomsRoutes(){
   return (
     <Router>
       <Header />
-      <main>
+      <div className="test">
       <NavBarLeft/>
       <Routes>
         <Route exact path="/" element={<Accueil />} />
@@ -20,7 +20,7 @@ function CustomsRoutes(){
         <Route exact path="/profil/:id" element={<Profil />} />
         <Route exact path="/reglage" element={<Reglage />} />
         <Route exact path="communaute" element={<Communaute />} />
-      </Routes></main>
+      </Routes></div>
      
     </Router>
   );
