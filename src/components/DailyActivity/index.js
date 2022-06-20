@@ -80,8 +80,8 @@ const activitiesArray = data.data.sessions.map(activity=> {
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip />
       <Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
-      <Bar yAxisId="right" dataKey="kilogram" fill="black" />
-      <Bar yAxisId="left" dataKey="calories" fill="red"  />
+      <Bar yAxisId="right" dataKey="kilogram" fill="black" barSize={7} />
+      <Bar yAxisId="left" dataKey="calories" fill="red" barSize={7} />
      
     </BarChart></div>
   );
