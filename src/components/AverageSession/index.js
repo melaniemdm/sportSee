@@ -43,7 +43,7 @@ useEffect(() => {
   getData();
 });
 
-  return (<div>
+  return (<div className="containerAverageSession">
   <div className="containerTitleGraphRed">Durée moyenne des sessions</div>
     <LineChart
       width={263}
@@ -52,12 +52,12 @@ useEffect(() => {
       
     >
       
-      <XAxis dataKey="name" />
+      <XAxis dataKey="name" stroke="white" />
       
       <Tooltip />
      
       
-      <Line type="monotone" dataKey="pv" stroke="black" />
+      <Line type="monotone" dataKey="pv" stroke="white" />
     </LineChart></div>
   );
 }

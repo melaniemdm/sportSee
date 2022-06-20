@@ -35,9 +35,11 @@
   font-size: $fontSizeContainerLittleGraph;
   width: 263px;
   height: 258px;
+  border-radius: 5px;
 }
 .averageSession {
   background-color: $colorRed;
+  
 }
 .intensity {
   background-color: $colorGrey;
