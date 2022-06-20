@@ -15,8 +15,9 @@ export default function Score() {
   const { data } = await axios.get(`http://localhost:3000/user/` + id);
 const scoreUser = data.data.todayScore ? data.data.todayScore : data.data.score;
 const dataScore = [
-  { name: "Group A", value: scoreUser },
-  { name: "Group B", value: 1 - scoreUser },
+  { name: "Group A", value: scoreUser,"fill": "red" },
+  { name: "Group B", value: 1 - scoreUser,"fill": "red" },
+ 
 ];
 setScore(dataScore)
 console.log(dataScore)
