@@ -1,7 +1,4 @@
 @import "../../styles/commun.scss";
-.containerGraph {
-  margin-left: 109px;
-}
 .titleProfil {
   font-weight: 500;
   font-size: $fontSizeTitleProfil;
@@ -17,26 +14,32 @@
   display: flex;
   margin-bottom: 77px;
 }
+ .containerLittleGraph {
+  width: 263px;
+  height: 258px;
+border-radius: 5px;
+
+ }
+.littleGraph{
+  margin-top: 28px;
+  width: $widthgraph;
+  font-size: $fontSizeContainerLittleGraph;
+ margin-left:$marginLeftGraph;
+ display: flex;
+ justify-content:space-between;
+ }
   
 .dailyActivity {
+  margin-left:$marginLeftGraph;
   font-size: $fontSizeContainerMaxGraph;
-  width: 835px;
+  width: $widthgraph;
   height: 321px;
   background-color: $colorGreylight;
 }
-.littleGraph {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 90px;
-  width: 849px;
-}
 
-.containerGraph {
-  font-size: $fontSizeContainerLittleGraph;
-  width: 263px;
-  height: 258px;
-  border-radius: 5px;
-}
+
+
+
 .averageSession {
   background-color: $colorRed;
   
@@ -47,6 +50,7 @@
 .score {
   background-color: $colorGreylight;
 }
+
 .containerBody {
   position: absolute;
   display: flex;
