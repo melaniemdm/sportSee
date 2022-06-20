@@ -53,19 +53,20 @@ border-radius: 5px;
 }
 
 .containerBody {
+ // outline: 1px green solid;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   right: 90px;
   top: 320px;
-  
+  height: 620px;
 }
 @media #{$medium-down} {
   .containerBody {
   
    flex-direction: row;
-     right: 00px;
+     right: 0px;
     top: 1000px;
   width:100%;
     height: auto;
