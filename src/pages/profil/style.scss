@@ -59,13 +59,18 @@ border-radius: 5px;
   justify-content: space-between;
   right: 90px;
   top: 320px;
-  height: 610px;
+  
 }
 @media #{$medium-down} {
   .containerBody {
+  
    flex-direction: row;
      right: 00px;
     top: 1000px;
-    height: 10px;
+  width:100%;
+    height: auto;
+  }
+  .containerGraph{
+    margin-left:10px;
   }
 }

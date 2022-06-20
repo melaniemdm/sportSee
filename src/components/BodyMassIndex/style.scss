@@ -16,3 +16,9 @@
     margin-left: 32px;
     margin-right: 29px;
 }
+@media #{$medium-down} {
+
+    .bodyMassIndex{
+        width:200px;
+       
+}}
