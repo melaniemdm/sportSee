@@ -83,7 +83,7 @@ function Profil() {
         </div>
       </div>
 
-      <div className="containerBody">
+      <div className="containerBodyMass">
         {bodyMassIndex.map((item, index) => (
           <BodyMassIndex key={index} data={item} />
         ))}

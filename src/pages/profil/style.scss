@@ -52,7 +52,7 @@ border-radius: 5px;
   background-color: $colorGreylight;
 }
 
-.containerBody {
+.containerBodyMass {
  // outline: 1px green solid;
   position: absolute;
   display: flex;
@@ -63,7 +63,7 @@ border-radius: 5px;
   height: 620px;
 }
 @media #{$medium-down} {
-  .containerBody {
+  .containerBodyMass {
   
    flex-direction: row;
      right: 0px;
