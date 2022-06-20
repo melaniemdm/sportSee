@@ -31,10 +31,10 @@ console.log(dataScore)
   return (
     <div> Score
     <RadialBarChart
-    width={500}
-    height={300}
+    width={263}
+    height={228}
     cx={150}
-    cy={150}
+    cy={100}
     innerRadius={20}
     outerRadius={140}
     barSize={10}

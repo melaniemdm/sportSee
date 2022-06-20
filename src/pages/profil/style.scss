@@ -1,6 +1,9 @@
 @import "../../styles/commun.scss";
-.containerGraph{
+.containerProfil{
   margin-left:$marginLeftProfilGraph;
+}
+.nameProfil{
+  color:$colorRed;
 }
 .titleProfil {
   font-weight: 500;
@@ -10,35 +13,24 @@
   margin-left:-4px;
   line-height: 24px;
   }
-.nameProfil{
-  color:$colorRed;
+.containerGraphUser{
+  display: flex;
+flex-wrap: wrap;
 }
 .txtProfil {
   margin-top: 41px;
   display: flex;
   margin-bottom: 77px;
 }
-.containerSectionOneBigGraph{
-  width: 100%;
-   display: flex;
-   flex-direction: row;
-   justify-content:space-between;
+.containerGraph{
+    display: flex;
+  flex-direction: column;
   outline: 1px green solid;
-position:relative;
-  
-}
- .containerLittleGraph {
+ }
+ .averageSession, .intensity, .score{
   width: 263px;
   height: 258px;
 border-radius: 5px;
-
- }
-.containerSectionTwoLittleGraph{
-  margin-top: -258px;
-  width: $widthgraph;
-  font-size: $fontSizeContainerLittleGraph;
-  display: flex;
- justify-content:space-between;
  }
   
 .dailyActivity {
@@ -48,7 +40,10 @@ border-radius: 5px;
   height: 321px;
   background-color: $colorGreylight;
 }
-
+.containerLittleGraphs{
+  display: flex;
+  margin-top:30px;
+}
 .averageSession {
   background-color: $colorRed;
   
@@ -69,24 +64,20 @@ border-radius: 5px;
  top: 320px;
  height: 620px;
  margin-left:30px;
-
 }
+
 @media #{$medium-down} {
-  .containerGraph{
-    margin-left:$marginLeftProfilGraphMobile;
-  }
-  .containerSectionOneBigGraph{
+ .containerProfil{
+  margin-left:30px;
+}
+.containerBodyMass {
+  outline: 1px green solid;
+  margin-top:30px;
+ flex-direction: row;
+ justify-content: space-between;
+ right: 0px;
  
-display: block;
-  }
-  .containerBodyMass {
-   height:auto;
-    margin-top: 20px;
-    margin-left:0px;
-    flex-direction: row;
-  }
-    .containerSectionTwoLittleGraph{
-      margin-top: 20px;
-    
-     }
+ height:auto;
+ margin-left:0px;
+}
 }

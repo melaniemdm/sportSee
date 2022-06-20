@@ -61,37 +61,37 @@ function Profil() {
   });
 
   return (
-    <div className="containerGraph">
+    <div className="containerProfil">
       <div className="titleProfil">Bonjour &nbsp;<div className="nameProfil">{name}</div>
       </div>
       <div className="txtProfil">
         <img src={clappingTxt} alt="logo clapping du texte" />
       </div>
-      <div className="containerSectionOneBigGraph">
+      <div className="containerGraphUser">
+      <div className="containerGraph">
       <div className="dailyActivity">
         <DailyActivity />
       </div>
+      <div className="containerLittleGraphs">
+      <div className="averageSession">
+       
+          <AverageSession />
+        </div>
+        <div className="intensity">
+          <Intensity />
+        </div>
+        <div className=" score">
+          <Score />
+        </div></div>
+      </div>
+              
+
       <div className="containerBodyMass">
         {bodyMassIndex.map((item, index) => (
           <BodyMassIndex key={index} data={item} />
         ))}
       </div>
-      </div>
-      <div className="containerSectionTwoLittleGraph">
-        <div className="containerLittleGraph averageSession">
-          {" "}
-          <AverageSession />
-        </div>
-        <div className="containerLittleGraph intensity">
-          <Intensity />
-        </div>
-        <div className="containerLittleGraph score">
-          <Score />
-        </div>
-      </div>
-
-      
-    </div>
+    </div></div>
   );
 }
 
