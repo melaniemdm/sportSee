@@ -10,11 +10,15 @@
 }
 .bodyMass{
        color: $colorBlack;
-       ;
+   font-size: 20px;
 }
 .iconeBodyMass{
     margin-left: 32px;
     margin-right: 29px;
+}
+.typeBodyMass{
+    font-size:14px;
+    
 }
 @media #{$medium-down} {
 

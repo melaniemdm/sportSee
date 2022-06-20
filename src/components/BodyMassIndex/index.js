@@ -22,8 +22,8 @@ const typeMass = props.data.type === "Calories"? "kCal" :" g";
                <div className="containerIconeBodyMass"> <img src={props.data.picture} className="iconeBodyMass" alt="icone "/></div> 
                 </div> 
                 
-                <div className="bodyMass calories">{props.data.value} {typeMass}
-                <div >{props.data.type} </div>
+                <div className="bodyMass">{props.data.value} <strong>{typeMass}</strong>
+                <div className="typeBodyMass">{props.data.type} </div>
              
 
                
