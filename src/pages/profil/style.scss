@@ -25,7 +25,8 @@ flex-wrap: wrap;
 .containerGraph{
     display: flex;
   flex-direction: column;
-  outline: 1px green solid;
+  width: $widthgraph;
+  outline: 1px yellow solid;
  }
  .averageSession, .intensity, .score{
   width: 263px;
@@ -36,12 +37,14 @@ border-radius: 5px;
 .dailyActivity {
   outline: 1px green solid;
    font-size: $fontSizeContainerMaxGraph;
-  width: 100%;
+  width: $widthgraph;
   height: 321px;
   background-color: $colorGreylight;
 }
 .containerLittleGraphs{
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top:30px;
 }
 .averageSession {
@@ -60,6 +63,7 @@ border-radius: 5px;
   display: flex;
  flex-direction: column;
  justify-content: space-between;
+ flex-wrap: wrap;
  right: 90px;
  top: 320px;
  height: 620px;
@@ -70,14 +74,20 @@ border-radius: 5px;
  .containerProfil{
   margin-left:30px;
 }
+.dailyActivity, .containerGraph {
+  width: $widthgraphMobile;
+
+}
+.score {
+margin-top: 50px;
+}
 .containerBodyMass {
   outline: 1px green solid;
   margin-top:30px;
  flex-direction: row;
  justify-content: space-between;
  right: 0px;
- 
- height:auto;
+  height:auto;
  margin-left:0px;
 }
 }

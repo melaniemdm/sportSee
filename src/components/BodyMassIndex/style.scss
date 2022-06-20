@@ -3,7 +3,6 @@
 .bodyMassIndex{
     background-color: $colorGreylight;
    width:$widthBodyMass;
-  
     height:128px;
     display: flex;
     align-items: center;
@@ -24,6 +23,6 @@
 @media #{$medium-down} {
 
     .bodyMassIndex{
-        width:200px;
+        width:220px;
        
 }}
