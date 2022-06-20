@@ -4,7 +4,7 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis
+  
 } from "recharts";
 //import {getPerformance} from '../../utils/data';
 import React, { useEffect, useState } from "react";
@@ -62,16 +62,16 @@ useEffect(() => {
 
   return (
     <RadarChart
-      cx={120}
+    outerRadius={89}
+      cx={130}
       cy={130}
-     
-      width={300}
+           width={300}
       height={250}
       data={performances}
     >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" />
-      <PolarRadiusAxis />
+      
       <Radar
         name="Mike"
         dataKey="A"
