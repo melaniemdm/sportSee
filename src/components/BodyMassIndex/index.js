@@ -14,7 +14,7 @@ import './style.scss';
  * @param props - {
  */
 function BodyMassIndex(props){
-
+const typeMass = props.data.type === "Calories"? "kCal" :" g";
     
     return (
         <div className="bodyMassIndex">
@@ -22,7 +22,8 @@ function BodyMassIndex(props){
                <div className="containerIconeBodyMass"> <img src={props.data.picture} className="iconeBodyMass" alt="icone "/></div> 
                 </div> 
                 
-                <div className="bodyMass calories">{props.data.value} {props.data.type} 
+                <div className="bodyMass calories">{props.data.value} {typeMass}
+                <div >{props.data.type} </div>
              
 
                
