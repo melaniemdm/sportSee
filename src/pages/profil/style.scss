@@ -1,4 +1,4 @@
-@import "../../styles/commun.scss";
+//@import "../../styles/commun.scss";
 // .containerProfil{
 //   margin-left:$marginLeftProfilGraph;
 // }
@@ -93,6 +93,7 @@
 // }
 // }
 
+@import "../../styles/commun.scss";
 
 .containerProfil {
   //  outline: 1px solid green;
@@ -113,4 +114,29 @@
 .txtProfil{
     margin-top:41px;
     margin-bottom:77px;
+}
+.containerLittleGraphs{
+  display: flex;
+  justify-content:space-between;
+  margin-top:30px;
+}
+.layoutLittlelGraph{
+  width: 258px;
+  height:263px;
+  border-radius: 5px;
+}
+.averageSession{
+  background-color:#FF0000
+}
+.intensity{
+  background-color:#282D30;
+}
+.score{
+  background-color: #FBFBFB;
+}
+
+@media #{$medium-down} {
+  .containerProfil {
+  margin-left: 145px;
+  }
 }

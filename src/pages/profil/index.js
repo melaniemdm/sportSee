@@ -73,14 +73,14 @@ function Profil() {
         <DailyActivity />
       </div>
       <div className="containerLittleGraphs">
-      <div className="averageSession">
+      <div className="averageSession layoutLittlelGraph">
        
-          <AverageSession />
-        </div>
-        <div className="intensity">
-          <Intensity />
-        </div>
-        <div className=" score">
+       <AverageSession />
+     </div>
+     <div className="intensity layoutLittlelGraph">
+       <Intensity />
+     </div>
+     <div className="score layoutLittlelGraph">
           <Score />
         </div></div>
       </div>
