@@ -1,19 +1,15 @@
 @import "../../styles/commun.scss";
 
 
-.logoSportSee{
-width:176px;
-margin-left:29px;
-}
-header{ 
-    //outline: 10px solid green;
-    width:100%;
-    height:72px;
-    background-color:$colorBlack;
+.containerHeader{
+    height:71px;
+    background:black;
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    justify-content:space-around;
-    padding-top:19px;
- 
-   
-}
+    padding-top:20px;
+    }
+    .logoSportSee{
+        width:176px;
+        margin-left:29px;
+    }

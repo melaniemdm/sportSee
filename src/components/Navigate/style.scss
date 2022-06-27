@@ -1,19 +1,21 @@
 @import "../../styles/commun.scss";
-.containerNav {
-  margin-left: 149px;
-  //outline:1px solid rgb(0, 83, 128);
-  width: 100%;
-}
-.navigate {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 87px;
+
+.navigate{
+  //outline: 2px solid green;
+ width:100%;
+ display: flex;
+ justify-content: space-around;
 }
 .navigate a {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 24px;
-  font-style: normal;
   text-decoration: none;
-  color: $colorWhite;
+  font-size:24px ;
+  font-weight:500;
+  color: #FFFFFF;
+}
+
+.containerNav{
+ // outline: 2px solid yellow; 
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
