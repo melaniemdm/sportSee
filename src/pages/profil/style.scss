@@ -94,7 +94,10 @@
 // }
 
 @import "../../styles/commun.scss";
-
+.containerGraphUser{
+  display:flex;
+  flex-wrap: wrap;
+  }
 .containerProfil {
   //  outline: 1px solid green;
   position: absolute;
