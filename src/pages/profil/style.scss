@@ -138,6 +138,9 @@
   background-color: #FBFBFB;
 }.containerBodyMass{
   outline: 2px solid green;
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
  margin-left: 24px;
 }
 @media #{$medium-down} {
@@ -146,8 +149,7 @@
   }
   .containerBodyMass{
     outline: 2px solid green;
-   display:flex;
-    justify-content:space-between;
+   
     margin-left:0;
   }
 }
