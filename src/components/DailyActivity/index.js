@@ -29,27 +29,7 @@ const getBarShape = (x, y, width, height, radius) => {
   );
 };
 
-/**
- * It takes the data from the API and maps it into an array of objects.
- * </code>
- * 
- * 
- * A:
- * 
- * You can use <code>useEffect</code> to fetch the data and set it to the state.
- * <code>import React, { useState, useEffect } from "react";
- * import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
- * import axios from "axios";
- * 
- * export default function DailyActivity() {
- *   const [activities, setActivities] = useState([]);
- *   const { id } = useParams();
- * 
- *   useEffect(() =&gt; {
- *     const getData = async () =&gt; {
- *       const { data } = await axios.get(`http://localhost:3000/user/` + id + `/activity`);
- * @returns The data from the API is being returned.
- */
+
 export default function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
