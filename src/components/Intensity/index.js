@@ -40,7 +40,7 @@ useEffect(() => {
   getPerformance(id, setPerformance);
   // eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
-
+if(performances.length === 0) return null;
   return (
     <RadarChart
     outerRadius={75}
