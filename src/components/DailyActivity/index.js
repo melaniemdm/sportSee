@@ -63,7 +63,19 @@ export default function DailyActivity() {
       <XAxis dataKey="number" />
       <YAxis yAxisId="left" stroke="white" />
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
-      <Tooltip />
+      <Tooltip
+            contentStyle={{margin:'0', padding:'0' }}
+           viewBox={{ x: 0, y: 0, width: 400, height: 400} }
+            itemStyle={{ backgroundColor: "red", color:"white" }}
+            formatter={function(value) {
+              return `${value}`;
+            }}
+            labelFormatter={function(value) {
+              return ``;
+            }}
+          
+          />
+
       <Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
       <Bar yAxisId="left" name = "Poids (kg)" dataKey="calories" fill="black" barSize={7} shape={({ x, y, width, height, value, background }) => {
         const Bar = getBarShape(x, y, width, height, [4, 4, 0, 0]);
