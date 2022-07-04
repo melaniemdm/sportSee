@@ -29,7 +29,19 @@ const getBarShape = (x, y, width, height, radius) => {
   );
 };
 
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip">
+        <p className="label">{`${payload[1].value}kg`}</p>
+        <p className="label">{`${payload[0].value}Kcal`}</p>
+        
+      </div>
+    );
+  }
 
+  return null;
+};
 export default function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
@@ -64,17 +76,8 @@ export default function DailyActivity() {
       <YAxis yAxisId="left" stroke="white" />
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip
-            contentStyle={{margin:'0', padding:'0' }}
-           viewBox={{ x: 0, y: 0, width: 400, height: 400} }
-            itemStyle={{ backgroundColor: "red", color:"white" }}
-            formatter={function(value) {
-              return `${value}`;
-            }}
-            labelFormatter={function(value) {
-              return ``;
-            }}
-          
-          />
+      content={<CustomTooltip />}
+                  />
 
       <Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
       <Bar yAxisId="left" name = "Poids (kg)" dataKey="calories" fill="black" barSize={7} shape={({ x, y, width, height, value, background }) => {
