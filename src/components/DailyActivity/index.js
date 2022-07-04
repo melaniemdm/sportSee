@@ -60,7 +60,7 @@ export default function DailyActivity() {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
+      <XAxis dataKey="number" />
       <YAxis yAxisId="left" stroke="white" />
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip />

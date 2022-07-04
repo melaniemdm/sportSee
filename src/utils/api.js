@@ -27,6 +27,7 @@ export const getDailyActivity = async (id, setDailyActivity) => {
   const activitiesArray = data.data.sessions.map((activity) => {
     return {
       name: activity.day,
+      number:activity.day.split('-')[2],
       kilogram: activity.kilogram,
       calories: activity.calories,
     };
