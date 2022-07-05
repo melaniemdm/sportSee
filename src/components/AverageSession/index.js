@@ -57,7 +57,7 @@ useEffect(() => {
       <Tooltip content={<CustomTooltip />}/>
      
       
-      <Line type="monotone" dataKey="pv" name="min"   stroke="white" fill="transparent" />
+      <Line type="monotone" dataKey="pv" name="min"   stroke="white" fill="transparent" dot="false"/>
     </LineChart></div>
   );
 }
