@@ -22,24 +22,33 @@ export default function Score() {
   }, []);
 
   return (
-    <div> Score
-    <RadialBarChart
+    <div> <div className="titleScore">Score</div>
+    
+         <RadialBarChart
     width={263}
     height={228}
-    cx={150}
-    cy={100}
-    innerRadius={100}
-   barSize={10}
+    cx={135}
+    cy={89}
+    innerRadius="50%"
+  
      data={score}
   >
-    <RadialBar
-      minAngle={15}
-      label={{ position: "center", fill: "blue" }}
+
+    <RadialBar className="graphScore"
+      label={{ position: "center", fill: "black" }}
       background
       clockWise
-            dataKey="value"
+      dataKey="value"
     />
-   
+    <text className="graphScore" x={155} y={90} dy={8} fill={"black"}>
+    % 
+      </text>
+      <text className="txtObjectif" x={120} y={110} dy={8} fill={"black"}>
+    de votre 
+      </text> 
+      <text className="txtObjectif" x={120} y={130} dy={8} fill={"black"}>
+     objectif
+      </text>   
   </RadialBarChart></div>
   );
 }
