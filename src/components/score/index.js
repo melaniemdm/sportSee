@@ -28,17 +28,16 @@ export default function Score() {
     height={228}
     cx={150}
     cy={100}
-    innerRadius={20}
-    outerRadius={140}
-    barSize={10}
-    data={score}
+    innerRadius={100}
+   barSize={10}
+     data={score}
   >
     <RadialBar
       minAngle={15}
-      label={{ position: "insideStart", fill: "#fff" }}
+      label={{ position: "center", fill: "blue" }}
       background
       clockWise
-      dataKey="value"
+            dataKey="value"
     />
    
   </RadialBarChart></div>
