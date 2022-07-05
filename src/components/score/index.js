@@ -22,7 +22,7 @@ export default function Score() {
   }, []);
 
   return (
-    <div> <div className="titleScore">Score</div>
+    <div className="layout"> <div className="titleScore">Score</div>
     
          <RadialBarChart
     width={263}
