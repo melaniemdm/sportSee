@@ -32,7 +32,7 @@ const getBarShape = (x, y, width, height, radius) => {
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip">
+      <div className="custom-tooltipDailyActivity">
         <p className="label">{`${payload[1].value}kg`}</p>
         <p className="label">{`${payload[0].value}Kcal`}</p>
         

@@ -1,3 +1,5 @@
+@import '../../styles/commun.scss';
+
 .containerDailyActivity{
     background-color: rgba(251, 251, 251, 1);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
@@ -21,8 +23,9 @@
     
     }
 
-    .custom-tooltip{
-        background-color:red;color:white;
+    .custom-tooltipDailyActivity{
+        background-color:$colorRed;
+        color:white;
         width:39px;
         height:63px;
         font-size:7px;

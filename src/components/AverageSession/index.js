@@ -10,6 +10,21 @@ import {getAverageSessions} from '../../utils/api';
 import { useParams } from 'react-router-dom';
 
 
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltipAverage">
+       
+        <p className="label">{`${payload[0].value} min`}</p>
+        
+      </div>
+    );
+  }
+
+  return null;
+};
+
 /**
  * A function that returns a component that displays a graph
  * @returns An array of objects.
@@ -39,7 +54,7 @@ useEffect(() => {
       
       <XAxis dataKey="name" stroke="white" />
       
-      <Tooltip />
+      <Tooltip content={<CustomTooltip />}/>
      
       
       <Line type="monotone" dataKey="pv" name="min"   stroke="black" />
