@@ -39,6 +39,7 @@ export default function Score() {
       background
       clockWise
       dataKey="value"
+      cornerRadius={30 / 2}
     />
     <text className="graphScore" x={155} y={90} dy={8} fill={"black"}>
     % 
