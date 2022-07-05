@@ -18,6 +18,9 @@ function CustomsRoutes(){
         <Route exact path="/" element={<Accueil />} />
         <Route exact path="/accueil" element={<Accueil />} />
         <Route exact path="/profil/:id" element={<Profil />} />
+        <Route exact path="/profil/:id/activities" element={<Profil />} />
+        <Route exact path="/profil/:id/today-score" element={<Profil />} />
+        <Route exact path="/profil/:id/key-data" element={<Profil />} />
         <Route exact path="/reglage" element={<Reglage />} />
         <Route exact path="communaute" element={<Communaute />} />
       </Routes></div>
