@@ -28,9 +28,9 @@ export default function Score() {
     width={263}
     height={228}
     cx={135}
-    cy={89}
-    innerRadius="50%"
-  
+    cy={125}
+    innerRadius="75%"
+    outerRadius="100%"
      data={score}
   >
 
@@ -41,13 +41,13 @@ export default function Score() {
       dataKey="value"
       cornerRadius={30 / 2}
     />
-    <text className="graphScore" x={155} y={90} dy={8} fill={"black"}>
+    <text className="graphScore" x={155} y={125} dy={8} fill={"black"}>
     % 
       </text>
-      <text className="txtObjectif" x={120} y={110} dy={8} fill={"black"}>
+      <text className="txtObjectif" x={115} y={150} dy={8} fill={"rgba(116, 121, 140, 1)"}>
     de votre 
       </text> 
-      <text className="txtObjectif" x={120} y={130} dy={8} fill={"black"}>
+      <text className="txtObjectif" x={115} y={170} dy={8} fill={"rgba(116, 121, 140, 1)"}>
      objectif
       </text>   
   </RadialBarChart></div>
