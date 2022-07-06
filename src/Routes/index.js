@@ -2,6 +2,7 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Accueil from '../pages/Accueil';
 import Profil from '../pages/Profil';
 import Reglage from '../pages/Reglage';
+import Error from '../pages/Error';
 import Communaute from '../pages/Communaute';
 import Header from '../layout/Header';
 import NavBarLeft from '../layout/NavBarLeft';
@@ -23,6 +24,7 @@ function CustomsRoutes(){
         <Route exact path="/profil/:id/key-data" element={<Profil />} />
         <Route exact path="/reglage" element={<Reglage />} />
         <Route exact path="communaute" element={<Communaute />} />
+        <Route path="*" element={<Error />} />
       </Routes></div>
      
     </Router>
