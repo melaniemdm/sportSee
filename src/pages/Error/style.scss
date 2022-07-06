@@ -1,23 +1,23 @@
-@import '../../styles/commun.scss';
+@import "../../styles/commun.scss";
 
-.containerError{
-    width:100%;
-    outline: 2px solid green;
-    display: flex;
-    flex-direction: column;
-     text-align: center;
+.containerError {
+  width: 100%;
+  outline: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.codeError{
-font-size:70px;
-font-weight:bold;
-color:$colorRed;
-margin-top:90px;
-margin-bottom:50px;
+.codeError {
+  font-size: 70px;
+  font-weight: bold;
+  color: $colorRed;
+  margin-top: 90px;
+  margin-bottom: 50px;
 }
-.messageError{
-    font-size:15px;
-    font-weight:bold;
-color:$colorRed;
-margin-bottom: 50px;
+.messageError {
+  font-size: 15px;
+  font-weight: bold;
+  color: $colorRed;
+  margin-bottom: 50px;
 }
