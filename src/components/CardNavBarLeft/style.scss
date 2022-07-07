@@ -1,13 +1,7 @@
 @import "../../styles/commun.scss";
 .containerIcones{
-  // outline: 2px solid yellow ;
-  display: flex;
-  justify-content:center;
-  
-}
-.layoutIcone nav{
- //  outline: 2px solid green;
-   background-color:white;
+ // outline: 2px solid rgb(8, 0, 255) ;
+ background-color:white;
    width:64px;
    height:64px;
    border-radius: 6px;
@@ -15,4 +9,4 @@
    align-items:center;
    justify-content:center;
    margin-bottom:20px;
-}
+ }

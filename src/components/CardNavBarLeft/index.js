@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 function CardNavBarLeft(props) {
   return (
     <div className="containerIcones">
-      <div className="layoutIcone">
+      
         <nav className="navLeft">
         <Link to="" className="">
-          <img src={props.data.picture} alt="Icone de navigation left" className="containerIconeNavBarLeft" />
+          <img src={props.data.picture} alt="Icone de navigation left" className="cardNavBarLeft" />
         </Link></nav>
-      </div>
-     
+    
 
     </div>
   );

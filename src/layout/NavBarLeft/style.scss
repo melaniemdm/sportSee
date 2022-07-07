@@ -1,19 +1,29 @@
 @import "../../styles/commun.scss";
 .containerNavBarLeft{
+  outline: 2px solid yellow; 
+  position: absolute;
+    height:100%;
+    width:117px;
+
+  color: white;
   background-color: black;
-  width:117px;
-  height:1024px;
+ 
   display:flex;
   flex-direction: column;
  justify-content:space-around;
  align-items: center;
+
 }
 .textNavBarLeft{
- // outline: 2px solid yellow; 
-  color: white;
+outline: 2px solid yellow; 
+color: white;
   writing-mode: vertical-lr;
 text-orientation: use-glyph-orientation;
 transform: rotate(180deg);
 display: inline-block;
-
+height: 160px;
+width: 24px;
+font-weight: 500;
+font-size: 12px;
+line-height: 24px;
 }
