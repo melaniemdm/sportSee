@@ -60,8 +60,8 @@ export default function DailyActivity() {
   <div className="containerTitleDailyActivity">
     <div className="titleDailyActivity">Activité quotidienne</div></div>
     <BarChart
-      width={800}
-      height={300}
+      width={window.innerWidth/2}
+      height={window.innerHeight/5}
       data={activities}
       margin={{
         top: 20,

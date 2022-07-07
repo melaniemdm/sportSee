@@ -32,16 +32,9 @@
 }
 .layoutLittlelGraph{
  //   outline:1px solid yellow;
-  width: 258px;
-  height:263px;
-  border-radius: 5px;
+   border-radius: 5px;
 }
-.averageSession{
-  background-color:#FF0000
-}
-.intensity{
-  background-color:#282D30;
-}
+
 .score{
 background-color: #FBFBFB;
 }
@@ -67,9 +60,8 @@ background-color: #FBFBFB;
    font-size: 28px;
 }
   .layoutLittlelGraph{
-   // outline:5px solid yellow;
-     width: 250px;
-     height:auto;
+   outline:5px solid yellow;
+  
      
    }
 }

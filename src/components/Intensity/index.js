@@ -46,9 +46,10 @@ if(performances.length === 0) return null;
     outerRadius={75}
       cx={125}
       cy={130}
-           width={300}
+           width={window.innerWidth/5}
       height={250}
       data={performances}
+      className="intensity"
     >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" stroke="white" tick={{fontSize: 12}}/>

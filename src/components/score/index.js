@@ -25,7 +25,7 @@ export default function Score() {
     <div className="layout"> <div className="titleScore">Score</div>
     
          <RadialBarChart
-    width={263}
+    width={window.innerWidth/5}
     height={228}
     cx={135}
     cy={125}
