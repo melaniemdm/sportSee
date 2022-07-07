@@ -32,6 +32,7 @@ export default function Score() {
     innerRadius="75%"
     outerRadius="100%"
      data={score}
+     className="score"
   >
 
     <RadialBar className="graphScore"
