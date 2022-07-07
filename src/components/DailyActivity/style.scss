@@ -33,3 +33,10 @@
         text-align:center;
         align-items:center;
     }
+
+
+    @media #{$large-down} {
+        .containerDailyActivity{
+            width:770px;
+        }
+    }
