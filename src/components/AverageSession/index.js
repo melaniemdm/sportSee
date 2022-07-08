@@ -50,6 +50,13 @@ useEffect(() => {
       height={window.innerWidth/3.96}
        data={averageSessions}
        className="averageSession"
+       margin={{
+        top: 20,
+        right: 30,
+        left: 20,
+        bottom: 5,
+        
+      }}
     >
       
       <XAxis dataKey="name" stroke="white" />

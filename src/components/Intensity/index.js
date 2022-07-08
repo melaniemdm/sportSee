@@ -43,13 +43,17 @@ useEffect(() => {
 if(performances.length === 0) return null;
   return (
     <RadarChart
-    outerRadius={75}
-      cx={125}
-      cy={130}
-      width={window.innerWidth/5.47}
+       width={window.innerWidth/5.47}
       height={window.innerWidth/3.96}
       data={performances}
       className="intensity"
+      margin={{
+        top: 5,
+        right: 5,
+        left: 5,
+        bottom: 5,
+        
+      }}
     >
       <PolarGrid />
       <PolarAngleAxis dataKey="subject" stroke="white" tick={{fontSize: 12}}/>

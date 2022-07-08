@@ -1,21 +1,38 @@
+@import "../../styles/commun.scss";
 .score{
     text-align: center;
     background-color: #FBFBFB;
     border-radius: 5px;
+    
 }
 .titleScore{
-    position: relative;
+  z-index: 100;
     width: 50px;
     top: 24px;
     left: 30px;
     font-size:15px;
     font-weight: 500;
 }
+
+.containerTxtScore{
+    position: absolute;  
+    width: 100px;  
+margin-top:-120px;
+margin-left:60px;
+   }
+   .pourcentScore{
+       position: absolute;
+       margin-top:-148px;
+       margin-left:15px;
+   }
 .txtObjectif{
     font-weight: 700;
 }
-
 .graphScore{
+    font-size:26px;
+    font-weight: 700;}
+
+.pourcentScore{
     font-size:26px;
     font-weight: 700;
 }

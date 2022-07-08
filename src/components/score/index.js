@@ -27,12 +27,17 @@ export default function Score() {
          <RadialBarChart
     width={window.innerWidth/5.47}
     height={window.innerWidth/3.96}
-    cx={135}
-    cy={125}
     innerRadius="75%"
     outerRadius="100%"
      data={score}
      className="score"
+     margin={{
+      top: 5,
+      right: 5,
+      left: 5,
+      bottom: 5,
+      
+    }}
   >
 
     <RadialBar className="graphScore"
@@ -42,15 +47,20 @@ export default function Score() {
       dataKey="value"
       cornerRadius={30 / 2}
     />
-    <text className="graphScore" x={155} y={125} dy={8} fill={"black"}>
+     
+  </RadialBarChart>
+  <text className="pourcentScore"  fill={"black"}>
     % 
       </text>
-      <text className="txtObjectif" x={115} y={150} dy={8} fill={"rgba(116, 121, 140, 1)"}>
-    de votre 
+  <div className="containerTxtScore">
+  
+      <text className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
+    de votre <br></br>
       </text> 
-      <text className="txtObjectif" x={115} y={170} dy={8} fill={"rgba(116, 121, 140, 1)"}>
-     objectif
-      </text>   
-  </RadialBarChart></div>
+      <text className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
+      objectif
+      </text>  </div>
+  
+  </div>
   );
 }
