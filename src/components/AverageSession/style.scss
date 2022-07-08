@@ -1,27 +1,16 @@
 @import "../../styles/commun.scss";
-.containerAverageSession{
+.averageSession{
    background: #FF0000;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
 border-radius: 5px;
-width:100% ;
-height:auto;
 font-size: 12px;
-//opacity: 0.6;
 }
-.containerTitleGraphRed{
+.containerTitleGraphAverageSession{
+   z-index: 100;
+   width: 147px;
     font-size: 15px;
     color: #FFFFFF;
-    //opacity: 0.5;
-    width:147px;
-    height:48px;
     position: absolute;
-   margin-top:29px;
+   margin-top:15px;
    margin-left:34px;
 }
-.custom-tooltipAverage{
-background-color: white;
-width: 39px;
-height:25px;
-font-size:8px;
-display: flex;justify-content: center;
-text-align: center;}

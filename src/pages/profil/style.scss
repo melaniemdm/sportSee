@@ -1,14 +1,12 @@
 @import "../../styles/commun.scss";
 
 .containerProfil {
-   //outline: 1px solid green;
   position: absolute;
   margin-left: 225px;
   top: 159px;
 }
 
 .titleProfil {
- //outline: 1px solid rgb(167, 167, 21);
   font-size: 48px;
   font-weight: 500;
   display: flex;
@@ -16,13 +14,11 @@
 .nameProfil {
   color: red;
 }
-
 .txtProfil{
     margin-top:41px;
     margin-bottom:77px;
 }
 .containerGraphUser{
- // outline: 1px solid rgb(167, 167, 21);
   display:flex;
    }
 .containerLittleGraphs{
@@ -30,13 +26,9 @@
   justify-content:space-between;
   margin-top:30px;
 }
-.layoutLittlelGraph{
-   border-radius: 5px;
-}
 
 .containerBodyMass{
-  //   outline: 2px solid green;
-  display:flex;
+   display:flex;
   flex-direction: column;
   justify-content:space-between;
  margin-left: 24px;
@@ -51,12 +43,7 @@
     margin-bottom:3px;
 }
 .titleProfil {
-  //outline: 1px solid rgb(167, 167, 21);
-   font-size: 28px;
+    font-size: 28px;
 }
-  .layoutLittlelGraph{
-   outline:5px solid yellow;
-  
-     
-   }
+
 }

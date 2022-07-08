@@ -1,9 +1,9 @@
 .score{
     text-align: center;
     background-color: #FBFBFB;
+    border-radius: 5px;
 }
 .titleScore{
-   // outline:1px solid blue;
     position: relative;
     width: 50px;
     top: 24px;
@@ -13,15 +13,9 @@
 }
 .txtObjectif{
     font-weight: 700;
-
 }
 
 .graphScore{
     font-size:26px;
     font-weight: 700;
-}
-.layoutScore{
-  //  outline:1px solid green;
-   width: 258px;
-  height:263px;
 }

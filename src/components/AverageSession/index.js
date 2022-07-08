@@ -44,13 +44,12 @@ useEffect(() => {
 }, []);
 
   return (<div className="containerAverageSession">
-  <div className="containerTitleGraphRed">Durée moyenne des sessions</div>
+  <div className="containerTitleGraphAverageSession">Durée moyenne des sessions</div>
     <LineChart
-     width={window.innerWidth/5}
-      height={253}
-      fill="yellow"
-      data={averageSessions}
-      
+     width={window.innerWidth/5.47}
+      height={window.innerWidth/3.96}
+       data={averageSessions}
+       className="averageSession"
     >
       
       <XAxis dataKey="name" stroke="white" />

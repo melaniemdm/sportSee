@@ -46,8 +46,8 @@ if(performances.length === 0) return null;
     outerRadius={75}
       cx={125}
       cy={130}
-           width={window.innerWidth/5}
-      height={250}
+      width={window.innerWidth/5.47}
+      height={window.innerWidth/3.96}
       data={performances}
       className="intensity"
     >

@@ -1,6 +1,5 @@
 @import "../../styles/commun.scss";
 .layoutcardBodyMass{
-    //outline:2px solid green;
     display: flex;
     align-items: center;
     width:258px;
@@ -22,7 +21,7 @@ margin-right:24px;
 @media #{$large-down} {
     .layoutcardBodyMass{
         margin-right: 3px;
-        width:207px;
-        height:108px;
+        width:auto;
+       padding-right:15px;
     }
     }

@@ -12,13 +12,10 @@
     }
     
     .titleDailyActivity{
-       //outline:2px solid green;
         position: relative;
         top: 24px;
         left: 32px;
-     
-    
-    }
+        }
 
     .custom-tooltipDailyActivity{
         background-color:$colorRed;
@@ -29,11 +26,4 @@
         margin-top:4px;
         text-align:center;
         align-items:center;
-    }
-
-
-    @media #{$large-down} {
-        .containerDailyActivity{
-            outline:2px solid green;
-        }
     }
