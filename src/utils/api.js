@@ -55,7 +55,7 @@ export const getDataScore = async (id, setScore) => {
   const scoreUser = data.data.todayScore ? data.data.todayScore : data.data.score;
   const dataScore = [
     { name: "Group B", value: (1 - scoreUser)*100,"fill": "white", "stroke":"white", "fontSize":"0"},
-    { name: scoreUser*100+"%", value: scoreUser*100,"fill": "red" },
+    { name: scoreUser*100, value: scoreUser*100,"fill": "red" },
     
    
   ];

@@ -22,7 +22,7 @@ export default function Score() {
   }, []);
 
   return (
-    <div className="layout"> 
+    <div className="containerScore"> 
     <div className="titleScore">Score</div>
     
          <RadialBarChart
@@ -33,7 +33,7 @@ export default function Score() {
      data={score}
      className="score"
      margin={{
-      top: 0,
+      top: 15,
       right: 5,
       left: 5,
       bottom: 0,
@@ -50,17 +50,18 @@ export default function Score() {
     />
      
   </RadialBarChart>
-  <text className="pourcentScore"  fill={"black"}>
+  <div className="containerTextScore">
+  <div className="pourcentScore"  fill={"black"}>
     % 
-      </text>
-  <div className="containerTxtScore">
+      </div>
+  <div className="containerTextitle">
   
-      <text className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
+      <div className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
     de votre <br></br>
-      </text> 
-      <text className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
+      </div> 
+      <div className="txtObjectif"  fill={"rgba(116, 121, 140, 1)"}>
       objectif
-      </text>  </div>
+      </div>  </div></div>
   
   </div>
   );
