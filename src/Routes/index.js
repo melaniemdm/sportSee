@@ -15,7 +15,7 @@ import "./style.scss";
  * and an Error component.
  * @returns A React Router DOM Router component.
  */
-function CustomsRoutes(){
+ export default function CustomsRoutes(){
   return (
     <Router>
       <Header />
@@ -35,6 +35,4 @@ function CustomsRoutes(){
      
     </Router>
   );
-}
-
-export default CustomsRoutes;
+};

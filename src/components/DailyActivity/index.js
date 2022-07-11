@@ -66,15 +66,12 @@ const CustomTooltip = ({ active, payload, label }) => {
 export default function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
-
- 
  
 /* A hook that is called when the component is mounted. */
   useEffect(() => {
     getDailyActivity(id, setDailyActivity);
      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
 
   return (<div className="containerDailyActivity"> 
   <div className="containerTitleDailyActivity">

@@ -2,7 +2,7 @@ import './style.scss'
 import {Link} from 'react-router-dom';
 
 
-function Navigate(){
+export default function Navigate(){
     return(
         <div className="containerNav">
 <nav className="navigate">
@@ -13,5 +13,4 @@ function Navigate(){
     </nav>
         </div>
     )
-}
-export default Navigate;
+};

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
  * @param props - {
  * @returns The CardNavBarLeft component is being returned.
  */
-function CardNavBarLeft(props) {
+ export default function CardNavBarLeft(props) {
   return (
     <div className="containerIcones">
       
@@ -19,5 +19,5 @@ function CardNavBarLeft(props) {
 
     </div>
   );
-}
-export default CardNavBarLeft;
+};
+

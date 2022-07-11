@@ -14,7 +14,7 @@ import React, { useEffect, useState } from "react";
  * there's an img with a src of the data.picture.
  * @returns The component is being returned.
  */
-function NavBarLeft() {
+ export default function NavBarLeft() {
   const [navBarLeft, setIconeNavBarLeft] = useState([]);
 
 /**
@@ -56,5 +56,5 @@ useEffect(() => {
       </div>
    </div>
   );
-}
-export default NavBarLeft;
+};
+

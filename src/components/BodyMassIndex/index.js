@@ -14,7 +14,7 @@ import './style.scss';
  * @param props - {
  * @returns a JSX element.
  */
-function BodyMassIndex(props){
+ export default function BodyMassIndex(props){
 const typeMass = props.data.type === "Calories"? "kCal" :" g";
     
     return (
@@ -32,5 +32,4 @@ const typeMass = props.data.type === "Calories"? "kCal" :" g";
             </div></div>
         </div>
     )
-}
-export default BodyMassIndex;
+};

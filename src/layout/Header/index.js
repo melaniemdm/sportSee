@@ -8,7 +8,7 @@ import Navigate from '../../components/Navigate';
  * @returns A header with a logo and a Navigate component.
  */
 
-function Header(){
+ export default function Header(){
     return(
         <header className="containerHeader">
             <div className="logoImg">
@@ -16,5 +16,4 @@ function Header(){
 <Navigate/>
         </header>
     )
-}
-export default Header
+};

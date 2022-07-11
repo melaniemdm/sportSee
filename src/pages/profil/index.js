@@ -17,7 +17,7 @@ import { useParams } from "react-router-dom";
  * his score. It also displays a graph of his body mass index.
  * @returns The return is the component Profil.
  */
-function Profil() {
+ export default function Profil() {
   const { id } = useParams();
   const [name, setFirstName] = useState([]);
   const [bodyMassIndex, setBMI] = useState([]);
@@ -63,6 +63,6 @@ function Profil() {
       </div>
     </div></div>
   );
-}
+};
 
-export default Profil;
+
