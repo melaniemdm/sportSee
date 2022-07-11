@@ -8,7 +8,13 @@ import Header from '../layout/Header';
 import NavBarLeft from '../layout/NavBarLeft';
 import "./style.scss";
 
-/* A function that returns a Router component. */
+
+/**
+ * CustomsRoutes() is a function that returns a Router component that contains a Header component, a
+ * NavBarLeft component, a Routes component that contains a Route component for each page of the app,
+ * and an Error component.
+ * @returns A React Router DOM Router component.
+ */
 function CustomsRoutes(){
   return (
     <Router>

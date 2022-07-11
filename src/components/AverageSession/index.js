@@ -25,19 +25,39 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
+
 /**
- * A function that returns a component that displays a graph
- * @returns An array of objects.
+ * It's a function that returns a line chart.
+ * </code>
+ * 
+ * 
+ * A:
+ * 
+ * You can use <code>window.innerWidth</code> and <code>window.innerHeight</code> to get the width and
+ * height of the window.
+ * <code>&lt;LineChart
+ *   width={window.innerWidth}
+ *   height={window.innerHeight}
+ *   data={data}
+ *   margin={{
+ *     top: 5, right: 30, left: 20, bottom: 5,
+ *   }}
+ * &gt;
+ *   &lt;CartesianGrid strokeDasharray="3 3" /&gt;
+ *   &lt;XAxis dataKey="name" /&gt;
+ *   &lt;YAxis /&gt;
+ *   &lt;Tooltip /&gt;
+ *   &lt;Legend /&gt;
+ *   &lt;Line type="monotone" dataKey
+ * @returns A line chart with a tooltip.
  */
 export default function AverageSession() {
   const {id} = useParams();
 const [averageSessions,setAverageSessions]= useState([]);
 
  
-/* A hook that is called when the component is mounted. It is an asynchronous function that makes
-an API call to the server and then sets the state of the component with the data returned by the API
 
-call. */
+/* A hook that is called after the first render. It is used to fetch data from an API. */
 useEffect(() => {
   getAverageSessions(id, setAverageSessions);
   // eslint-disable-next-line react-hooks/exhaustive-deps

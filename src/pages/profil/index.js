@@ -10,18 +10,20 @@ import {getFirstName} from '../../utils/api';
 import {getBMI} from '../../utils/api';
 import { useParams } from "react-router-dom";
 
+
 /**
- * I'm using axios to get data from my backend, then I'm setting the state of my component with the
- * data I got from my backend.
- * </code>
- * @returns A React component.
+ * The function Profil() is called when the user is on the profil page. It displays the user's name, a
+ * graph of his daily activity, a graph of his average session, a graph of his intensity and a graph of
+ * his score. It also displays a graph of his body mass index.
+ * @returns The return is the component Profil.
  */
 function Profil() {
   const { id } = useParams();
   const [name, setFirstName] = useState([]);
   const [bodyMassIndex, setBMI] = useState([]);
   
-  /* It's a hook that is called when the component is mounted. */
+ 
+/* A hook that is called when the component is mounted. It is used to fetch data from an API. */
   useEffect(() => {
     getFirstName(id, setFirstName);
     getBMI(id, setBMI); 

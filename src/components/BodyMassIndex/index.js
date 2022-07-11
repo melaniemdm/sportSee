@@ -1,17 +1,18 @@
 
 import './style.scss';
-// import {getUser} from '../../utils/data';
 
 
 /**
- * It's a function that returns a div with a class name of bodyMassIndex. Inside that div, there's
- * another div with a class name of containerIconeBodyMass. Inside that div, there's another div with a
- * class name of containerIconeBodyMass. Inside that div, there's an image with a source of
- * props.data.picture, a class name of iconeBodyMass, and an alt of icone.
- * 
- * After that, there's another div with a class name of bodyMass calories. Inside that div, there's a
- * value of props.data.value and a type of props.data.type.
+ * It takes in a prop called data, and returns a div with a className of containerBodyMassIndex. Inside
+ * that div, there's another div with a className of layoutcardBodyMass. Inside that div, there's
+ * another div with a className of containerIconeBodyMass. Inside that div, there's another div with a
+ * className of containerIconeBodyMass. Inside that div, there's an img tag with a src of
+ * props.data.picture, a className of iconeBodyMass, and an alt of icone. Inside the layoutcardBodyMass
+ * div, there's another div with a className of bodyMass. Inside that div, there's a text node with the
+ * value of props.data.value, a text node with the value of typeMass, and another div with a className
+ * of typeBodyMass. Inside that div, there's a text node with the value of props.data.type.
  * @param props - {
+ * @returns a JSX element.
  */
 function BodyMassIndex(props){
 const typeMass = props.data.type === "Calories"? "kCal" :" g";

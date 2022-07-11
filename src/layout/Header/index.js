@@ -4,9 +4,10 @@ import Navigate from '../../components/Navigate';
 
 
 /**
- * It returns a header element with a logo and a Navigate component.
- * @returns The Header component is being returned.
+ * It returns a header with a logo and a Navigate component.
+ * @returns A header with a logo and a Navigate component.
  */
+
 function Header(){
     return(
         <header className="containerHeader">

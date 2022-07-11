@@ -1,5 +1,9 @@
 import './style.scss';
 
+/**
+ * It returns a div with the class name containerError.
+ * @returns A div with a className of containerError.
+ */
 function Error(){
     return(
         <div className="containerError">

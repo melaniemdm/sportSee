@@ -10,24 +10,9 @@ import {getPerformance} from '../../utils/api';
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
+
 /**
- * It takes the data from the API and maps it to an array of objects.
- * </code>
- * 
- * 
- * A:
- * 
- * You can use <code>useMemo</code> to memoize the data.
- * <code>const performancesArray = useMemo(() =&gt; {
- *   return data.data.data.map(performance =&gt; {
- *     return {
- *       subject: data.data.kind[performance.kind],
- *       A: performance.value,
- *       fullMark: 150
- *     };
- *   });
- * }, [data]);
- * </code>
+ * It's a radar chart that displays the performance of a student in different subjects
  * @returns An array of objects.
  */
 export default function Intensity() {
@@ -35,7 +20,8 @@ const [performances,setPerformance] = useState([]);
 const {id} = useParams();
 
 
-/* A hook that is called when the component is mounted. */
+
+/* A hook that is called when the component is mounted. It is used to fetch data from an API. */
 useEffect(() => {
   getPerformance(id, setPerformance);
   // eslint-disable-next-line react-hooks/exhaustive-deps

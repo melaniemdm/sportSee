@@ -13,6 +13,16 @@ import {getDailyActivity} from '../../utils/api';
 import { useParams } from 'react-router-dom';
 
 
+/**
+ * It takes a rectangle's x, y, width, height, and radius, and returns a function that takes a fill,
+ * fillOpacity, and stroke, and returns a path element
+ * @param x - The x-coordinate of the top-left corner of the rectangle.
+ * @param y - y-coordinate of the top-left corner of the bar
+ * @param width - The width of the bar
+ * @param height - The height of the bar.
+ * @param radius - [top-left, top-right, bottom-right, bottom-left]
+ * @returns A function that returns a path element.
+ */
 const getBarShape = (x, y, width, height, radius) => {
   const [tl, tr, bl, br] = radius;
   const d = `M${x},${y + tl}
@@ -29,6 +39,10 @@ const getBarShape = (x, y, width, height, radius) => {
   );
 };
 
+/**
+ * If the tooltip is active and there is a payload, then return a div with the value of the payload.
+ * @returns The return is a function that returns a component.
+ */
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
@@ -42,14 +56,20 @@ const CustomTooltip = ({ active, payload, label }) => {
 
   return null;
 };
+
+
+
+/**
+ * It's a function that returns a bar chart.
+ * @returns A React component.
+ */
 export default function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
 
  
- /* A hook that is used for performing side effects in function components. It serves the same purpose
- as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified
- into a single API. */
+ 
+/* A hook that is called when the component is mounted. */
   useEffect(() => {
     getDailyActivity(id, setDailyActivity);
      // eslint-disable-next-line react-hooks/exhaustive-deps

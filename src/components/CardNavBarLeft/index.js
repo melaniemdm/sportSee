@@ -2,6 +2,11 @@ import "./style.scss";
 
 import { Link } from "react-router-dom";
 
+/**
+ * It's a function that returns a div with a navbar and a link to a picture.
+ * @param props - {
+ * @returns The CardNavBarLeft component is being returned.
+ */
 function CardNavBarLeft(props) {
   return (
     <div className="containerIcones">
