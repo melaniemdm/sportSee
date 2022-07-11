@@ -47,14 +47,14 @@ useEffect(() => {
   <div className="containerTitleGraphAverageSession">Durée moyenne des sessions</div>
     <LineChart
      width={window.innerWidth/5.47}
-      height={window.innerHeight/3.96}
+      height={(window.innerHeight-91)/3.65}
        data={averageSessions}
        className="averageSession"
        margin={{
-        top: 20,
+        top: 0,
         right: 30,
         left: 20,
-        bottom: 5,
+        bottom: 0,
         
       }}
     >

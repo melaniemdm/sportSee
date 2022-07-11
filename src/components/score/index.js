@@ -22,20 +22,21 @@ export default function Score() {
   }, []);
 
   return (
-    <div className="layout"> <div className="titleScore">Score</div>
+    <div className="layout"> 
+    <div className="titleScore">Score</div>
     
          <RadialBarChart
     width={window.innerWidth/5.47}
-    height={window.innerHeight/3.96}
+    height={(window.innerHeight-91)/3.65}
     innerRadius="75%"
     outerRadius="100%"
      data={score}
      className="score"
      margin={{
-      top: 5,
+      top: 0,
       right: 5,
       left: 5,
-      bottom: 5,
+      bottom: 0,
       
     }}
   >
