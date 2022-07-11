@@ -1,8 +1,8 @@
-import axios from "axios";
-import fire from "../assets/fire.png";
-import prot from "../assets/prot.png";
-import apple from "../assets/apple.png";
-import lipides from "../assets/lipides.png";
+import axios from 'axios';
+import fire from '../assets/fire.png';
+import prot from '../assets/prot.png';
+import apple from '../assets/apple.png';
+import lipides from '../assets/lipides.png';
 
 
 /**
@@ -13,9 +13,9 @@ import lipides from "../assets/lipides.png";
  * @param setStateData - is a function that sets the state of the component
  */
 export const getAverageSessions = async (id, setStateData) => {
-  const arrayDay = ["L", "M", "M", "J", "V", "S", "D"];
+  const arrayDay = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
   const { data } = await axios.get(
-    `http://localhost:3000/user/` + id + ` /average-sessions`
+    'http://localhost:3000/user/' + id + ' /average-sessions'
   );
   const averageSessionsArray = data.data.sessions.map((averageSession) => {
     return {
@@ -33,7 +33,7 @@ export const getAverageSessions = async (id, setStateData) => {
  */
 export const getDailyActivity = async (id, setDailyActivity) => {
   const { data } = await axios.get(
-    `http://localhost:3000/user/` + id + `/activity`
+    'http://localhost:3000/user/' + id + '/activity'
   );
 
   const activitiesArray = data.data.sessions.map((activity) => {
@@ -53,7 +53,7 @@ export const getDailyActivity = async (id, setDailyActivity) => {
  */
 export const getPerformance = async (id, setPerformance) => {
   const { data } = await axios.get(
-    "http://localhost:3000/user/" + id + "/performance"
+    'http://localhost:3000/user/' + id + '/performance'
   );
 
   const performancesArray = data.data.data.map((performance) => {
@@ -74,14 +74,14 @@ export const getPerformance = async (id, setPerformance) => {
  * @param setScore - a function that sets the state of the score
  */
 export const getDataScore = async (id, setScore) => {
-    const { data } = await axios.get(`http://localhost:3000/user/` + id);
+  const { data } = await axios.get('http://localhost:3000/user/' + id);
   const scoreUser = data.data.todayScore ? data.data.todayScore : data.data.score;
   const dataScore = [
-    { name: "Group B", value: (1 - scoreUser)*100,"fill": "white", "stroke":"white", "fontSize":"0"},
-    { name: scoreUser*100, value: scoreUser*100,"fill": "red" },
-     ];
-  setScore(dataScore)
-      }
+    { name: 'Group B', value: (1 - scoreUser)*100,'fill': 'white', 'stroke':'white', 'fontSize':'0'},
+    { name: scoreUser*100, value: scoreUser*100,'fill': 'red' },
+  ];
+  setScore(dataScore);
+};
   
     
 /**
@@ -89,43 +89,43 @@ export const getDataScore = async (id, setScore) => {
  * @param id - the id of the user
  * @param setFirstName - is a function that sets the firstName state
  */
-    export const getFirstName = async (id, setFirstName) => {
-      const { data } = await axios.get(`http://localhost:3000/user/` + id);
-      setFirstName(data.data.userInfos.firstName);
-        };
+export const getFirstName = async (id, setFirstName) => {
+  const { data } = await axios.get('http://localhost:3000/user/' + id);
+  setFirstName(data.data.userInfos.firstName);
+};
 
-  /**
+/**
    * I'm using axios to get data from my API, then I'm pushing the data into an array and I'm setting
    * the state of my component with the array.
    * </code>
    * @param id - the id of the user
    * @param setBMI - a function that sets the state of the BMI array
    */
-      export  const getBMI = async (id, setBMI) => {
-          const { data } = await axios.get(`http://localhost:3000/user/` + id);
+export  const getBMI = async (id, setBMI) => {
+  const { data } = await axios.get('http://localhost:3000/user/' + id);
          
-          const keyData = data.data.keyData;
+  const keyData = data.data.keyData;
       
-          let bmiArray = [];
-          bmiArray.push({
-            value: keyData.calorieCount,
-            type: "Calories",
-            picture: fire,
-          });
-          bmiArray.push({
-            value: keyData.proteinCount,
-            type: "Protéines",
-            picture: prot,
-          });
-          bmiArray.push({
-            value: keyData.carbohydrateCount,
-            type: "Glucides",
-            picture: apple,
-          });
-          bmiArray.push({
-            value: keyData.lipidCount,
-            type: "Lipides",
-            picture: lipides,
-          });
-          setBMI(bmiArray);
-        };
+  let bmiArray = [];
+  bmiArray.push({
+    value: keyData.calorieCount,
+    type: 'Calories',
+    picture: fire,
+  });
+  bmiArray.push({
+    value: keyData.proteinCount,
+    type: 'Protéines',
+    picture: prot,
+  });
+  bmiArray.push({
+    value: keyData.carbohydrateCount,
+    type: 'Glucides',
+    picture: apple,
+  });
+  bmiArray.push({
+    value: keyData.lipidCount,
+    type: 'Lipides',
+    picture: lipides,
+  });
+  setBMI(bmiArray);
+};

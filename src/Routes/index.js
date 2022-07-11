@@ -6,7 +6,7 @@ import Error from '../pages/Error';
 import Communaute from '../pages/Communaute';
 import Header from '../layout/Header';
 import NavBarLeft from '../layout/NavBarLeft';
-import "./style.scss";
+import './style.scss';
 
 
 /**
@@ -15,24 +15,24 @@ import "./style.scss";
  * and an Error component.
  * @returns A React Router DOM Router component.
  */
- export default function CustomsRoutes(){
+export default function CustomsRoutes(){
   return (
     <Router>
       <Header />
       <main>
-      <NavBarLeft/>
-      <Routes>
-        <Route exact path="/" element={<Accueil />} />
-        <Route exact path="/accueil" element={<Accueil />} />
-        <Route exact path="/profil/:id" element={<Profil />} />
-        <Route exact path="/profil/:id/activities" element={<Profil />} />
-        <Route exact path="/profil/:id/today-score" element={<Profil />} />
-        <Route exact path="/profil/:id/key-data" element={<Profil />} />
-        <Route exact path="/reglage" element={<Reglage />} />
-        <Route exact path="communaute" element={<Communaute />} />
-        <Route path="*" element={<Error />} />
-      </Routes></main>
+        <NavBarLeft/>
+        <Routes>
+          <Route exact path="/" element={<Accueil />} />
+          <Route exact path="/accueil" element={<Accueil />} />
+          <Route exact path="/profil/:id" element={<Profil />} />
+          <Route exact path="/profil/:id/activities" element={<Profil />} />
+          <Route exact path="/profil/:id/today-score" element={<Profil />} />
+          <Route exact path="/profil/:id/key-data" element={<Profil />} />
+          <Route exact path="/reglage" element={<Reglage />} />
+          <Route exact path="communaute" element={<Communaute />} />
+          <Route path="*" element={<Error />} />
+        </Routes></main>
      
     </Router>
   );
-};
+}

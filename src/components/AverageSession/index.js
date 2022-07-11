@@ -4,14 +4,14 @@ import {
   Line,
   XAxis,
   Tooltip,
- } from "recharts";
-import React, { useEffect, useState } from "react";
+} from 'recharts';
+import React, { useEffect, useState } from 'react';
 import {getAverageSessions} from '../../utils/api';
 import { useParams } from 'react-router-dom';
 
 
 
-const CustomTooltip = ({ active, payload, label }) => {
+const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltipAverage">
@@ -53,24 +53,23 @@ const CustomTooltip = ({ active, payload, label }) => {
  */
 export default function AverageSession() {
   const {id} = useParams();
-const [averageSessions,setAverageSessions]= useState([]);
+  const [averageSessions,setAverageSessions]= useState([]);
 
  
 
-/* A hook that is called after the first render. It is used to fetch data from an API. */
-useEffect(() => {
-  getAverageSessions(id, setAverageSessions);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, []);
+  /* A hook that is called after the first render. It is used to fetch data from an API. */
+  useEffect(() => {
+    getAverageSessions(id, setAverageSessions);
+  }, []);
 
   return (<div className="containerAverageSession">
-  <div className="containerTitleGraphAverageSession">Durée moyenne des sessions</div>
+    <div className="containerTitleGraphAverageSession">Durée moyenne des sessions</div>
     <LineChart
-     width={window.innerWidth/5.47}
+      width={window.innerWidth/5.47}
       height={(window.innerHeight-91)/3.65}
-       data={averageSessions}
-       className="averageSession"
-       margin={{
+      data={averageSessions}
+      className="averageSession"
+      margin={{
         top: 0,
         right: 30,
         left: 20,

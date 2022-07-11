@@ -14,22 +14,22 @@ import './style.scss';
  * @param props - {
  * @returns a JSX element.
  */
- export default function BodyMassIndex(props){
-const typeMass = props.data.type === "Calories"? "kCal" :" g";
+export default function BodyMassIndex(props){
+  const typeMass = props.data.type === 'Calories'? 'kCal' :' g';
     
-    return (
-        <div className="containerBodyMassIndex">
-            <div className="layoutcardBodyMass">
-            <div className="containerIconeBodyMass">
-               <div className="containerIconeBodyMass"> <img src={props.data.picture} className="iconeBodyMass" alt="icone "/></div> 
-                </div> 
+  return (
+    <div className="containerBodyMassIndex">
+      <div className="layoutcardBodyMass">
+        <div className="containerIconeBodyMass">
+          <div className="containerIconeBodyMass"> <img src={props.data.picture} className="iconeBodyMass" alt="icone "/></div> 
+        </div> 
                 
-                <div className="bodyMass">{props.data.value} <strong>{typeMass}</strong>
-                <div className="typeBodyMass">{props.data.type} </div>
+        <div className="bodyMass">{props.data.value} <strong>{typeMass}</strong>
+          <div className="typeBodyMass">{props.data.type} </div>
              
 
                
-            </div></div>
-        </div>
-    )
-};
+        </div></div>
+    </div>
+  );
+}

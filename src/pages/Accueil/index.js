@@ -1,10 +1,10 @@
 function Accueil(){
  
-    return(
-      <div>
+  return(
+    <div>
       <div>page accueil</div>
-      </div>
-    );
-  }
+    </div>
+  );
+}
   
-  export default Accueil;
+export default Accueil;

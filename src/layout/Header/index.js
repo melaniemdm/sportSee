@@ -8,12 +8,12 @@ import Navigate from '../../components/Navigate';
  * @returns A header with a logo and a Navigate component.
  */
 
- export default function Header(){
-    return(
-        <header className="containerHeader">
-            <div className="logoImg">
-<img src={logo} alt="logo SportSee" className="logoSportSee"/></div>
-<Navigate/>
-        </header>
-    )
-};
+export default function Header(){
+  return(
+    <header className="containerHeader">
+      <div className="logoImg">
+        <img src={logo} alt="logo SportSee" className="logoSportSee"/></div>
+      <Navigate/>
+    </header>
+  );
+}

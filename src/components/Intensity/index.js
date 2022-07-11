@@ -5,9 +5,9 @@ import {
   PolarGrid,
   PolarAngleAxis,
   
-} from "recharts";
+} from 'recharts';
 import {getPerformance} from '../../utils/api';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 
@@ -16,20 +16,19 @@ import { useParams } from 'react-router-dom';
  * @returns An array of objects.
  */
 export default function Intensity() {
-const [performances,setPerformance] = useState([]);
-const {id} = useParams();
+  const [performances,setPerformance] = useState([]);
+  const {id} = useParams();
 
 
 
-/* A hook that is called when the component is mounted. It is used to fetch data from an API. */
-useEffect(() => {
-  getPerformance(id, setPerformance);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-},[]);
-if(performances.length === 0) return null;
+  /* A hook that is called when the component is mounted. It is used to fetch data from an API. */
+  useEffect(() => {
+    getPerformance(id, setPerformance);
+  },[]);
+  if(performances.length === 0) {return null;}
   return (
     <RadarChart
-       width={window.innerWidth/5.47}
+      width={window.innerWidth/5.47}
       height={(window.innerHeight-91)/3.65}
       data={performances}
       className="intensity"

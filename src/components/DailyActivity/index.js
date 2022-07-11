@@ -7,8 +7,8 @@ import {
   CartesianGrid,
   Tooltip,
   Legend
-} from "recharts";
-import React, { useEffect, useState } from "react";
+} from 'recharts';
+import React, { useEffect, useState } from 'react';
 import {getDailyActivity} from '../../utils/api';
 import { useParams } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ const getBarShape = (x, y, width, height, radius) => {
  * If the tooltip is active and there is a payload, then return a div with the value of the payload.
  * @returns The return is a function that returns a component.
  */
-const CustomTooltip = ({ active, payload, label }) => {
+const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltipDailyActivity">
@@ -67,15 +67,15 @@ export default function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
  
-/* A hook that is called when the component is mounted. */
+  /* A hook that is called when the component is mounted. */
   useEffect(() => {
     getDailyActivity(id, setDailyActivity);
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, []);
 
   return (<div className="containerDailyActivity"> 
-  <div className="containerTitleDailyActivity">
-    <div className="titleDailyActivity">Activité quotidienne</div></div>
+    <div className="containerTitleDailyActivity">
+      <div className="titleDailyActivity">Activité quotidienne</div></div>
     <BarChart
       width={window.innerWidth/1.7}
       height={(window.innerHeight-91)/2.97}
@@ -93,11 +93,11 @@ export default function DailyActivity() {
       <YAxis yAxisId="left" stroke="white" />
       <YAxis yAxisId="right" orientation="right" stroke="gray" />
       <Tooltip
-      content={<CustomTooltip />}
-                  />
+        content={<CustomTooltip />}
+      />
 
       <Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
-      <Bar yAxisId="left" name = "Poids (kg)" dataKey="calories" fill="black" barSize={7} shape={({ x, y, width, height, value, background }) => {
+      <Bar yAxisId="left" name = "Poids (kg)" dataKey="calories" fill="black" barSize={7} shape={({ x, y, width, height,  background }) => {
         const Bar = getBarShape(x, y, width, height, [4, 4, 0, 0]);
         return (
           <g>
@@ -113,7 +113,7 @@ export default function DailyActivity() {
           </g>
         );
       }}/>
-      <Bar yAxisId="right" name = "Calories brûlées (kCal)"  dataKey="kilogram" fill="red" barSize={7} shape={({ x, y, width, height, value, background }) => {
+      <Bar yAxisId="right" name = "Calories brûlées (kCal)"  dataKey="kilogram" fill="red" barSize={7} shape={({ x, y, width, height, background }) => {
         const Bar = getBarShape(x, y, width, height, [4, 4, 0, 0]);
         return (
           <g>

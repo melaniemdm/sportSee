@@ -1,10 +1,10 @@
 function Reglage(){
  
-    return(
-      <div>
+  return(
+    <div>
       <div>page reglage</div>
-      </div>
-    );
-  }
+    </div>
+  );
+}
   
-  export default Reglage;
+export default Reglage;

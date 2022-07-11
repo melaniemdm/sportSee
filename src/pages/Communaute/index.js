@@ -1,11 +1,11 @@
 
 function Communaute(){
  
-    return(
-      <div>
+  return(
+    <div>
       <div>page communauté</div>
-      </div>
-    );
-  }
+    </div>
+  );
+}
   
-  export default Communaute;
+export default Communaute;
