@@ -10,18 +10,18 @@
  
   display:flex;
   flex-direction: column;
- justify-content:space-around;
+ justify-content:space-between;
  align-items: center;
 
 }
 .textNavBarLeft{
 outline: 2px solid yellow; 
 color: white;
-  writing-mode: vertical-lr;
+writing-mode: vertical-lr;
 text-orientation: use-glyph-orientation;
 transform: rotate(180deg);
 display: inline-block;
-height: 160px;
+//height: 160px;
 width: 24px;
 font-weight: 500;
 font-size: 12px;

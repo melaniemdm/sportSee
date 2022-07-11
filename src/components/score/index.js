@@ -26,7 +26,7 @@ export default function Score() {
     
          <RadialBarChart
     width={window.innerWidth/5.47}
-    height={window.innerWidth/3.96}
+    height={window.innerHeight/3.96}
     innerRadius="75%"
     outerRadius="100%"
      data={score}

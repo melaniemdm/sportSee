@@ -44,7 +44,7 @@ if(performances.length === 0) return null;
   return (
     <RadarChart
        width={window.innerWidth/5.47}
-      height={window.innerWidth/3.96}
+      height={window.innerHeight/3.96}
       data={performances}
       className="intensity"
       margin={{
