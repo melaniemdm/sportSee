@@ -49,14 +49,14 @@ if(performances.length === 0) return null;
       className="intensity"
       margin={{
         top: 0,
-        right: 5,
-        left: 5,
+        right: 47,
+        left: 25,
         bottom: 0,
         
       }}
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="subject" stroke="white" tick={{fontSize: 12}}/>
+      <PolarAngleAxis dataKey="subject" stroke="white" tick={{fontSize: 10}}/>
       
       <Radar
         name="Mike"
