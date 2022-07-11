@@ -6,7 +6,6 @@
     height:124px;
     background: #FBFBFB;
     border-radius: 5px;
-
 }
 .bodyMass{
     font-size:20px;
@@ -21,7 +20,14 @@ margin-right:24px;
 
 @media #{$large-down} {
     .layoutcardBodyMass{
-      
+        width:180px;
       height:80px;}
+      .bodyMass{
+        font-size:15px;
+    }
+    .typeBodyMass{
+        font-size:12px;
+    }
+
   }
   
