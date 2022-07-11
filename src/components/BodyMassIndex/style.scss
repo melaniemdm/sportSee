@@ -18,10 +18,10 @@
 margin-left: 32px;
 margin-right:24px;
 }
+
 @media #{$large-down} {
     .layoutcardBodyMass{
-        margin-right: 3px;
-        width:auto;
-       padding-right:15px;
-    }
-    }
+      
+      height:80px;}
+  }
+  

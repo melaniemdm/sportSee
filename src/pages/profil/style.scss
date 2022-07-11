@@ -32,17 +32,3 @@
   justify-content:space-between;
  margin-left: 24px;
 }
-@media #{$large-down} {
-  .containerProfil {
-  margin-left: 135px;
-  top: 110px;
-  }
-  .txtProfil{
-    margin-top:3px;
-    margin-bottom:3px;
-}
-.titleProfil {
-    font-size: 28px;
-}
-
-}

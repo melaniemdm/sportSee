@@ -1,8 +1,7 @@
 @import "../../styles/commun.scss";
 .containerNavBarLeft{
-
     height:100%;
-    width:117px;
+    min-width:117px;
   color: white;
   background-color: black;
    display:flex;
