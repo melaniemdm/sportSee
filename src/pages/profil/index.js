@@ -6,10 +6,11 @@ import Score from '../../components/Score';
 import Intensity from '../../components/Intensity';
 import BodyMassIndex from '../../components/BodyMassIndex';
 import React, { useEffect, useState } from 'react';
-import {getFirstName} from '../../utils/api';
-import {getBMI} from '../../utils/api';
 import { useParams } from 'react-router-dom';
+import Error from '../../pages/Error';
+import Api from '../../utils/api';
 
+const api = new Api();
 
 /**
  * The function Profil() is called when the user is on the profil page. It displays the user's name, a
@@ -25,10 +26,12 @@ export default function Profil() {
  
   /* A hook that is called when the component is mounted. It is used to fetch data from an API. */
   useEffect(() => {
-    getFirstName(id, setFirstName);
-    getBMI(id, setBMI); 
+    api.getFirstName(id, setFirstName);
+    api.getBMI(id, setBMI); 
   },[]);
-
+  if(name=== 'error'){
+    return <Error type="unavailable"/>;
+  }
   return (
     <div className="containerProfil">
       <div className="titleProfil">Bonjour &nbsp;<div className="nameProfil">{name}</div>

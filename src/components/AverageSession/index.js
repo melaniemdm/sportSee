@@ -6,10 +6,11 @@ import {
   Tooltip,
 } from 'recharts';
 import React, { useEffect, useState } from 'react';
-import {getAverageSessions} from '../../utils/api';
 import { useParams } from 'react-router-dom';
+import Api from '../../utils/api';
+import ErrorGraph from '../ErrorGraph';
 
-
+const api = new Api();
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -59,9 +60,11 @@ export default function AverageSession() {
 
   /* A hook that is called after the first render. It is used to fetch data from an API. */
   useEffect(() => {
-    getAverageSessions(id, setAverageSessions);
+    api.getAverageSessions(id, setAverageSessions);
   }, []);
-
+  if(averageSessions === 'error'){
+    return (<div><ErrorGraph/></div>);
+  }
   return (<div className="containerAverageSession">
     <div className="containerTitleGraphAverageSession">Durée moyenne des sessions</div>
     <LineChart

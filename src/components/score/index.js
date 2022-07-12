@@ -1,14 +1,15 @@
 import './style.scss';
 import React, { useEffect, useState } from 'react';
-import {getDataScore} from '../../utils/api';
 import { RadialBarChart, RadialBar } from 'recharts';
 /**
  * It's a function that returns a div with a navbar and 4 links.
  * @returns A React component.
  */
 import { useParams } from 'react-router-dom';
+import Api from '../../utils/api';
+import ErrorGraph from '../ErrorGraph';
 
-
+const api = new Api();
 
 
 /**
@@ -21,9 +22,11 @@ export default function Score() {
   
   /* It's a hook that is called after every render. */
   useEffect(() => {
-    getDataScore(id, setScore);
+    api.getDataScore(id, setScore);
   }, []);
-
+  if(score === ''){
+    return (<div><ErrorGraph/></div>);
+  }
   return (
     <div className="containerScore"> 
       <div className="titleScore">Score</div>

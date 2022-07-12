@@ -4,7 +4,16 @@ import './style.scss';
  * It returns a div with the class name containerError.
  * @returns A div with a className of containerError.
  */
-export default function Error(){
+export default function Error(props){
+  if(props.type==='unavailable'){
+    return(
+      <div className="containerError">
+        <div className="codeError">Service indisponible</div>
+        <div className="messageError">Merci de revenir ulterieurement</div>
+        
+      </div>
+    );
+  }
   return(
     <div className="containerError">
       <div className="codeError">ERROR 404</div>

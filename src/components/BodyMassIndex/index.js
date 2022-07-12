@@ -15,8 +15,8 @@ import './style.scss';
  * @returns a JSX element.
  */
 export default function BodyMassIndex(props){
-  const typeMass = props.data.type === 'Calories'? 'kCal' :' g';
-    
+  const typeMass = props.data?.type === 'Calories'? 'kCal' :' g';
+
   return (
     <div className="containerBodyMassIndex">
       <div className="layoutcardBodyMass">

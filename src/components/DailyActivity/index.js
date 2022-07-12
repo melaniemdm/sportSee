@@ -9,8 +9,11 @@ import {
   Legend
 } from 'recharts';
 import React, { useEffect, useState } from 'react';
-import {getDailyActivity} from '../../utils/api';
 import { useParams } from 'react-router-dom';
+import Api from '../../utils/api';
+import ErrorGraph from '../ErrorGraph';
+
+const api = new Api();
 
 
 /**
@@ -69,10 +72,12 @@ export default function DailyActivity() {
  
   /* A hook that is called when the component is mounted. */
   useEffect(() => {
-    getDailyActivity(id, setDailyActivity);
+    api.getDailyActivity(id, setDailyActivity);
    
   }, []);
-
+  if(activities === 'error'){
+    return (<div><ErrorGraph/></div>);
+  }
   return (<div className="containerDailyActivity"> 
     <div className="containerTitleDailyActivity">
       <div className="titleDailyActivity">Activité quotidienne</div></div>

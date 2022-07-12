@@ -6,10 +6,12 @@ import {
   PolarAngleAxis,
   
 } from 'recharts';
-import {getPerformance} from '../../utils/api';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Api from '../../utils/api';
+import ErrorGraph from '../ErrorGraph';
 
+const api = new Api();
 
 /**
  * It's a radar chart that displays the performance of a student in different subjects
@@ -23,9 +25,12 @@ export default function Intensity() {
 
   /* A hook that is called when the component is mounted. It is used to fetch data from an API. */
   useEffect(() => {
-    getPerformance(id, setPerformance);
+    api.getPerformance(id, setPerformance);
   },[]);
-  if(performances.length === 0) {return null;}
+  if(performances === 'error'){
+    return (<div><ErrorGraph/></div>);
+  }
+  else if(performances.length === 0) {return null;}
   return (
     <RadarChart
       width={window.innerWidth/5.47}
