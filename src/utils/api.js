@@ -3,7 +3,7 @@ import fire from '../assets/fire.png';
 import prot from '../assets/prot.png';
 import apple from '../assets/apple.png';
 import lipides from '../assets/lipides.png';
-
+import Models from '../models';
 
 export default class {
   constructor(){
@@ -11,16 +11,11 @@ export default class {
     this.user_endPoint='user/';
 
     this.getAverageSessions = async (id, setStateData) => {
-      const arrayDay = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
       await axios.get(
         this.baseUrl +this.user_endPoint + id + ' /average-sessions'
       ).then((response) =>{
-        const averageSessionsArray = response.data.data.sessions.map((averageSession) => {
-          return {
-            name: arrayDay[averageSession.day - 1],
-            pv: averageSession.sessionLength,
-          };
-        });
+        const averageSessions = new Models();
+        const averageSessionsArray = averageSessions.getAverageSessions(response.data.data.sessions);
         setStateData(averageSessionsArray);
       }).catch((error) => {
         console.error(error);

@@ -1,38 +1,46 @@
-
+import Models from '../models';
 export default class {
   constructor(){
     
     this.getAverageSessions = async (id, setStateData) => {
-      setStateData([
-        {
-          'name': 'L',
-          'pv': 30
-        },
-        {
-          'name': 'M',
-          'pv': 23
-        },
-        {
-          'name': 'M',
-          'pv': 45
-        },
-        {
-          'name': 'J',
-          'pv': 50
-        },
-        {
-          'name': 'V',
-          'pv': 0
-        },
-        {
-          'name': 'S',
-          'pv': 0
-        },
-        {
-          'name': 'D',
-          'pv': 60
+      const data = {
+        'data': {
+          'userId': 18,
+          'sessions': [
+            {
+              'day': 1,
+              'sessionLength': 30
+            },
+            {
+              'day': 2,
+              'sessionLength': 40
+            },
+            {
+              'day': 3,
+              'sessionLength': 50
+            },
+            {
+              'day': 4,
+              'sessionLength': 30
+            },
+            {
+              'day': 5,
+              'sessionLength': 30
+            },
+            {
+              'day': 6,
+              'sessionLength': 50
+            },
+            {
+              'day': 7,
+              'sessionLength': 50
+            }
+          ]
         }
-      ]);
+      };
+      const averageSessions = new Models();
+      const averageSessionsArray = averageSessions.getAverageSessions(data.data.sessions);
+      setStateData(averageSessionsArray);
   
      
     };
