@@ -1,3 +1,7 @@
+import fire from '../assets/fire.png';
+import prot from '../assets/prot.png';
+import apple from '../assets/apple.png';
+import lipides from '../assets/lipides.png';
 
 export default class {
   constructor(){
@@ -34,6 +38,27 @@ export default class {
     return performancesArray;
   }
 
+  getDataScore(scoreUser){
+    const score1 = new Score('Group B', (1 - scoreUser)*100, 'white', 'white', '0');
+    const score2= new Score( scoreUser*100, scoreUser*100,'red');
+    return [score1, score2 ];
+  }
+  
+  getBMI(keyData){
+    const bmi1 = new Bmi(  keyData.calorieCount,
+      'Calories',
+      fire);
+    const bmi2= new Bmi( keyData.proteinCount,
+      'Protéines',
+      prot, );
+    const bmi3 = new Bmi( keyData.carbohydrateCount,
+      'Glucides',
+      apple,);
+    const bmi4 = new Bmi( keyData.lipidCount,
+      'Lipides',
+      lipides, );
+    return [bmi1, bmi2, bmi3, bmi4];
+  }
 
 
 }
@@ -60,3 +85,20 @@ class Performance{
   }
 }
 
+class Score{
+  constructor(name, value, fill, stroke,fontSize){
+    this.name=name;
+    this.value=value;
+    this.fill=fill;
+    this.stroke=stroke;
+    this.fontSize=fontSize;
+  }
+}
+
+class Bmi{
+  constructor(value,type,picture){
+    this.value=value;
+    this.type=type;
+    this.picture=picture;
+  }
+}
