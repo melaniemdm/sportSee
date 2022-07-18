@@ -2,7 +2,7 @@ import Models from '../models';
 export default class {
   constructor(){
     
-    this.getAverageSessions = async (id, setStateData) => {
+    this.getAverageSessions = async ( setStateData) => {
       const data = {
         'data': {
           'userId': 18,
@@ -41,90 +41,101 @@ export default class {
       const averageSessions = new Models();
       const averageSessionsArray = averageSessions.getAverageSessions(data.data.sessions);
       setStateData(averageSessionsArray);
-  
-     
+      
     };
 
     this.getDailyActivity = async (id, setDailyActivity) => {
-      setDailyActivity([
-        {
-          'name': '2020-07-01',
-          'number': '01',
-          'kilogram': 80,
-          'calories': 240
-        },
-        {
-          'name': '2020-07-02',
-          'number': '02',
-          'kilogram': 80,
-          'calories': 220
-        },
-        {
-          'name': '2020-07-03',
-          'number': '03',
-          'kilogram': 81,
-          'calories': 280
-        },
-        {
-          'name': '2020-07-04',
-          'number': '04',
-          'kilogram': 81,
-          'calories': 290
-        },
-        {
-          'name': '2020-07-05',
-          'number': '05',
-          'kilogram': 80,
-          'calories': 160
-        },
-        {
-          'name': '2020-07-06',
-          'number': '06',
-          'kilogram': 78,
-          'calories': 162
-        },
-        {
-          'name': '2020-07-07',
-          'number': '07',
-          'kilogram': 76,
-          'calories': 390
+      const data={
+        'data': {
+          'userId': 18,
+          'sessions': [
+            {
+              'day': '2020-07-01',
+              'kilogram': 70,
+              'calories': 240
+            },
+            {
+              'day': '2020-07-02',
+              'kilogram': 69,
+              'calories': 220
+            },
+            {
+              'day': '2020-07-03',
+              'kilogram': 70,
+              'calories': 280
+            },
+            {
+              'day': '2020-07-04',
+              'kilogram': 70,
+              'calories': 500
+            },
+            {
+              'day': '2020-07-05',
+              'kilogram': 69,
+              'calories': 160
+            },
+            {
+              'day': '2020-07-06',
+              'kilogram': 69,
+              'calories': 162
+            },
+            {
+              'day': '2020-07-07',
+              'kilogram': 69,
+              'calories': 390
+            }
+          ]
         }
-      ]);
+      };
+
+      const dailyActivity = new Models();
+      const dailyActivityArray = dailyActivity.getDailyActivity(data.data.sessions);
+      setDailyActivity(dailyActivityArray);
     };
 
-    this.getPerformance = async (id, setPerformance) => {
-      setPerformance([
-        {
-          'subject': 'cardio',
-          'A': 80,
-          'fullMark': 150
-        },
-        {
-          'subject': 'energy',
-          'A': 120,
-          'fullMark': 150
-        },
-        {
-          'subject': 'endurance',
-          'A': 140,
-          'fullMark': 150
-        },
-        {
-          'subject': 'strength',
-          'A': 50,
-          'fullMark': 150
-        },
-        {
-          'subject': 'speed',
-          'A': 200,
-          'fullMark': 150
-        },
-        {
-          'subject': 'intensity',
-          'A': 90,
-          'fullMark': 150
+    this.getPerformance = async (id,setPerformance) => {
+      const data={
+        'data': {
+          'userId': 12,
+          'kind': {
+            '1': 'cardio',
+            '2': 'energy',
+            '3': 'endurance',
+            '4': 'strength',
+            '5': 'speed',
+            '6': 'intensity'
+          },
+          'data': [
+            {
+              'value': 80,
+              'kind': 1
+            },
+            {
+              'value': 120,
+              'kind': 2
+            },
+            {
+              'value': 140,
+              'kind': 3
+            },
+            {
+              'value': 50,
+              'kind': 4
+            },
+            {
+              'value': 200,
+              'kind': 5
+            },
+            {
+              'value': 90,
+              'kind': 6
+            }
+          ]
         }
-      ] );
+      };
+      const performance = new Models();
+      const performanceArray = performance.getPerformance(data.data.sessions);
+      setPerformance(performanceArray);
     };
 
     this.getDataScore = async (id, setScore) => {

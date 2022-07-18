@@ -10,6 +10,32 @@ export default class {
     });
     return averageSessionsArray;   
   }
+  getDailyActivity(sessions){
+    const activitiesArray = sessions.map((activity) => {
+      return new DailyActivity(   
+        activity.day,
+        activity.day.split('-')[2],
+        activity.kilogram,
+        activity.calories,
+      );
+     
+    });
+    return activitiesArray;
+  }
+
+  getPerformance(performances){
+    const performancesArray = performances.data.map((performance) => {
+      return new Performance(
+        performances.kind[performance.kind],
+        performance.value,
+        150,
+      );
+    });
+    return performancesArray;
+  }
+
+
+
 }
 
 class AverageSession {
@@ -18,3 +44,19 @@ class AverageSession {
     this.pv=pv;
   }
 }
+class DailyActivity {
+  constructor(name,number,kilogram,calories) {
+    this.name=name;
+    this.number=number;
+    this.kilogram=kilogram;
+    this.calories=calories; 
+  }
+}
+class Performance{
+  constructor(subject, A, fullmark){
+    this.subject = subject;
+    this.A= A;
+    this.fullmark= fullmark;
+  }
+}
+

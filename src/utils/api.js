@@ -9,7 +9,6 @@ export default class {
   constructor(){
     this.baseUrl= 'http://localhost:3000/';
     this.user_endPoint='user/';
-
     this.getAverageSessions = async (id, setStateData) => {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + ' /average-sessions'
@@ -29,14 +28,8 @@ export default class {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + '/activity'
       ).then((response) => {
-        const activitiesArray = response.data.data.sessions.map((activity) => {
-          return {
-            name: activity.day,
-            number:activity.day.split('-')[2],
-            kilogram: activity.kilogram,
-            calories: activity.calories,
-          };
-        });
+        const dailyActivity = new Models();
+        const activitiesArray = dailyActivity.getDailyActivity(response.data.data.sessions);
         setDailyActivity(activitiesArray);
       }).catch((error) => {
         console.error(error);
@@ -48,15 +41,10 @@ export default class {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + '/performance'
       ).then((response) => {
-
-        const performancesArray = response.data.data.data.map((performance) => {
-          return {
-            subject: response.data.data.kind[performance.kind],
-            A: performance.value,
-            fullMark: 150,
-          };
-        });
-        setPerformance(performancesArray);
+        const performance = new Models();
+        const performanceArray = performance.getPerformance(response.data.data);
+      
+        setPerformance(performanceArray);
       }).catch((error) => {
         console.error(error);
         setPerformance('error');
