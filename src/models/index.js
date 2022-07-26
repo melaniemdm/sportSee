@@ -6,6 +6,11 @@ import lipides from '../assets/lipides.png';
 export default class {
   constructor(){
   }
+  /**
+ * It takes an array of objects, and returns an array of objects.
+ * @param sessions - an array of objects that contain the following properties:
+ * @returns An array of objects.
+ */
   getAverageSessions(sessions){
     const arrayDay = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
     const averageSessionsArray =sessions.map((averageSession) => {
@@ -14,6 +19,11 @@ export default class {
     });
     return averageSessionsArray;   
   }
+  /**
+  * It takes an array of objects and returns an array of objects.
+  * @param sessions - an array of objects that contain the following properties:
+  * @returns An array of DailyActivity objects.
+  */
   getDailyActivity(sessions){
     const activitiesArray = sessions.map((activity) => {
       return new DailyActivity(   
@@ -27,6 +37,13 @@ export default class {
     return activitiesArray;
   }
 
+  /**
+ * This function takes an object with a data property that contains an array of objects, and returns an
+ * array of Performance objects, where each Performance object is created using the data from the
+ * corresponding object in the array.
+ * @param performances - {
+ * @returns An array of objects.
+ */
   getPerformance(performances){
     const performancesArray = performances.data.map((performance) => {
       return new Performance(
@@ -38,12 +55,34 @@ export default class {
     return performancesArray;
   }
 
+  /**
+   * It takes a number between 0 and 1 and returns an array of two objects. 
+   * 
+   * The first object has a label of "Group B" and a value of 100 minus the input number. 
+   * 
+   * The second object has a label of the input number and a value of the input number. 
+   * 
+   * The first object has a color of white and the second object has a color of red. 
+   * 
+   * The first object has a highlight color of white and the second object has a highlight color of
+   * red. 
+   * 
+   * The first object has a stroke color of 0 and the second object has a stroke color of 0.
+   * @param scoreUser - the score of the user
+   * @returns An array of two objects.
+   */
   getDataScore(scoreUser){
     const score1 = new Score('Group B', (1 - scoreUser)*100, 'white', 'white', '0');
     const score2= new Score( scoreUser*100, scoreUser*100,'red');
     return [score1, score2 ];
   }
   
+  /**
+  * It takes a keyData object as an argument and returns an array of Bmi objects.
+  * </code>
+  * @param keyData - 
+  * @returns An array of objects.
+  */
   getBMI(keyData){
     const bmi1 = new Bmi(  keyData.calorieCount,
       'Calories',
@@ -63,12 +102,14 @@ export default class {
 
 }
 
+/* It creates a class called AverageSession. */
 class AverageSession {
   constructor(name,pv) {
     this.name=name;
     this.pv=pv;
   }
 }
+/* It creates a class called DailyActivity. */
 class DailyActivity {
   constructor(name,number,kilogram,calories) {
     this.name=name;
@@ -77,6 +118,7 @@ class DailyActivity {
     this.calories=calories; 
   }
 }
+/* A class is a blueprint for creating objects. */
 class Performance{
   constructor(subject, A, fullmark){
     this.subject = subject;
@@ -85,6 +127,8 @@ class Performance{
   }
 }
 
+/* The Score class is a constructor function that creates a new object with the properties name, value,
+fill, stroke, and fontSize. */
 class Score{
   constructor(name, value, fill, stroke,fontSize){
     this.name=name;
@@ -95,6 +139,7 @@ class Score{
   }
 }
 
+/* It creates a class called Bmi. */
 class Bmi{
   constructor(value,type,picture){
     this.value=value;

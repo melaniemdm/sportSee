@@ -2,6 +2,7 @@ import Models from '../models';
 export default class {
   constructor(){
     
+    /* A function that is being called in the constructor. */
     this.getAverageSessions = async ( setStateData) => {
       const data = {
         'data': {
@@ -44,6 +45,7 @@ export default class {
       
     };
 
+    /* A function that is being called in the constructor. */
     this.getDailyActivity = async (id, setDailyActivity) => {
       const data={
         'data': {
@@ -93,6 +95,7 @@ export default class {
       setDailyActivity(dailyActivityArray);
     };
 
+    /* A function that is being called in the constructor. */
     this.getPerformance = async (id,setPerformance) => {
       const data={
         'data': {
@@ -138,16 +141,19 @@ export default class {
       setPerformance(performanceArray);
     };
 
+    /* A function that is being called in the constructor. */
     this.getDataScore = async (id, setScore) => {
       const score = new Models();
       const scoreArray = score.getScore(0.12);
       setScore(scoreArray);
     };
 
+    /* A function that is being called in the constructor. */
     this.getFirstName = async (id, setFirstName) => {
       setFirstName('Karl');
     };
 
+    /* A function that is being called in the constructor. */
     this.getBMI = async (id, setBMI) => {
       const keyData= {
         'calorieCount': 2500,

@@ -5,6 +5,7 @@ export default class {
   constructor(){
     this.baseUrl= 'http://localhost:3000/';
     this.user_endPoint='user/';
+    /* A function that is called in the component. */
     this.getAverageSessions = async (id, setStateData) => {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + ' /average-sessions'
@@ -20,6 +21,7 @@ export default class {
      
     };
 
+    /* A function that is called in the component. */
     this.getDailyActivity = async (id, setDailyActivity) => {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + '/activity'
@@ -33,6 +35,7 @@ export default class {
       });
     };
 
+    /* A function that is called in the component. */
     this.getPerformance = async (id, setPerformance) => {
       await axios.get(
         this.baseUrl +this.user_endPoint + id + '/performance'
@@ -48,6 +51,7 @@ export default class {
 
     };
 
+    /* A function that is called in the component. */
     this.getDataScore = async (id, setScore) => {
       await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
         const scoreUser = response.data.data.todayScore ? response.data.data.todayScore : response.data.data.score;
@@ -58,6 +62,7 @@ export default class {
     
     };
 
+    /* A function that is called in the component. */
     this.getFirstName = async (id, setFirstName) => {
       await axios.get(this.baseUrl +this.user_endPoint + id).then((response)=>{
         setFirstName(response.data.data.userInfos.firstName);
@@ -67,6 +72,7 @@ export default class {
       });
     };
 
+    /* A function that is called in the component. */
     this.getBMI = async (id, setBMI) => {
       await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
         const keyData = response.data.data.keyData;

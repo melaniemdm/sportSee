@@ -1,63 +1,59 @@
 @import "../../styles/commun.scss";
-.containerScore{
-    text-align: center;
-    background-color: #FBFBFB;
-    border-radius: 5px;
-    
+.containerScore {
+  text-align: center;
+  background-color: #fbfbfb;
+  border-radius: 5px;
 }
 
-
-.titleScore{
-    z-index: 100;
-    width: 147px;
-     font-size: 15px;
-     color: black;
-     position: absolute;
-    margin-top:15px;
-    margin-left: -25px;
+.titleScore {
+  z-index: 100;
+  width: 147px;
+  font-size: 15px;
+  color: black;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -25px;
 }
 
-.containerTextScore{
-     font-weight: 700;
-   position: relative;
-   z-index: 100;
-   top: -70px;
-left: 10px;
-      }
-   .pourcentScore{
-     font-size:26px;
-    font-weight: 700;
+.containerTextScore {
+  font-weight: 700;
+  position: relative;
+  z-index: 100;
+  top: -70px;
+  left: 10px;
+}
+.pourcentScore {
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  top: -68px;
+  left: 20px;
+}
+
+.graphScore {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.containerTextitle {
+  position: relative;
+  margin-top: -70px;
+  margin-left: 12px;
+}
+
+@media #{$large-down} {
+  .pourcentScore {
+    top: -45px;
+  }
+  .containerTextitle {
     position: relative;
-    top: -68px;
-    left: 20px;
-   }
+    margin-top: -48px;
+    margin-left: 12px;
+  }
+  .titleScore {
+    font-size: 12px;
 
-.graphScore{
-    font-size:26px;
-    font-weight: 700;}
-
-    .containerTextitle{
-        position: relative;
-        margin-top:-70px;
-        margin-left: 12px;
-    }
-
-    @media #{$large-down} {
-        .pourcentScore{
-                       top: -55px;
-          
-          }
-        .containerTextitle{
-            position: relative;
-            margin-top:-58px;
-            margin-left: 12px;
-        }
-        .titleScore{
-           
-             font-size: 12px;
-          
-            margin-top:12px;
-            margin-left: -50px;
-        }
-        
-      }
+    margin-top: 12px;
+    margin-left: -50px;
+  }
+}

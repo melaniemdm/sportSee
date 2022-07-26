@@ -12,7 +12,7 @@ export default function CardNavBarLeft(props) {
     <div className="containerIcones">
       
       <nav className="navLeft">
-        <Link to="" className="">
+        <Link to="">
           <img src={props.data.picture} alt="Icone de navigation left" className="cardNavBarLeft" />
         </Link></nav>
     

@@ -12,6 +12,10 @@ import ErrorGraph from '../ErrorGraph';
 
 const api = new Api();
 
+/**
+ * If the mouse is hovering over a data point, then display the value of that data point.
+ * @returns The return is the average of the data.
+ */
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
