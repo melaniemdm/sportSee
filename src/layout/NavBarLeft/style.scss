@@ -2,7 +2,7 @@
 .containerNavBarLeft{
     height:100%;
     min-width:117px;
-    min-height: 100vh;
+    min-height: calc(100vh - 91px);
   color: white;
   background-color: black;
    display:flex;
