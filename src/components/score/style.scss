@@ -23,11 +23,11 @@
   left: 10px;
 }
 .pourcentScore {
-  font-size: 26px;
+  font-size: 3vh;
   font-weight: 700;
   position: relative;
-  top: -68px;
-  left: 20px;
+  margin-top: -8vh;
+  transform: translateX(-1.5vw)
 }
 
 .graphScore {
@@ -37,22 +37,13 @@
 
 .containerTextitle {
   position: relative;
-  margin-top: -70px;
-  margin-left: 12px;
+  font-size: 2vh;
+  transform: translateX(-1vw);
 }
 
 @media #{$large-down} {
-  .pourcentScore {
-    top: -45px;
-  }
-  .containerTextitle {
-    position: relative;
-    margin-top: -48px;
-    margin-left: 12px;
-  }
-  .titleScore {
+   .titleScore {
     font-size: 12px;
-
     margin-top: 12px;
     margin-left: -50px;
   }

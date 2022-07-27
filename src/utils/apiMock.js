@@ -45,7 +45,7 @@ export default class {
       }
     };
 
-    const averageSessionsArray = models.getAverageSessions(data.data.sessions);
+    const averageSessionsArray = models.getFormatedByModelsAverageSessions(data.data.sessions);
     setStateData(averageSessionsArray);
   
   }
@@ -96,7 +96,7 @@ export default class {
     };
 
 
-    const dailyActivityArray = models.getDailyActivity(data.data.sessions);
+    const dailyActivityArray = models.getFormatedByModelsDailyActivity(data.data.sessions);
     setDailyActivity(dailyActivityArray);
   }
 
@@ -142,14 +142,14 @@ export default class {
       }
     };
 
-    const performanceArray = models.getPerformance(data.data.sessions);
+    const performanceArray = models.getFormatedByModelsPerformance(data.data.sessions);
     setPerformance(performanceArray);
   }
 
   /* A function that is being called in the constructor. */
   async getDataScore(id, setScore) {
  
-    const scoreArray = models.getScore(0.12);
+    const scoreArray = models.getFormatedByModelsScore(0.12);
     setScore(scoreArray);
   }
 
@@ -167,7 +167,7 @@ export default class {
       'lipidCount': 120
     };
   
-    const bmiArray = models.getBMI(keyData);
+    const bmiArray = models.getFormatedByModelsBMI(keyData);
     setBMI(bmiArray);
 
   }

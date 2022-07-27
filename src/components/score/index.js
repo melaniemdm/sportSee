@@ -48,7 +48,7 @@ export default function Score() {
       >
 
         <RadialBar className="graphScore"
-          label={{ position: 'center', fill: 'black' }}
+          label={{ position: 'center', fill: 'white' }}
           background
           clockWise
           dataKey="value"
@@ -58,7 +58,7 @@ export default function Score() {
       </RadialBarChart>
       <div className="containerTextScore">
         <div className="pourcentScore"  fill={'black'}>
-    % 
+          { score[1]?.value }  %
         </div>
         <div className="containerTextitle">
   

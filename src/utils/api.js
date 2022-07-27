@@ -13,7 +13,7 @@ export default class {
       this.baseUrl +this.user_endPoint + id + ' /average-sessions'
     ).then((response) =>{
    
-      const averageSessionsArray = models.getAverageSessions(response.data.data.sessions);
+      const averageSessionsArray = models.getFormatedByModelsAverageSessions(response.data.data.sessions);
       setStateData(averageSessionsArray);
     }).catch((error) => {
       console.error(error);
@@ -27,7 +27,7 @@ export default class {
       this.baseUrl +this.user_endPoint + id + '/activity'
     ).then((response) => {
    
-      const activitiesArray = models.getDailyActivity(response.data.data.sessions);
+      const activitiesArray = models.getFormatedByModelsDailyActivity(response.data.data.sessions);
       setDailyActivity(activitiesArray);
     }).catch((error) => {
       console.error(error);
@@ -41,7 +41,7 @@ export default class {
       this.baseUrl +this.user_endPoint + id + '/performance'
     ).then((response) => {
       
-      const performanceArray = models.getPerformance(response.data.data);
+      const performanceArray = models.getFormatedByModelsPerformance(response.data.data);
       
       setPerformance(performanceArray);
     }).catch((error) => {
@@ -55,7 +55,7 @@ export default class {
     await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
       const scoreUser = response.data.data.todayScore ? response.data.data.todayScore : response.data.data.score;
    
-      const scoreArray= models.getDataScore(scoreUser);
+      const scoreArray= models.getFormatedByModelsDataScore(scoreUser);
       setScore(scoreArray);
     });
 
@@ -75,7 +75,7 @@ export default class {
     await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
       const keyData = response.data.data.keyData;
     
-      const bmiArray = models.getBMI(keyData);
+      const bmiArray = models.getFormatedByModelsBMI(keyData);
       setBMI(bmiArray);
     }).catch(error=> {
       console.error(error);

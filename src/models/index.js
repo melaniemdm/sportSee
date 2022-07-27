@@ -6,12 +6,14 @@ import lipides from '../assets/lipides.png';
 export default class {
   constructor(){
   }
+
   /**
  * It takes an array of objects, and returns an array of objects.
- * @param sessions - an array of objects that contain the following properties:
+ * @param sessions - [{day: 1, sessionLength: 1}, {day: 2, sessionLength: 2}, {day: 3, sessionLength:
+ * 3}, {day: 4, sessionLength: 4}, {day: 5, sessionLength: 5}, {day: 6, sessionLength: 6
  * @returns An array of objects.
  */
-  getAverageSessions(sessions){
+  getFormatedByModelsAverageSessions(sessions){
     const arrayDay = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
     const averageSessionsArray =sessions.map((averageSession) => {
       return new AverageSession(arrayDay[averageSession.day - 1], averageSession.sessionLength);
@@ -24,7 +26,7 @@ export default class {
   * @param sessions - an array of objects that contain the following properties:
   * @returns An array of DailyActivity objects.
   */
-  getDailyActivity(sessions){
+  getFormatedByModelsDailyActivity(sessions){
     const activitiesArray = sessions.map((activity) => {
       return new DailyActivity(   
         activity.day,
@@ -44,7 +46,7 @@ export default class {
  * @param performances - {
  * @returns An array of objects.
  */
-  getPerformance(performances){
+  getFormatedByModelsPerformance(performances){
     const performancesArray = performances.data.map((performance) => {
       return new Performance(
         performances.kind[performance.kind],
@@ -71,7 +73,7 @@ export default class {
    * @param scoreUser - the score of the user
    * @returns An array of two objects.
    */
-  getDataScore(scoreUser){
+  getFormatedByModelsDataScore(scoreUser){
     const score1 = new Score('Group B', (1 - scoreUser)*100, 'white', 'white', '0');
     const score2= new Score( scoreUser*100, scoreUser*100,'red');
     return [score1, score2 ];
@@ -83,7 +85,7 @@ export default class {
   * @param keyData - 
   * @returns An array of objects.
   */
-  getBMI(keyData){
+  getFormatedByModelsBMI(keyData){
     const bmi1 = new Bmi(  keyData.calorieCount,
       'Calories',
       fire);
