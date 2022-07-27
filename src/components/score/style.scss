@@ -26,8 +26,8 @@
   font-size: 3vh;
   font-weight: 700;
   position: relative;
-  margin-top: -8vh;
-  transform: translateX(-1.5vw)
+  margin-top: -9vh;
+  transform: translateX(-0vw)
 }
 
 .graphScore {
@@ -38,7 +38,7 @@
 .containerTextitle {
   position: relative;
   font-size: 2vh;
-  transform: translateX(-1vw);
+  transform: translateX(-0vw);
 }
 
 @media #{$large-down} {
