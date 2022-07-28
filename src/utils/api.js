@@ -2,12 +2,19 @@ import axios from 'axios';
 import Models from '../models';
 
 const models = new Models();
+/* A class that is used to get data from an API. */
 export default class {
   constructor(){
     this.baseUrl= 'http://localhost:3000/';
     this.user_endPoint='user/';
   }
-  /* A function that is called in the component. */
+  
+  /**
+   * It gets the average sessions of a user from the API and sets the state of the component with the
+   * data.
+   * @param id - the user id
+   * @param setStateData - a function that sets the state of the component
+   */
   async getAverageSessions(id, setStateData)  {
     await axios.get(
       this.baseUrl +this.user_endPoint + id + ' /average-sessions'
@@ -19,9 +26,14 @@ export default class {
       console.error(error);
       setStateData('error');
     });
- 
   }
-  /* A function that is called in the component. */
+  
+  /**
+ * It gets the daily activity of a user from the Fitbit API and then formats it using a function from a
+ * models.js file.
+ * @param id - the user id
+ * @param setDailyActivity - is a function that sets the state of the component.
+ */
   async getDailyActivity (id, setDailyActivity){
     await axios.get(
       this.baseUrl +this.user_endPoint + id + '/activity'
@@ -35,7 +47,12 @@ export default class {
     });
   }
 
-  /* A function that is called in the component. */
+  
+  /**
+   * It gets the performance of a user from the API and then formats it using a model.
+   * @param id - the id of the user
+   * @param setPerformance - a function that sets the state of the component
+   */
   async getPerformance(id, setPerformance) {
     await axios.get(
       this.baseUrl +this.user_endPoint + id + '/performance'
@@ -48,9 +65,13 @@ export default class {
       console.error(error);
       setPerformance('error');
     });
-
   }
-  /* A function that is called in the component. */
+  
+  /**
+  * It gets the score of a user from an API and then formats it using a function from another file.
+  * @param id - the user id
+  * @param setScore - is a function that sets the state of the component
+  */
   async getDataScore(id, setScore) {
     await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
       const scoreUser = response.data.data.todayScore ? response.data.data.todayScore : response.data.data.score;
@@ -58,9 +79,13 @@ export default class {
       const scoreArray= models.getFormatedByModelsDataScore(scoreUser);
       setScore(scoreArray);
     });
-
   }
-  /* A function that is called in the component. */
+ 
+  /**
+  * It gets the first name of a user from an API and sets the first name in the state of the component.
+  * @param id - the id of the user
+  * @param setFirstName - a function that sets the state of the firstName variable
+  */
   async getFirstName(id, setFirstName) {
     await axios.get(this.baseUrl +this.user_endPoint + id).then((response)=>{
       setFirstName(response.data.data.userInfos.firstName);
@@ -70,7 +95,12 @@ export default class {
     });
   }
 
-  /* A function that is called in the component. */
+  
+  /**
+  * It gets the BMI of a user from an API and sets the BMI in the state of the component.
+  * @param id - the user id
+  * @param setBMI - a function that sets the state of BMI
+  */
   async getBMI  (id, setBMI){
     await axios.get(this.baseUrl +this.user_endPoint + id).then((response) => {
       const keyData = response.data.data.keyData;
@@ -81,6 +111,5 @@ export default class {
       console.error(error);
       setBMI('error');
     });
- 
   }
 }

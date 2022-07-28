@@ -5,6 +5,7 @@ import Routes from '../src/Routes';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+/* Rendering the Routes component. */
 root.render(
   <React.StrictMode>
     <Routes/>

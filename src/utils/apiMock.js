@@ -3,11 +3,8 @@ import Models from '../models';
 const models = new Models();
 export default class {
   constructor(){
-    
-
   }
 
-  /* A function that is being called in the constructor. */
   async getAverageSessions( setStateData) {
     const data = {
       'data': {
@@ -50,7 +47,7 @@ export default class {
   
   }
 
-  /* A function that is being called in the constructor. */
+  
   async getDailyActivity (id, setDailyActivity){
     const data={
       'data': {
@@ -100,7 +97,7 @@ export default class {
     setDailyActivity(dailyActivityArray);
   }
 
-  /* A function that is being called in the constructor. */
+  
   async getPerformance(id,setPerformance){
     const data={
       'data': {
@@ -146,19 +143,16 @@ export default class {
     setPerformance(performanceArray);
   }
 
-  /* A function that is being called in the constructor. */
   async getDataScore(id, setScore) {
  
     const scoreArray = models.getFormatedByModelsScore(0.12);
     setScore(scoreArray);
   }
 
-  /* A function that is being called in the constructor. */
   async getFirstName(id, setFirstName) {
     setFirstName('Karl');
   }
 
-  /* A function that is being called in the constructor. */
   async getBMI(id, setBMI){
     const keyData= {
       'calorieCount': 2500,
@@ -171,9 +165,5 @@ export default class {
     setBMI(bmiArray);
 
   }
-
-
-
-
 
 }
