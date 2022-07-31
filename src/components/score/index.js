@@ -1,26 +1,29 @@
 import './style.scss';
 import React, { useEffect, useState } from 'react';
 import { RadialBarChart, RadialBar } from 'recharts';
-/**
- * It's a function that returns a div with a navbar and 4 links.
- * @returns A React component.
- */
 import { useParams } from 'react-router-dom';
-import Api from '../../utils/api';
-import ErrorGraph from '../ErrorGraph';
+import { Api } from '../../utils/api';
+import { ErrorGraph } from '../ErrorGraph';
 
+/* It's an instance of the Api class. */
 const api = new Api();
 
 
 /**
- * I'm trying to display a graph in a component, but the graph is not displayed.
- * @returns The data is being returned as an array of objects.
+ * @module 
+ * Score (react component)
+ *@description It's a hook that is called when the component is mounted. It calls the api.getDataScore() function
+ * which makes an API call to get the data. The data is then displayed in a graph.
+ * </code>
+ * @returns The data is being returned in the form of a graph.
  */
-export default function Score() {
+export function Score() {
   const {id} = useParams();
   const [score, setScore] = useState([]);
   
-  /* It's a hook that is called after every render. */
+
+  /* It's a hook that is called when the component is mounted. It calls the api.getDataScore() function
+  which makes an API call to get the data. The data is then displayed in a graph. */
   useEffect(() => {
     api.getDataScore(id, setScore);
   }, []);

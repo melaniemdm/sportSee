@@ -1,14 +1,17 @@
 import './style.scss';
 import logo from '../../assets/logo.png';
-import Navigate from '../../components/Navigate';
+import { Navigate } from '../../components/Navigate';
+
+
 
 
 /**
- * It returns a header with a logo and a Navigate component.
+ * @module 
+ * Header (react component)
+ *@description It returns a header with a logo and a Navigate component.
  * @returns A header with a logo and a Navigate component.
  */
-
-export default function Header(){
+export function Header(){
   return(
     <header className="containerHeader">
       <div className="logoImg">

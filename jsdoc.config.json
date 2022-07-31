@@ -1,0 +1,34 @@
+{
+    "source": {
+        "include": ["src", "src/components", "package.json", "README.md"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+
+    "plugins": ["plugins/markdown"],
+
+    "opts": {
+        "encoding": "utf8",
+        "readme": "./README.md",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "template": "node_modules/tui-jsdoc-template",
+        "theme_opts": {
+            "default_theme": "dark"
+        }
+    },
+    "templates": {
+        "useCollapsibles": true,
+        "tabNames": {
+            "classes": "Classes",
+            "components": "Components",
+            "modules": "Modules"
+        }
+    },
+
+    "markdown": {
+        "hardwrap": false,
+        "idInHeadings": true 
+    }
+}

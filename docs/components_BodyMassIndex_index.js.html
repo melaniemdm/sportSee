@@ -1,24 +1,46 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/BodyMassIndex/index.js</title>
+    <title>Source: components/BodyMassIndex/index.js | sportsee</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
 </head>
-
 <body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">sportsee</a></h1>
+        
+            <span class="version">v0.1.0</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="AverageSession%252520.html">AverageSession </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="AverageSession (react component)_sub"></div></li><li><a href="BodyMassIndex%252520.html">BodyMassIndex </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="BodyMassIndex (react component)_sub"></div></li><li><a href="CardNavBarLeft%252520.html">CardNavBarLeft </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="CardNavBarLeft (react component)_sub"></div></li><li><a href="CustomsRoutes%2520.html">CustomsRoutes </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="CustomsRoutes (react component)_sub"></div></li><li><a href="DailyActivity%252520.html">DailyActivity </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="DailyActivity (react component)_sub"></div></li><li><a href="Error%2520.html">Error </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Error (react component)_sub"></div></li><li><a href="ErrorGraph%252520.html">ErrorGraph </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ErrorGraph (react component)_sub"></div></li><li><a href="Header%2520.html">Header </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Header (react component)_sub"></div></li><li><a href="Intensity%252520.html">Intensity </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Intensity (react component)_sub"></div></li><li><a href="NavBarLeft%2520.html">NavBarLeft </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="NavBarLeft (react component)_sub"></div></li><li><a href="Navigate%252520.html">Navigate </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Navigate (react component)_sub"></div></li><li><a href="Profil%2520.html">Profil </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Profil (react component)_sub"></div></li><li><a href="Score%252520.html">Score </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Score (react component)_sub"></div></li></ul></div><div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Api.html">Api</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Api_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Api.html#getAverageSessions">getAverageSessions</a></li><li><a href="Api.html#getBMI">getBMI</a></li><li><a href="Api.html#getDailyActivity">getDailyActivity</a></li><li><a href="Api.html#getDataScore">getDataScore</a></li><li><a href="Api.html#getFirstName">getFirstName</a></li><li><a href="Api.html#getPerformance">getPerformance</a></li></ul></div></li><li><a href="ApiMock.html">ApiMock</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ApiMock_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ApiMock.html#getAverageSessions">getAverageSessions</a></li><li><a href="ApiMock.html#getBMI">getBMI</a></li><li><a href="ApiMock.html#getDailyActivity">getDailyActivity</a></li><li><a href="ApiMock.html#getDataScore">getDataScore</a></li><li><a href="ApiMock.html#getFirstName">getFirstName</a></li><li><a href="ApiMock.html#getPerformance">getPerformance</a></li></ul></div></li><li><a href="Models.html">Models</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Models_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Models.html#getFormatedByModelsAverageSessions">getFormatedByModelsAverageSessions</a></li><li><a href="Models.html#getFormatedByModelsBMI">getFormatedByModelsBMI</a></li><li><a href="Models.html#getFormatedByModelsDailyActivity">getFormatedByModelsDailyActivity</a></li><li><a href="Models.html#getFormatedByModelsDataScore">getFormatedByModelsDataScore</a></li><li><a href="Models.html#getFormatedByModelsPerformance">getFormatedByModelsPerformance</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#CustomTooltip">CustomTooltip</a></li><li><a href="global.html#getBarShape">getBarShape</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
 
-<div id="main">
-
-    <h1 class="page-title">Source: components/BodyMassIndex/index.js</h1>
-
+<div class="main" id="main">
     
 
 
@@ -28,37 +50,42 @@
         <article>
             <pre class="prettyprint source linenums"><code>
 import './style.scss';
-// import {getUser} from '../../utils/data';
+
 
 
 /**
- * It's a function that returns a div with a class name of bodyMassIndex. Inside that div, there's
- * another div with a class name of containerIconeBodyMass. Inside that div, there's another div with a
- * class name of containerIconeBodyMass. Inside that div, there's an image with a source of
- * props.data.picture, a class name of iconeBodyMass, and an alt of icone.
- * 
- * After that, there's another div with a class name of bodyMass calories. Inside that div, there's a
- * value of props.data.value and a type of props.data.type.
+ * @module 
+ * BodyMassIndex (react component)
+ *@description  It's a function that takes a prop called data and returns a div with a class of
+ * containerBodyMassIndex. Inside that div is another div with a class of layoutcardBodyMass. Inside
+ * that div is another div with a class of containerIconeBodyMass. Inside that div is another div with
+ * a class of containerIconeBodyMass. Inside that div is an img tag with a src of props.data.picture
+ * and a class of iconeBodyMass. Inside that div is another div with a class of bodyMass. Inside that
+ * div is a text node with the value of props.data.value, a text node with the value of typeMass, and
+ * another div with a class of typeBodyMass. Inside that div is a text node with the value of
+ * props.data.type.
  * @param props - {
  */
-function BodyMassIndex(props){
+export  function BodyMassIndex(props){
+  const typeMass = props.data?.type === 'Calories'? 'kCal' :' g';
 
-    
-    return (
-        &lt;div className="bodyMassIndex">
-            &lt;div className="containerIconeBodyMass">
-               &lt;div className="containerIconeBodyMass"> &lt;img src={props.data.picture} className="iconeBodyMass" alt="icone "/>&lt;/div> 
-                &lt;/div> 
+  return (
+    &lt;div className="containerBodyMassIndex">
+      &lt;div className="layoutcardBodyMass">
+        &lt;div className="containerIconeBodyMass">
+          &lt;div className="containerIconeBodyMass"> &lt;img src={props.data.picture} className="iconeBodyMass" alt="icone "/>&lt;/div> 
+        &lt;/div> 
                 
-                &lt;div className="bodyMass calories">{props.data.value} {props.data.type} 
+        &lt;div className="bodyMass">{props.data.value} &lt;strong>{typeMass}&lt;/strong>
+          &lt;div className="typeBodyMass">{props.data.type} &lt;/div>
              
 
                
-            &lt;/div>
-        &lt;/div>
-    )
+        &lt;/div>&lt;/div>
+    &lt;/div>
+  );
 }
-export default BodyMassIndex;</code></pre>
+</code></pre>
         </article>
     </section>
 
@@ -67,17 +94,24 @@ export default BodyMassIndex;</code></pre>
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BodyMassIndex">BodyMassIndex</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#NavBarLeft">NavBarLeft</a></li><li><a href="global.html#Navigate">Navigate</a></li><li><a href="global.html#Profil">Profil</a></li></ul>
-</nav>
-
-<br class="clear">
-
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Jun 19 2022 22:41:30 GMT+0200 (heure d’été d’Europe centrale)
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">NHN Entertainment. Frontend Development Lab</div>
 </footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
 </body>
 </html>

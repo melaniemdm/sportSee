@@ -1,24 +1,46 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/DailyActivity/index.js</title>
+    <title>Source: components/DailyActivity/index.js | sportsee</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
 </head>
-
 <body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">sportsee</a></h1>
+        
+            <span class="version">v0.1.0</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="AverageSession%252520.html">AverageSession </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="AverageSession (react component)_sub"></div></li><li><a href="BodyMassIndex%252520.html">BodyMassIndex </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="BodyMassIndex (react component)_sub"></div></li><li><a href="CardNavBarLeft%252520.html">CardNavBarLeft </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="CardNavBarLeft (react component)_sub"></div></li><li><a href="CustomsRoutes%2520.html">CustomsRoutes </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="CustomsRoutes (react component)_sub"></div></li><li><a href="DailyActivity%252520.html">DailyActivity </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="DailyActivity (react component)_sub"></div></li><li><a href="Error%2520.html">Error </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Error (react component)_sub"></div></li><li><a href="ErrorGraph%252520.html">ErrorGraph </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ErrorGraph (react component)_sub"></div></li><li><a href="Header%2520.html">Header </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Header (react component)_sub"></div></li><li><a href="Intensity%252520.html">Intensity </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Intensity (react component)_sub"></div></li><li><a href="NavBarLeft%2520.html">NavBarLeft </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="NavBarLeft (react component)_sub"></div></li><li><a href="Navigate%252520.html">Navigate </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Navigate (react component)_sub"></div></li><li><a href="Profil%2520.html">Profil </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Profil (react component)_sub"></div></li><li><a href="Score%252520.html">Score </a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Score (react component)_sub"></div></li></ul></div><div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Api.html">Api</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Api_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Api.html#getAverageSessions">getAverageSessions</a></li><li><a href="Api.html#getBMI">getBMI</a></li><li><a href="Api.html#getDailyActivity">getDailyActivity</a></li><li><a href="Api.html#getDataScore">getDataScore</a></li><li><a href="Api.html#getFirstName">getFirstName</a></li><li><a href="Api.html#getPerformance">getPerformance</a></li></ul></div></li><li><a href="ApiMock.html">ApiMock</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ApiMock_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ApiMock.html#getAverageSessions">getAverageSessions</a></li><li><a href="ApiMock.html#getBMI">getBMI</a></li><li><a href="ApiMock.html#getDailyActivity">getDailyActivity</a></li><li><a href="ApiMock.html#getDataScore">getDataScore</a></li><li><a href="ApiMock.html#getFirstName">getFirstName</a></li><li><a href="ApiMock.html#getPerformance">getPerformance</a></li></ul></div></li><li><a href="Models.html">Models</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Models_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Models.html#getFormatedByModelsAverageSessions">getFormatedByModelsAverageSessions</a></li><li><a href="Models.html#getFormatedByModelsBMI">getFormatedByModelsBMI</a></li><li><a href="Models.html#getFormatedByModelsDailyActivity">getFormatedByModelsDailyActivity</a></li><li><a href="Models.html#getFormatedByModelsDataScore">getFormatedByModelsDataScore</a></li><li><a href="Models.html#getFormatedByModelsPerformance">getFormatedByModelsPerformance</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#CustomTooltip">CustomTooltip</a></li><li><a href="global.html#getBarShape">getBarShape</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
 
-<div id="main">
-
-    <h1 class="page-title">Source: components/DailyActivity/index.js</h1>
-
+<div class="main" id="main">
     
 
 
@@ -35,64 +57,87 @@ import {
   CartesianGrid,
   Tooltip,
   Legend
-} from "recharts";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+} from 'recharts';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Api } from '../../utils/api';
+import { ErrorGraph } from '../ErrorGraph';
+
+const api = new Api();
+
 
 /**
- * It takes the data from the API and maps it into an array of objects.
- * &lt;/code>
- * 
- * 
- * A:
- * 
- * You can use &lt;code>useEffect&lt;/code> to fetch the data and set it to the state.
- * &lt;code>import React, { useState, useEffect } from "react";
- * import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
- * import axios from "axios";
- * 
- * export default function DailyActivity() {
- *   const [activities, setActivities] = useState([]);
- *   const { id } = useParams();
- * 
- *   useEffect(() =&amp;gt; {
- *     const getData = async () =&amp;gt; {
- *       const { data } = await axios.get(`http://localhost:3000/user/` + id + `/activity`);
- * @returns The data from the API is being returned.
+ * It takes a rectangle's x, y, width, height, and radius, and returns a function that takes a fill,
+ * fillOpacity, and stroke, and returns a path element
+ * @param x - The x-coordinate of the top-left corner of the rectangle.
+ * @param y - y-coordinate of the top-left corner of the bar
+ * @param width - The width of the bar
+ * @param height - The height of the bar.
+ * @param radius - [top-left, top-right, bottom-right, bottom-left]
+ * @returns A function that returns a path element.
  */
-export default function DailyActivity() {
-  const [activities, setActivities] = useState([]);
-  const {id} = useParams();
-/**
- * It takes the data from the API and maps it into an array of objects.
- */
-  const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/user/`+ id +`/activity`);
+const getBarShape = (x, y, width, height, radius) => {
+  const [tl, tr, bl, br] = radius;
+  const d = `M${x},${y + tl}
+        a${tl},${tl} 0 0 1 ${tl},${-tl}
+        h${width - tl - tr}
+        a${tr},${tr} 0 0 1 ${tr},${tr}
+        v${height - tr - br}
+        a${br},${br} 0 0 1 ${-br},${br}
+        h${bl + (br - width)}
+        a${bl},${bl} 0 0 1 ${-bl},${-bl}
+        z`;
+  return ({ fill, fillOpacity, stroke }) => (
+    &lt;path d={d} fill={fill} fillOpacity={fillOpacity} stroke={stroke} />
+  );
+};
 
-const activitiesArray = data.data.sessions.map(activity=> { 
-    return{
-       name: activity.day,
-       kilogram: activity.kilogram,
-       calories: activity.calories
-    }
-   
-  })
-  setActivities(activitiesArray)
+/**
+ * If the tooltip is active and there is a payload, then return a div with the value of the payload.
+ * @returns The return is a function that returns a component.
+ */
+
+const CustomTooltip = ({ active, payload }) => {
+  if (active &amp;&amp; payload &amp;&amp; payload.length) {
+    return (
+      &lt;div className="custom-tooltipDailyActivity">
+        &lt;p className="label">{`${payload[1].value}kg`}&lt;/p>
+        &lt;p className="label">{`${payload[0].value}Kcal`}&lt;/p>
+        
+      &lt;/div>
+    );
   }
- 
- /* A hook that is used for performing side effects in function components. It serves the same purpose
- as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified
- into a single API. */
-  useEffect(() => {
-    getData();
-  });
 
-  return (&lt;div> 
-    &lt;div className="titleDailyActivity">Activité quotidienne&lt;/div>
+  return null;
+};
+
+
+
+/**
+ * @module 
+ * DailyActivity (react component)
+ *@description It's a function that returns a bar chart.
+ * &lt;/code>
+ * @returns A BarChart component.
+ */
+export function DailyActivity() {
+  const [activities, setDailyActivity] = useState([]);
+  const {id} = useParams();
+ 
+
+  /* It's a hook that is called after the first render. */
+  useEffect(() => {
+    api.getDailyActivity(id, setDailyActivity);
+  }, []);
+  if(activities === 'error'){
+    return (&lt;div>&lt;ErrorGraph/>&lt;/div>);
+  }
+  return (&lt;div className="containerDailyActivity"> 
+    &lt;div className="containerTitleDailyActivity">
+      &lt;div className="titleDailyActivity">Activité quotidienne&lt;/div>&lt;/div>
     &lt;BarChart
-      width={800}
-      height={300}
+      width={window.innerWidth/1.7}
+      height={(window.innerHeight-91)/2.97}
       data={activities}
       margin={{
         top: 20,
@@ -103,13 +148,47 @@ const activitiesArray = data.data.sessions.map(activity=> {
       }}
     >
       &lt;CartesianGrid strokeDasharray="3 3" />
-      &lt;XAxis dataKey="name" />
+      &lt;XAxis dataKey="number" />
       &lt;YAxis yAxisId="left" stroke="white" />
       &lt;YAxis yAxisId="right" orientation="right" stroke="gray" />
-      &lt;Tooltip />
+      &lt;Tooltip
+        content={&lt;CustomTooltip />}
+      />
+
       &lt;Legend verticalAlign="top" height={36} align="right" iconType="cercle"/>
-      &lt;Bar yAxisId="right" dataKey="kilogram" fill="black" />
-      &lt;Bar yAxisId="left" dataKey="calories" fill="red"  />
+      &lt;Bar yAxisId="left" name = "Poids (kg)" dataKey="calories" fill="black" barSize={7} shape={({ x, y, width, height,  background }) => {
+        const Bar = getBarShape(x, y, width, height, [4, 4, 0, 0]);
+        return (
+          &lt;g>
+            &lt;rect
+              x={background.x}
+              y={background.y}
+              width={background.width}
+              height={background.height}
+              fill={'transparent'}
+            />
+
+            &lt;Bar fillOpacity={1} fill={'black'} />
+          &lt;/g>
+        );
+      }}/>
+      &lt;Bar yAxisId="right" name = "Calories brûlées (kCal)"  dataKey="kilogram" fill="red" barSize={7} shape={({ x, y, width, height, background }) => {
+        const Bar = getBarShape(x, y, width, height, [4, 4, 0, 0]);
+        return (
+          &lt;g>
+            &lt;rect
+              x={background.x}
+              y={background.y}
+              width={background.width}
+              height={background.height}
+              fill={'transparent'}
+            />
+
+            &lt;Bar fillOpacity={1} fill={'red'} />
+          &lt;/g>
+        );
+      }}/>
+     
      
     &lt;/BarChart>&lt;/div>
   );
@@ -123,17 +202,24 @@ const activitiesArray = data.data.sessions.map(activity=> {
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BodyMassIndex">BodyMassIndex</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#NavBarLeft">NavBarLeft</a></li><li><a href="global.html#Navigate">Navigate</a></li><li><a href="global.html#Profil">Profil</a></li></ul>
-</nav>
-
-<br class="clear">
-
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Jun 19 2022 22:41:30 GMT+0200 (heure d’été d’Europe centrale)
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">NHN Entertainment. Frontend Development Lab</div>
 </footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
 </body>
 </html>

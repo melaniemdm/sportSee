@@ -10,8 +10,8 @@ import {
 } from 'recharts';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Api from '../../utils/api';
-import ErrorGraph from '../ErrorGraph';
+import { Api } from '../../utils/api';
+import { ErrorGraph } from '../ErrorGraph';
 
 const api = new Api();
 
@@ -46,6 +46,7 @@ const getBarShape = (x, y, width, height, radius) => {
  * If the tooltip is active and there is a payload, then return a div with the value of the payload.
  * @returns The return is a function that returns a component.
  */
+
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -63,17 +64,20 @@ const CustomTooltip = ({ active, payload }) => {
 
 
 /**
- * It's a function that returns a bar chart.
- * @returns A React component.
+ * @module 
+ * DailyActivity (react component)
+ *@description It's a function that returns a bar chart.
+ * </code>
+ * @returns A BarChart component.
  */
-export default function DailyActivity() {
+export function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
  
-  /* A hook that is called when the component is mounted. */
+
+  /* It's a hook that is called after the first render. */
   useEffect(() => {
     api.getDailyActivity(id, setDailyActivity);
-   
   }, []);
   if(activities === 'error'){
     return (<div><ErrorGraph/></div>);

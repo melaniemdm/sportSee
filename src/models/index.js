@@ -3,14 +3,16 @@ import prot from '../assets/prot.png';
 import apple from '../assets/apple.png';
 import lipides from '../assets/lipides.png';
 
-export default class {
+/**
+ * @class
+ *  It takes an array of objects, and returns an array of objects */
+export class Models {
   constructor(){
   }
 
   /**
  * It takes an array of objects, and returns an array of objects.
- * @param sessions - [{day: 1, sessionLength: 1}, {day: 2, sessionLength: 2}, {day: 3, sessionLength:
- * 3}, {day: 4, sessionLength: 4}, {day: 5, sessionLength: 5}, {day: 6, sessionLength: 6
+ * @param sessions - an array of days and duration of sessions.
  * @returns An array of objects.
  */
   getFormatedByModelsAverageSessions(sessions){

@@ -1,4 +1,4 @@
-function Reglage(){
+export function Reglage(){
  
   return(
     <div>
@@ -7,4 +7,3 @@ function Reglage(){
   );
 }
   
-export default Reglage;

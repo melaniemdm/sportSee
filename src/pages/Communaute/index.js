@@ -1,5 +1,5 @@
 
-function Communaute(){
+export function Communaute(){
  
   return(
     <div>
@@ -8,4 +8,3 @@ function Communaute(){
   );
 }
   
-export default Communaute;

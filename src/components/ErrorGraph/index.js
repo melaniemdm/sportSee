@@ -1,11 +1,13 @@
 import './style.scss';
 
+
 /**
- * This function returns a div that contains the text 'les informations sont indisponibles pour le
- * moment'.
+ * @module 
+ * ErrorGraph (react component)
+ *@description It returns a div with the text "les informations sont indisponibles pour le moment"
  * @returns A function that returns a div.
  */
-export default function ErrorGraph(){
+export function ErrorGraph(){
 
   return(
     <div>

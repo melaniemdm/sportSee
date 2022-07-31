@@ -1,20 +1,24 @@
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import Accueil from '../pages/Accueil';
-import Profil from '../pages/Profil';
-import Reglage from '../pages/Reglage';
-import Error from '../pages/Error';
-import Communaute from '../pages/Communaute';
-import Header from '../layout/Header';
-import NavBarLeft from '../layout/NavBarLeft';
+import { Accueil } from '../pages/Accueil';
+import { Profil } from '../pages/Profil';
+import { Reglage } from '../pages/Reglage';
+import { Error } from '../pages/Error';
+import { Communaute } from '../pages/Communaute';
+import { Header } from '../layout/Header';
+import { NavBarLeft } from '../layout/NavBarLeft';
 import './style.scss';
 
-
 /**
- * CustomsRoutes() is a function that returns a Router component that contains a Header component, a
- * NavBarLeft component, a Routes component that contains a Route component for each page of the app,
- * and an Error component.
- * @returns A React Router DOM Router component.
+ * @module 
+ * CustomsRoutes (react component)
+ *@descriptio It's a function that returns a Router component that contains a Header component, a main component
+ * that contains a NavBarLeft component and a Routes component that contains a Route component that
+ * contains an Accueil component, a Route component that contains a Profil component, a Route component
+ * that contains a Reglage component, a Route component that contains a Communaute component and a
+ * Route component that contains an Error component.
+ * @returns A React Router.
  */
+
 export default function CustomsRoutes(){
   return (
     <Router>

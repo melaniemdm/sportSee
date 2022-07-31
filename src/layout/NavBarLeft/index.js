@@ -1,5 +1,5 @@
 import './style.scss';
-import CardNavBarLeft from '../../components/CardNavBarLeft';
+import { CardNavBarLeft } from '../../components/CardNavBarLeft';
 import yoga from '../../assets/yoga.png';
 import bike from '../../assets/bike.png';
 import swim from '../../assets/swim.png';
@@ -7,20 +7,22 @@ import alter from '../../assets/alter.png';
 import React, { useEffect, useState } from 'react';
 
 
+
+
+
 /**
- * It's a function that returns a div with a className of containerNavBarLeft. Inside this div, there's
- * a div with a className of containerCard. Inside this div, there's a CardNavBarLeft component. This
- * component is a function that returns a div with a className of cardNavBarLeft. Inside this div,
- * there's an img with a src of the data.picture.
- * @returns The component is being returned.
+ * @module 
+ * NavBarLeft (react component)
+ *@description I'm trying to get the data from the array and display it in the CardNavBarLeft component.
+ * @returns The function NavBarLeft is being returned.
  */
-export default function NavBarLeft() {
-  const [navBarLeft, setIconeNavBarLeft] = useState([]);
+
+export function NavBarLeft() {
+  const [navBarLeft, setIconeNavBarLeft] = useState([ ]);
 
   /**
- * I'm trying to set the state of the variable iconeNavBarLeft with the array of objects that I created
- * in the function.
- */
+  * I'm trying to push an image into an array.
+  */
   const getData = async () => {
     let iconeNavBarLeft=[];
     iconeNavBarLeft.push({
@@ -36,9 +38,9 @@ export default function NavBarLeft() {
       picture:alter,
     });
     setIconeNavBarLeft(iconeNavBarLeft);};
-  /* It's a hook that is used for performing side effects in function components. It serves the same
-purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but
-unified into a single API. */
+
+  
+  /* A hook that is called after every render. */
   useEffect(() => {
     getData();
   }, []);

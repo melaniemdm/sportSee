@@ -7,10 +7,13 @@ import {
 } from 'recharts';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Api from '../../utils/api';
-import ErrorGraph from '../ErrorGraph';
+import { ErrorGraph } from '../ErrorGraph';
 
+/* It's creating a new instance of the Api class. */
+import { Api } from '../../utils/api';
 const api = new Api();
+// import { ApiMock } from '../../utils/apiMock';
+// const api = new ApiMock();
 
 /**
  * If the mouse is hovering over a data point, then display the value of that data point.
@@ -31,38 +34,23 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 
+
+
 /**
- * It's a function that returns a line chart.
+*@module 
+ * AverageSession (react component)
+ @description It's a function that returns a graph.
  * </code>
- * 
- * 
- * A:
- * 
- * You can use <code>window.innerWidth</code> and <code>window.innerHeight</code> to get the width and
- * height of the window.
- * <code>&lt;LineChart
- *   width={window.innerWidth}
- *   height={window.innerHeight}
- *   data={data}
- *   margin={{
- *     top: 5, right: 30, left: 20, bottom: 5,
- *   }}
- * &gt;
- *   &lt;CartesianGrid strokeDasharray="3 3" /&gt;
- *   &lt;XAxis dataKey="name" /&gt;
- *   &lt;YAxis /&gt;
- *   &lt;Tooltip /&gt;
- *   &lt;Legend /&gt;
- *   &lt;Line type="monotone" dataKey
- * @returns A line chart with a tooltip.
+ * @returns A line chart.
  */
-export default function AverageSession() {
+export  function AverageSession() {
   const {id} = useParams();
   const [averageSessions,setAverageSessions]= useState([]);
 
  
 
-  /* A hook that is called after the first render. It is used to fetch data from an API. */
+
+  /* It's calling the function getAverageSessions from the Api class. */
   useEffect(() => {
     api.getAverageSessions(id, setAverageSessions);
   }, []);

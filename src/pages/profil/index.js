@@ -1,31 +1,31 @@
 import './style.scss';
 import clappingTxt from '../../assets/clappingTxt.png';
-import DailyActivity from '../../components/DailyActivity';
-import AverageSession from '../../components/AverageSession';
-import Score from '../../components/Score';
-import Intensity from '../../components/Intensity';
-import BodyMassIndex from '../../components/BodyMassIndex';
+import { DailyActivity } from '../../components/DailyActivity';
+import { AverageSession } from '../../components/AverageSession';
+import { Score } from '../../components/Score';
+import { Intensity } from '../../components/Intensity';
+import { BodyMassIndex } from '../../components/BodyMassIndex';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Error from '../../pages/Error';
-import Api from '../../utils/api';
+import { Error } from '../../pages/Error';
+import { Api } from '../../utils/api';
 
 const api = new Api();
 
+
 /**
- * The function Profil() is called when the user is on the profil page. It displays the user's name, a
- * graph of his daily activity, a graph of his average session, a graph of his intensity and a graph of
- * his score. It also displays a graph of his body mass index.
- * @returns The return is the component Profil.
+ * @module 
+ * Profil (react component)
+ *@descriptio I'm trying to get the data from the API and display it in the BodyMassIndex component.
  */
-export default function Profil() {
+export  function Profil() {
   const { id } = useParams();
   const [name, setFirstName] = useState([]);
   const [bodyMassIndex, setBMI] = useState([]);
-  
- 
-  /* A hook that is called when the component is mounted. It is used to fetch data from an API. */
+   
+  /* It's a hook that allows you to perform side effects in function components. */
   useEffect(() => {
+  
     api.getFirstName(id, setFirstName);
     api.getBMI(id, setBMI); 
   },[]);

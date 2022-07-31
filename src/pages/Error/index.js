@@ -1,10 +1,13 @@
 import './style.scss';
 
 /**
+ * @module 
+ * Error (react component)
+ *@description
  * It returns a div with the class name containerError.
  * @returns A div with a className of containerError.
  */
-export default function Error(props){
+export function Error(props){
   if(props.type==='unavailable'){
     return(
       <div className="containerError">

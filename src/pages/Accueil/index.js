@@ -1,4 +1,4 @@
-function Accueil(){
+export function Accueil(){
  
   return(
     <div>
@@ -7,4 +7,3 @@ function Accueil(){
   );
 }
   
-export default Accueil;
