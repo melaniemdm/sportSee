@@ -5,7 +5,9 @@ import lipides from '../assets/lipides.png';
 
 /**
  * @class
- *  It takes an array of objects, and returns an array of objects */
+ * @description It's a class that provide methods to provide the data formatted with the modelisations classes.
+ * It takes an array of objects (the data from the backend), and returns an array of objects (the same data, but
+ * readable by ReCharts) */
 export class Models {
   constructor(){
   }
@@ -45,8 +47,8 @@ export class Models {
  * This function takes an object with a data property that contains an array of objects, and returns an
  * array of Performance objects, where each Performance object is created using the data from the
  * corresponding object in the array.
- * @param performances - {
- * @returns An array of objects.
+ * @param performances - It's an array containing the performances value for some performances kind.
+ * @returns An array of objects containing the performances readable by ReCharts.
  */
   getFormatedByModelsPerformance(performances){
     const performancesArray = performances.data.map((performance) => {
@@ -60,20 +62,10 @@ export class Models {
   }
 
   /**
-   * It takes a number between 0 and 1 and returns an array of two objects. 
-   * 
-   * The first object has a label of "Group B" and a value of 100 minus the input number. 
-   * 
-   * The second object has a label of the input number and a value of the input number. 
-   * 
-   * The first object has a color of white and the second object has a color of red. 
-   * 
-   * The first object has a highlight color of white and the second object has a highlight color of
-   * red. 
-   * 
-   * The first object has a stroke color of 0 and the second object has a stroke color of 0.
+   * It's a method to provide the an array from the current 
+   * score of the user. The array provided containg both the score part of the graph and the left to 100 part
    * @param scoreUser - the score of the user
-   * @returns An array of two objects.
+   * @returns An array of two objects readable by ReCharts.
    */
   getFormatedByModelsDataScore(scoreUser){
     const score1 = new Score('Group B', (1 - scoreUser)*100, 'white', 'white', '0');
@@ -82,10 +74,10 @@ export class Models {
   }
   
   /**
-  * It takes a keyData object as an argument and returns an array of Bmi objects.
-  * </code>
-  * @param keyData - 
-  * @returns An array of objects.
+  * It's a method that provide an array of Bmi objects.
+  * @param keyData - It's an object containing the following properties: 'calorieCount', 'proteinCount', 
+  * 'carbohydrateCount', 'lipiCount'
+  * @returns An array of Bmi objects readable by ReCharts.
   */
   getFormatedByModelsBMI(keyData){
     const bmi1 = new Bmi(  keyData.calorieCount,
@@ -106,14 +98,26 @@ export class Models {
 
 }
 
-/* It creates a class called AverageSession. */
+/**
+ * @class
+ * @description It's a modelisation class that provide one average session model.
+ * @param name - The name of the session
+ * @param pv - The value of the session
+ *  */
 class AverageSession {
   constructor(name,pv) {
     this.name=name;
     this.pv=pv;
   }
 }
-/* It creates a class called DailyActivity. */
+/**
+ * @class
+ * @description It's a modelisation class that provide one daily activity model. 
+ * @param name - the name of the day session
+ * @param number - the value of units of the day session
+ * @param kilogram - null if the unit is calories
+ * @param calories - null if the unit is kilogram
+ * */
 class DailyActivity {
   constructor(name,number,kilogram,calories) {
     this.name=name;
@@ -122,7 +126,13 @@ class DailyActivity {
     this.calories=calories; 
   }
 }
-/* A class is a blueprint for creating objects. */
+/**
+ * @class
+ * @description It's a modelisation class that provide one performance model. 
+ * @param subject - Kind of performance (intensity, etc.)
+ * @param A - value of the performance
+ * @fullmarl - param needed by ReCharts
+ * */
 class Performance{
   constructor(subject, A, fullmark){
     this.subject = subject;
@@ -131,8 +141,15 @@ class Performance{
   }
 }
 
-/* The Score class is a constructor function that creates a new object with the properties name, value,
-fill, stroke, and fontSize. */
+/**
+ * @class
+ * @description It's a modelisation class that provide one score model. 
+ * @param name - Name of the score part
+ * @param value - Value of the score part
+ * @param fill - Value of the fill of the score part
+ * @param stroke - Value of the stroke of the score part
+ * @param fontSize - Value of the font size of the score part
+ * */
 class Score{
   constructor(name, value, fill, stroke,fontSize){
     this.name=name;
@@ -143,7 +160,13 @@ class Score{
   }
 }
 
-/* It creates a class called Bmi. */
+/**
+ * @class
+ * @description It's a modelisation class that provide one body mass index model. 
+ * @param value - value of the body mass index
+ * @param type - type of the body mass index
+ * @param picture - image to display for the body mass index
+ * */
 class Bmi{
   constructor(value,type,picture){
     this.value=value;

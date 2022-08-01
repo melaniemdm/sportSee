@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 
 
 /**
- * @module 
+ * @function 
  * Navigate (react component)
- * @description It's a function that returns a div that contains a nav that contains 4 links.
- * @returns A React component.
+ * @description It's a React functional component that returns a div that contains a nav that contains 4 links.
+ * @returns the nav part of the header.
  */
 export function Navigate(){
   return(

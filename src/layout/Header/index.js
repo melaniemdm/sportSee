@@ -3,12 +3,10 @@ import logo from '../../assets/logo.png';
 import { Navigate } from '../../components/Navigate';
 
 
-
-
 /**
- * @module 
+ * @function 
  * Header (react component)
- *@description It returns a header with a logo and a Navigate component.
+ *@description It's a React functional component that returns a header with a logo and a Navigate component.
  * @returns A header with a logo and a Navigate component.
  */
 export function Header(){

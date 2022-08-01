@@ -16,8 +16,9 @@ const api = new Api();
 // const api = new ApiMock();
 
 /**
+ * Function used to customize the information box on the graph
  * If the mouse is hovering over a data point, then display the value of that data point.
- * @returns The return is the average of the data.
+ * @returns The return is the average of the session.
  */
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -37,18 +38,16 @@ const CustomTooltip = ({ active, payload }) => {
 
 
 /**
-*@module 
+*@function 
  * AverageSession (react component)
- @description It's a function that returns a graph.
- * </code>
- * @returns A line chart.
+ * @description It's a React functional component that returns a graph containing the average sessions.
+ * It's using a hook that is called when the component is mounted. It calls the api.getAverageSessions() function
+ * which makes an API call to get the data. The data is then displayed in a graph.
+ * @returns The data is being returned in the form of a graph.
  */
 export  function AverageSession() {
   const {id} = useParams();
   const [averageSessions,setAverageSessions]= useState([]);
-
- 
-
 
   /* It's calling the function getAverageSessions from the Api class. */
   useEffect(() => {

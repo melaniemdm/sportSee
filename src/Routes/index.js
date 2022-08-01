@@ -9,9 +9,9 @@ import { NavBarLeft } from '../layout/NavBarLeft';
 import './style.scss';
 
 /**
- * @module 
+ * @function
  * CustomsRoutes (react component)
- *@descriptio It's a function that returns a Router component that contains a Header component, a main component
+ * @description It's a function that returns a Router component that contains a Header component, a main component
  * that contains a NavBarLeft component and a Routes component that contains a Route component that
  * contains an Accueil component, a Route component that contains a Profil component, a Route component
  * that contains a Reglage component, a Route component that contains a Communaute component and a

@@ -17,8 +17,7 @@ const api = new Api();
 
 
 /**
- * It takes a rectangle's x, y, width, height, and radius, and returns a function that takes a fill,
- * fillOpacity, and stroke, and returns a path element
+ * @description It's a function to customize the shape of the bar in the Bar chart.
  * @param x - The x-coordinate of the top-left corner of the rectangle.
  * @param y - y-coordinate of the top-left corner of the bar
  * @param width - The width of the bar
@@ -43,8 +42,9 @@ const getBarShape = (x, y, width, height, radius) => {
 };
 
 /**
- * If the tooltip is active and there is a payload, then return a div with the value of the payload.
- * @returns The return is a function that returns a component.
+ * Function used to customize the information box on the graph
+ * If the mouse is hovering over a data point, then display the value of that data point.
+ * @returns The return is the result of the activity of the day .
  */
 
 const CustomTooltip = ({ active, payload }) => {
@@ -64,17 +64,17 @@ const CustomTooltip = ({ active, payload }) => {
 
 
 /**
- * @module 
+ * @function 
  * DailyActivity (react component)
- *@description It's a function that returns a bar chart.
- * </code>
- * @returns A BarChart component.
+ *@description It's a React functional component that returns a bar chart containing .
+ * It's using a hook that is called when the component is mounted. It calls the api.getDailyActivity() function
+ * which makes an API call to get the data. The data is then displayed in a graph.
+ * @returns The data is being returned in the form of a Bar chart.
  */
 export function DailyActivity() {
   const [activities, setDailyActivity] = useState([]);
   const {id} = useParams();
  
-
   /* It's a hook that is called after the first render. */
   useEffect(() => {
     api.getDailyActivity(id, setDailyActivity);

@@ -1,11 +1,11 @@
 import './style.scss';
 
 /**
- * @module 
+ * @function 
  * Error (react component)
- *@description
- * It returns a div with the class name containerError.
- * @returns A div with a className of containerError.
+ * @description It's a React functional component that returns a header with a logo and a Navigate component.
+ * @param props - An object containing the type property. Null means error 404.
+ * @returns An Error message in the page, corresponding to the type property.
  */
 export function Error(props){
   if(props.type==='unavailable'){

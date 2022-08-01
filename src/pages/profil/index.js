@@ -14,9 +14,12 @@ const api = new Api();
 
 
 /**
- * @module 
+ * @function 
  * Profil (react component)
- *@descriptio I'm trying to get the data from the API and display it in the BodyMassIndex component.
+ *@description t's a React functional component that get the data from the API and display it as User name and in the BodyMassIndex component.
+ * The component use a hook to call the getFirstName and getBMI methods of the API, and pass the 'set function' of states as parameter.
+ * This components contains the graphs component as children
+ * @return the full Profil page
  */
 export  function Profil() {
   const { id } = useParams();

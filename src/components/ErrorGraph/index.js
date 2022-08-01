@@ -2,10 +2,10 @@ import './style.scss';
 
 
 /**
- * @module 
+ * @function 
  * ErrorGraph (react component)
- *@description It returns a div with the text "les informations sont indisponibles pour le moment"
- * @returns A function that returns a div.
+ *@description It's a React functional component that returns a div with the text "les informations sont indisponibles pour le moment"
+ * @returns the div containing the message to display when the service is not available.
  */
 export function ErrorGraph(){
 

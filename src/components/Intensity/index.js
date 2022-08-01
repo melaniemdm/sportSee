@@ -15,28 +15,13 @@ import { ErrorGraph } from '../ErrorGraph';
 const api = new Api();
 
 /**
- * @module 
+ * @function 
  * Intensity (react component)
- *@description It takes in an id, uses that id to get data from an API, and then displays that data in a radar
- * chart.
- * </code>
- * 
- * 
- * A:
- * 
- * I think you are looking for <code>useCallback</code> hook.
- * <code>const [performances,setPerformance] = useState([ ]);
- * const {id} = useParams();
- * 
- * const getPerformance = useCallback(() =&gt; {
- *   api.getPerformance(id, setPerformance);
- * }, [id]);
- * 
- * useEffect(() =&gt; {
- *   getPerformance();
- * },[getPerformance]);
- * </code>
- * @returns The radar chart is being returned.
+ * @description It's a React functional component that takes in an user id, uses that id to get data from an API, and then 
+ * displays that data in a radar chart.
+ * It's using a hook that is called when the component is mounted. It calls the api.getDataScore() function
+ * which makes an API call to get the data. The data is then displayed in a graph.
+ * @returns The data is being returned in the form of a radar chart.
  */
 
 export function Intensity() {

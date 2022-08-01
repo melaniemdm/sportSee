@@ -4,17 +4,13 @@ import './style.scss';
 
 
 /**
- * @module 
+ * @function 
  * BodyMassIndex (react component)
- *@description  It's a function that takes a prop called data and returns a div with a class of
- * containerBodyMassIndex. Inside that div is another div with a class of layoutcardBodyMass. Inside
- * that div is another div with a class of containerIconeBodyMass. Inside that div is another div with
- * a class of containerIconeBodyMass. Inside that div is an img tag with a src of props.data.picture
- * and a class of iconeBodyMass. Inside that div is another div with a class of bodyMass. Inside that
- * div is a text node with the value of props.data.value, a text node with the value of typeMass, and
- * another div with a class of typeBodyMass. Inside that div is a text node with the value of
- * props.data.type.
- * @param props - {
+ *@description  It's a React functional component  that takes a prop called data and returns a 
+ * Body Mass Index card
+ * @param props props contains a data object with the following properties: 'type' to indicates which 
+ * type is displayed and what unity has to be set, 'picture' to manage the picture to display on the 
+ * component and 'value' to set the amount of kCal or g to display
  */
 export  function BodyMassIndex(props){
   const typeMass = props.data?.type === 'Calories'? 'kCal' :' g';

@@ -7,22 +7,16 @@ import alter from '../../assets/alter.png';
 import React, { useEffect, useState } from 'react';
 
 
-
-
-
 /**
- * @module 
+ * @function
  * NavBarLeft (react component)
- *@description I'm trying to get the data from the array and display it in the CardNavBarLeft component.
- * @returns The function NavBarLeft is being returned.
+ *@description It's a React functional component that get the data from the array and display it in the CardNavBarLeft component.
+ * @returns The aside NavBar on the left is being returned.
  */
-
 export function NavBarLeft() {
   const [navBarLeft, setIconeNavBarLeft] = useState([ ]);
 
-  /**
-  * I'm trying to push an image into an array.
-  */
+ 
   const getData = async () => {
     let iconeNavBarLeft=[];
     iconeNavBarLeft.push({
