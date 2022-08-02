@@ -23,7 +23,7 @@ const api = new Api();
  */
 export  function Profil() {
   const { id } = useParams();
-  const [name, setFirstName] = useState([]);
+  const [name, setFirstName] = useState('');
   const [bodyMassIndex, setBMI] = useState([]);
    
   /* It's a hook that allows you to perform side effects in function components. */

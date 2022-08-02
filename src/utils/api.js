@@ -116,7 +116,7 @@ export class Api {
    * @param setFirstName - a function that sets the state of the firstName variable
    */
   async getFirstName(id, setFirstName) {
-    await axios.get(this.baseUrl +this.user_endPoint + id).then((response)=>{
+    await axios.get(this.baseUrl +this.user_endPoint + id, { timeout: 500 }).then((response)=>{
       setFirstName(response.data.data.userInfos.firstName);
     }).catch(error=>{
       console.error(error);
