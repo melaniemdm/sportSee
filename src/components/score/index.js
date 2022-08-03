@@ -1,12 +1,7 @@
 import './style.scss';
-import React, { useEffect, useState } from 'react';
-import { RadialBarChart, RadialBar } from 'recharts';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../utils/api';
-import { ErrorGraph } from '../ErrorGraph';
 
-/* It's an instance of the Api class. */
-const api = new Api();
+import { RadialBarChart, RadialBar } from 'recharts';
+import { ErrorGraph } from '../ErrorGraph';
 
 
 /**
@@ -17,17 +12,9 @@ const api = new Api();
  * which makes an API call to get the data. The data is then displayed in a graph.
  * @returns The data is being returned in the form of a graph.
  */
-export function Score() {
-  const {id} = useParams();
-  const [score, setScore] = useState([]);
-  
+export function Score(props) {
 
-  /* It's a hook that is called when the component is mounted. It calls the api.getDataScore() function
-  which makes an API call to get the data. The data is then displayed in a graph. */
-  useEffect(() => {
-    api.getDataScore(id, setScore);
-  }, []);
-  if(score === ''){
+  if(props.score === ''){
     return (<div><ErrorGraph/></div>);
   }
   return (
@@ -39,7 +26,7 @@ export function Score() {
         height={(window.innerHeight-91)/3.65}
         innerRadius="75%"
         outerRadius="100%"
-        data={score}
+        data={props.score}
         className="score"
         margin={{
           top: 15,
@@ -61,7 +48,7 @@ export function Score() {
       </RadialBarChart>
       <div className="containerTextScore">
         <div className="pourcentScore"  fill={'black'}>
-          { score[1]?.value }  %
+          { props.score[1]?.value }  %
         </div>
         <div className="containerTextitle">
   

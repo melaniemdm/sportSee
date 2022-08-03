@@ -25,12 +25,20 @@ export  function Profil() {
   const { id } = useParams();
   const [name, setFirstName] = useState('');
   const [bodyMassIndex, setBMI] = useState([]);
-   
+  const [averageSessions,setAverageSessions]= useState([]);
+  const [activities, setDailyActivity] = useState([]);
+  const [score, setScore] = useState([]);
+  const [performances,setPerformance] = useState([ ]);
   /* It's a hook that allows you to perform side effects in function components. */
   useEffect(() => {
   
     api.getFirstName(id, setFirstName);
     api.getBMI(id, setBMI); 
+    api.getAverageSessions(id, setAverageSessions);
+    api.getDailyActivity(id, setDailyActivity);
+    api.getPerformance(id, setPerformance);
+    api.getDataScore(id, setScore);
+  
   },[]);
   if(name=== 'error'){
     return <Error type="unavailable"/>;
@@ -45,18 +53,18 @@ export  function Profil() {
       <div className="containerGraphUser">
         <div className="containerGraph">
           <div className="dailyActivity">
-            <DailyActivity />
+            <DailyActivity activities={activities}/>
           </div>
           <div className="containerLittleGraphs">
             <div className="averageSession">
        
-              <AverageSession />
+              <AverageSession averageSessions={averageSessions}/>
             </div>
             <div className="intensity">
-              <Intensity />
+              <Intensity  performances={performances}/>
             </div>
             <div className="score">
-              <Score />
+              <Score score={score}/>
             </div></div>
         </div>
               

@@ -8,12 +8,7 @@ import {
   Tooltip,
   Legend
 } from 'recharts';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../utils/api';
 import { ErrorGraph } from '../ErrorGraph';
-
-const api = new Api();
 
 
 /**
@@ -61,8 +56,6 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-
-
 /**
  * @function 
  * DailyActivity (react component)
@@ -71,15 +64,10 @@ const CustomTooltip = ({ active, payload }) => {
  * which makes an API call to get the data. The data is then displayed in a graph.
  * @returns The data is being returned in the form of a Bar chart.
  */
-export function DailyActivity() {
-  const [activities, setDailyActivity] = useState([]);
-  const {id} = useParams();
- 
-  /* It's a hook that is called after the first render. */
-  useEffect(() => {
-    api.getDailyActivity(id, setDailyActivity);
-  }, []);
-  if(activities === 'error'){
+export function DailyActivity(props) {
+  
+
+  if(props.activities === 'error'){
     return (<div><ErrorGraph/></div>);
   }
   return (<div className="containerDailyActivity"> 
@@ -88,7 +76,7 @@ export function DailyActivity() {
     <BarChart
       width={window.innerWidth/1.7}
       height={(window.innerHeight-91)/2.97}
-      data={activities}
+      data={props.activities}
       margin={{
         top: 20,
         right: 30,

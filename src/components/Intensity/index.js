@@ -6,13 +6,8 @@ import {
   PolarAngleAxis,
   
 } from 'recharts';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../utils/api';
 import { ErrorGraph } from '../ErrorGraph';
 
-/* Creating a new instance of the Api class. */
-const api = new Api();
 
 /**
  * @function 
@@ -24,24 +19,18 @@ const api = new Api();
  * @returns The data is being returned in the form of a radar chart.
  */
 
-export function Intensity() {
-  const [performances,setPerformance] = useState([ ]);
-  const {id} = useParams();
+export function Intensity(props) {
 
-  /* Calling the api.getPerformance function. */
-  useEffect(() => {
-    api.getPerformance(id, setPerformance);
-  },[]);
 
-  if(performances === 'error'){
+  if(props.performances === 'error'){
     return (<div><ErrorGraph/></div>);
   }
-  else if(performances.length === 0) {return null;}
+  else if(props.performances.length === 0) {return null;}
   return (
     <RadarChart
       width={window.innerWidth/5.47}
       height={(window.innerHeight-91)/3.65}
-      data={performances}
+      data={props.performances}
       className="intensity"
       margin={{
         top: 0,
