@@ -32,8 +32,7 @@ const CustomTooltip = ({ active, payload }) => {
 *@function 
  * AverageSession (react component)
  * @description It's a React functional component that returns a graph containing the average sessions.
- * It's using a hook that is called when the component is mounted. It calls the api.getAverageSessions() function
- * which makes an API call to get the data. The data is then displayed in a graph.
+ * @param {array} props.averageSessions  attribute of type array containing the AverageSession needed to display the graph
  * @returns The data is being returned in the form of a graph.
  */
 export  function AverageSession(props) {

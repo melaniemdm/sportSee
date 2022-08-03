@@ -59,9 +59,8 @@ const CustomTooltip = ({ active, payload }) => {
 /**
  * @function 
  * DailyActivity (react component)
- *@description It's a React functional component that returns a bar chart containing .
- * It's using a hook that is called when the component is mounted. It calls the api.getDailyActivity() function
- * which makes an API call to get the data. The data is then displayed in a graph.
+ * @description It's a React functional component that returns a bar chart containing .
+ * @param {array} props.activities  attribute of type array containing the DailyActivity needed to display the graph
  * @returns The data is being returned in the form of a Bar chart.
  */
 export function DailyActivity(props) {

@@ -58,12 +58,7 @@ import {
   Tooltip,
   Legend
 } from 'recharts';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../utils/api';
 import { ErrorGraph } from '../ErrorGraph';
-
-const api = new Api();
 
 
 /**
@@ -111,25 +106,17 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-
-
 /**
  * @function 
  * DailyActivity (react component)
  *@description It's a React functional component that returns a bar chart containing .
- * It's using a hook that is called when the component is mounted. It calls the api.getDailyActivity() function
- * which makes an API call to get the data. The data is then displayed in a graph.
+ * @param {array} props.activities  attribute of type array containing the DailyActivity needed to display the graph
  * @returns The data is being returned in the form of a Bar chart.
  */
-export function DailyActivity() {
-  const [activities, setDailyActivity] = useState([]);
-  const {id} = useParams();
- 
-  /* It's a hook that is called after the first render. */
-  useEffect(() => {
-    api.getDailyActivity(id, setDailyActivity);
-  }, []);
-  if(activities === 'error'){
+export function DailyActivity(props) {
+  
+
+  if(props.activities === 'error'){
     return (&lt;div>&lt;ErrorGraph/>&lt;/div>);
   }
   return (&lt;div className="containerDailyActivity"> 
@@ -138,7 +125,7 @@ export function DailyActivity() {
     &lt;BarChart
       width={window.innerWidth/1.7}
       height={(window.innerHeight-91)/2.97}
-      data={activities}
+      data={props.activities}
       margin={{
         top: 20,
         right: 30,

@@ -56,42 +56,30 @@ import {
   PolarAngleAxis,
   
 } from 'recharts';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Api } from '../../utils/api';
 import { ErrorGraph } from '../ErrorGraph';
 
-/* Creating a new instance of the Api class. */
-const api = new Api();
 
 /**
  * @function 
  * Intensity (react component)
  * @description It's a React functional component that takes in an user id, uses that id to get data from an API, and then 
  * displays that data in a radar chart.
- * It's using a hook that is called when the component is mounted. It calls the api.getDataScore() function
- * which makes an API call to get the data. The data is then displayed in a graph.
+ * @param {array} props.performances  attribute of type array containing the Performance needed to display the graph
  * @returns The data is being returned in the form of a radar chart.
  */
 
-export function Intensity() {
-  const [performances,setPerformance] = useState([ ]);
-  const {id} = useParams();
+export function Intensity(props) {
 
-  /* Calling the api.getPerformance function. */
-  useEffect(() => {
-    api.getPerformance(id, setPerformance);
-  },[]);
 
-  if(performances === 'error'){
+  if(props.performances === 'error'){
     return (&lt;div>&lt;ErrorGraph/>&lt;/div>);
   }
-  else if(performances.length === 0) {return null;}
+  else if(props.performances.length === 0) {return null;}
   return (
     &lt;RadarChart
       width={window.innerWidth/5.47}
       height={(window.innerHeight-91)/3.65}
-      data={performances}
+      data={props.performances}
       className="intensity"
       margin={{
         top: 0,

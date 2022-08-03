@@ -8,9 +8,9 @@ import './style.scss';
  * BodyMassIndex (react component)
  *@description  It's a React functional component  that takes a prop called data and returns a 
  * Body Mass Index card
- * @param props props contains a data object with the following properties: 'type' to indicates which 
- * type is displayed and what unity has to be set, 'picture' to manage the picture to display on the 
- * component and 'value' to set the amount of kCal or g to display
+ * @param {string} props.data.picture  string containing the source url of the picture
+ * @param {number} props.data.value  attribute of type number containing the Bmi value to display 
+ * @param {string} props.data.type  attribute of type string containing the Bmi type to display
  */
 export  function BodyMassIndex(props){
   const typeMass = props.data?.type === 'Calories'? 'kCal' :' g';

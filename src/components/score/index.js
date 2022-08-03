@@ -7,9 +7,8 @@ import { ErrorGraph } from '../ErrorGraph';
 /**
  * @function 
  * Score (react component)
- *@description It's a React functional component that display the current score of the user.
- * It's using a hook that is called when the component is mounted. It calls the api.getDataScore() function
- * which makes an API call to get the data. The data is then displayed in a graph.
+ * @description It's a React functional component that display the current score of the user.
+ * @param {array} props.score  attribute of type array containing the Score needed to display the graph
  * @returns The data is being returned in the form of a graph.
  */
 export function Score(props) {

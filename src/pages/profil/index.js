@@ -31,7 +31,6 @@ export  function Profil() {
   const [performances,setPerformance] = useState([ ]);
   /* It's a hook that allows you to perform side effects in function components. */
   useEffect(() => {
-  
     api.getFirstName(id, setFirstName);
     api.getBMI(id, setBMI); 
     api.getAverageSessions(id, setAverageSessions);
